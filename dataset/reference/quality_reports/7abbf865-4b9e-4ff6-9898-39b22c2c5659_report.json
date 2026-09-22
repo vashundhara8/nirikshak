@@ -1,0 +1,9 @@
+{
+    "rows_received": 32,
+    "rows_accepted": 32,
+    "rows_rejected": 0,
+    "validation_failures": [],
+    "warnings": [],
+    "schema_version": "1.0",
+    "validation_timestamp": "2026-09-22T20:46:16.584688+00:00"
+}

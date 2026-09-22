@@ -1,0 +1,41 @@
+[
+    {
+        "source_id": "SRC-OGD-PM-001",
+        "source_name": "State/UT-wise details of beneficiaries and funds released under Post Matric Scholarship for ST students",
+        "organization": "Ministry of Tribal Affairs",
+        "source_type": "API",
+        "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+        "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+        "access_type": "DATA_GOV_API_KEY",
+        "dataset_name": "Post-Matric ST Beneficiaries and Funds",
+        "academic_year": "2021-2022",
+        "scheme": "POST_MATRIC",
+        "geography": "INDIA",
+        "retrieved_at": null,
+        "license": "NDAP/OGDL",
+        "data_classification": "REAL_REFERENCE_DATA",
+        "refresh_frequency": "ANNUAL",
+        "ingestion_method": "OGD_CLIENT",
+        "status": "ACTIVE",
+        "provenance_notes": "Authoritative aggregate government statistics."
+    },
+    {
+        "source_id": "SRC-NSP-INST-001",
+        "source_name": "NSP Online Institute Search Index",
+        "organization": "National Scholarship Portal",
+        "source_type": "WEB_PORTAL",
+        "source_url": "https://scholarships.gov.in/onlineInstituteSearchIndex",
+        "access_type": "PUBLIC_CAPTCHA",
+        "dataset_name": "Registered Institutions",
+        "academic_year": "2026-2027",
+        "scheme": "ALL",
+        "geography": "INDIA",
+        "retrieved_at": null,
+        "license": "RESTRICTED",
+        "data_classification": "REAL_REFERENCE_DATA",
+        "refresh_frequency": "UNKNOWN",
+        "ingestion_method": "PENDING_OFFICIAL_ACCESS",
+        "status": "UNAVAILABLE",
+        "provenance_notes": "CAPTCHA protected. Automated ingestion disabled pending official machine-readable dataset or API access."
+    }
+]

@@ -1,0 +1,642 @@
+[
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.585491+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "1",
+            "state_ut": "Andaman and Nicobar Islands",
+            "_2019_20": 449,
+            "_2020_21": 312,
+            "_2021_22": 330,
+            "_2022_23": 386,
+            "_2023_24": 193
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586162+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "2",
+            "state_ut": "Andhra Pradesh",
+            "_2019_20": 158195,
+            "_2020_21": 71820,
+            "_2021_22": 117089,
+            "_2022_23": 129032,
+            "_2023_24": 114524
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586221+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "3",
+            "state_ut": "Arunachal Pradesh",
+            "_2019_20": 20500,
+            "_2020_21": 31916,
+            "_2021_22": 44144,
+            "_2022_23": 46330,
+            "_2023_24": 43209
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586251+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "4",
+            "state_ut": "Assam",
+            "_2019_20": 55507,
+            "_2020_21": 54846,
+            "_2021_22": 37370,
+            "_2022_23": 62102,
+            "_2023_24": 37182
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586274+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "5",
+            "state_ut": "Bihar",
+            "_2019_20": 5675,
+            "_2020_21": 9006,
+            "_2021_22": 16156,
+            "_2022_23": 3349,
+            "_2023_24": 1206
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586296+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "6",
+            "state_ut": "Chhattisgarh",
+            "_2019_20": 144453,
+            "_2020_21": 140163,
+            "_2021_22": 173228,
+            "_2022_23": 162336,
+            "_2023_24": 118875
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586316+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "7",
+            "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+            "_2019_20": 5969,
+            "_2020_21": 3549,
+            "_2021_22": 3352,
+            "_2022_23": 2208,
+            "_2023_24": 1053
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586336+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "8",
+            "state_ut": "Goa",
+            "_2019_20": 5870,
+            "_2020_21": 4833,
+            "_2021_22": 4047,
+            "_2022_23": 5199,
+            "_2023_24": 3275
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586365+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "9",
+            "state_ut": "Gujarat",
+            "_2019_20": 202667,
+            "_2020_21": 202413,
+            "_2021_22": 259360,
+            "_2022_23": 179226,
+            "_2023_24": 244602
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586387+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "10",
+            "state_ut": "Himachal Pradesh",
+            "_2019_20": 3009,
+            "_2020_21": 5121,
+            "_2021_22": 3332,
+            "_2022_23": 4303,
+            "_2023_24": 4390
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586408+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "11",
+            "state_ut": "Jammu and Kashmir",
+            "_2019_20": 10685,
+            "_2020_21": 4940,
+            "_2021_22": 8335,
+            "_2022_23": 10772,
+            "_2023_24": 7282
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586428+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "12",
+            "state_ut": "Jharkhand",
+            "_2019_20": 79823,
+            "_2020_21": 78755,
+            "_2021_22": 121601,
+            "_2022_23": 137570,
+            "_2023_24": 137570
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586447+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "13",
+            "state_ut": "Karnataka",
+            "_2019_20": 118083,
+            "_2020_21": 112038,
+            "_2021_22": 133748,
+            "_2022_23": 131702,
+            "_2023_24": 126637
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586466+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "14",
+            "state_ut": "Kerala",
+            "_2019_20": 16583,
+            "_2020_21": 15820,
+            "_2021_22": 14558,
+            "_2022_23": 17652,
+            "_2023_24": 12721
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586485+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "15",
+            "state_ut": "Ladakh",
+            "_2019_20": "NA",
+            "_2020_21": 8200,
+            "_2021_22": 8631,
+            "_2022_23": 8619,
+            "_2023_24": 9795
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586504+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "16",
+            "state_ut": "Madhya Pradesh",
+            "_2019_20": 244126,
+            "_2020_21": 279722,
+            "_2021_22": 426996,
+            "_2022_23": 234736,
+            "_2023_24": 225239
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586523+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "17",
+            "state_ut": "Maharashtra",
+            "_2019_20": 139550,
+            "_2020_21": 157503,
+            "_2021_22": 105693,
+            "_2022_23": 106817,
+            "_2023_24": 130359
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586542+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "18",
+            "state_ut": "Manipur",
+            "_2019_20": 30969,
+            "_2020_21": 39787,
+            "_2021_22": 47793,
+            "_2022_23": 42567,
+            "_2023_24": 33542
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586564+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "19",
+            "state_ut": "Meghalaya",
+            "_2019_20": 6159,
+            "_2020_21": 16399,
+            "_2021_22": 52598,
+            "_2022_23": 67026,
+            "_2023_24": 76755
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586583+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "20",
+            "state_ut": "Mizoram",
+            "_2019_20": 38174,
+            "_2020_21": 33798,
+            "_2021_22": 33267,
+            "_2022_23": 38872,
+            "_2023_24": 31685
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586601+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "21",
+            "state_ut": "Nagaland",
+            "_2019_20": 40164,
+            "_2020_21": 37183,
+            "_2021_22": 40588,
+            "_2022_23": 40638,
+            "_2023_24": 42774
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586620+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "22",
+            "state_ut": "Odisha",
+            "_2019_20": 171532,
+            "_2020_21": 155309,
+            "_2021_22": 207678,
+            "_2022_23": 204172,
+            "_2023_24": 213957
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586639+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "23",
+            "state_ut": "Puducherry",
+            "_2019_20": 23,
+            "_2020_21": 22,
+            "_2021_22": 50,
+            "_2022_23": "NA",
+            "_2023_24": "NA"
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586657+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "24",
+            "state_ut": "Rajasthan",
+            "_2019_20": 286652,
+            "_2020_21": 206011,
+            "_2021_22": 188614,
+            "_2022_23": 236628,
+            "_2023_24": 168516
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586676+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "25",
+            "state_ut": "Sikkim",
+            "_2019_20": 4431,
+            "_2020_21": 3488,
+            "_2021_22": 4457,
+            "_2022_23": 2650,
+            "_2023_24": 1849
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586694+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "26",
+            "state_ut": "Tamil Nadu",
+            "_2019_20": 29478,
+            "_2020_21": 20324,
+            "_2021_22": 24441,
+            "_2022_23": 23529,
+            "_2023_24": 22675
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586713+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "27",
+            "state_ut": "Telangana",
+            "_2019_20": 129243,
+            "_2020_21": 118347,
+            "_2021_22": 126708,
+            "_2022_23": 114911,
+            "_2023_24": 131505
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586732+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "28",
+            "state_ut": "Tripura",
+            "_2019_20": 23720,
+            "_2020_21": 26092,
+            "_2021_22": 35911,
+            "_2022_23": 37380,
+            "_2023_24": 34464
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586750+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "29",
+            "state_ut": "Uttar Pradesh",
+            "_2019_20": 17984,
+            "_2020_21": 19782,
+            "_2021_22": 18938,
+            "_2022_23": 6427,
+            "_2023_24": 8656
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586769+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "30",
+            "state_ut": "Uttarakhand",
+            "_2019_20": 8631,
+            "_2020_21": 8396,
+            "_2021_22": 3760,
+            "_2022_23": 3534,
+            "_2023_24": 3972
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586787+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "31",
+            "state_ut": "West Bengal",
+            "_2019_20": 62234,
+            "_2020_21": 58156,
+            "_2021_22": 78100,
+            "_2022_23": 63198,
+            "_2023_24": "NA"
+        }
+    },
+    {
+        "provenance": {
+            "source_id": "SRC-OGD-PM-001",
+            "source_url": "https://data.gov.in/resource/7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "resource_uuid": "7abbf865-4b9e-4ff6-9898-39b22c2c5659",
+            "retrieved_at": "2026-09-22T20:46:16.586806+00:00",
+            "academic_year": null,
+            "scheme": null,
+            "ingestion_version": "1.0.0"
+        },
+        "data": {
+            "sl__no_": "Total",
+            "state_ut": "Total",
+            "_2019_20": 2060538,
+            "_2020_21": 1924051,
+            "_2021_22": 2340873,
+            "_2022_23": 2123871,
+            "_2023_24": 1988462
+        }
+    }
+]
