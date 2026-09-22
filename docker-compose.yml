@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Placeholder for PostgreSQL
+  # db:
+  #   image: postgres:15
+  #   environment:
+  #     POSTGRES_USER: mota
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: mota_db
+
+  # Placeholder for Redis
+  # redis:
+  #   image: redis:7-alpine
+
+  # Placeholder for MinIO
+  # minio:
+  #   image: minio/minio
+  #   command: server /data --console-address ":9001"
+
+# DO NOT fully configure the application services yet.
+# The purpose is only to establish the infrastructure placeholder.
