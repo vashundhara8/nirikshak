@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* Deep Institutional Navy */
+    --primary: 221 68% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Institutional Dark Slate */
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Neutral Muted */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 40%;
+
+    /* Institutional Active Teal/Blue */
+    --accent: 199 89% 36%;
+    --accent-foreground: 180 100% 98%;
+
+    /* Status Colors */
+    --success: 142 71% 29%;
+    --success-foreground: 140 100% 98%;
+
+    --warning: 38 92% 40%;
+    --warning-foreground: 48 100% 96%;
+
+    --destructive: 0 72% 40%;
+    --destructive-foreground: 0 100% 98%;
+
+    --border: 214.3 31.8% 86%;
+    --input: 214.3 31.8% 86%;
+    --ring: 221 68% 16%;
+
+    /* Sharp, institutional 2px radius */
+    --radius: 2px;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Compact form controls for government density */
+  input, select, textarea {
+    font-size: 13px;
+  }
+}
+
+@theme {
+  --color-border: #CBD5E1;
+  --color-input: #CBD5E1;
+  --color-ring: #0B192C;
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
+
+  --color-gov-navy: #0A192F;
+  --color-gov-navy-dark: #071224;
+  --color-gov-navy-light: #1E3A5F;
+  --color-gov-blue: #0369A1;
+  --color-gov-teal: #0D9488;
+  --color-gov-amber: #B45309;
+  --color-gov-red: #B91C1C;
+  --color-gov-green: #15803D;
+  --color-gov-gray: #334155;
+  --color-gov-border: #E2E8F0;
+  --color-gov-border-dark: #CBD5E1;
+}
