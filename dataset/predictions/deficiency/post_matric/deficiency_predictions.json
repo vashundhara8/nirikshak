@@ -1,0 +1,4067 @@
+[
+  {
+    "deficiency_id": "DEF-A1E3DDD1",
+    "application_id": "APP-0004",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.855140+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-BB0F1E19",
+    "application_id": "APP-0031",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000171",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000172",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000173",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000174",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000175",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000176",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.858858+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-3001C3A5",
+    "application_id": "APP-0031",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.858858+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-024594D3",
+    "application_id": "APP-0035",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000195",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000196",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000197",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000198",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000199",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000200",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.859235+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-AB5ABC35",
+    "application_id": "APP-0035",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.859235+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-1398EBBD",
+    "application_id": "APP-0041",
+    "verification_run_id": null,
+    "category": "DATE_OF_BIRTH",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in DATE_OF_BIRTH between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "DOB_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "DOB_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000231",
+        "field": "Date of Birth"
+      },
+      {
+        "document_id": "DOC-000234",
+        "field": "DOB"
+      },
+      {
+        "document_id": "DOC-000235",
+        "field": "Date of Birth"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.859523+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-787DD2D2",
+    "application_id": "APP-0041",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.859523+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-78388EE0",
+    "application_id": "APP-0025",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.859788+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-3013AE2C",
+    "application_id": "APP-0034",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000189",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000190",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000191",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000192",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000193",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000194",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860017+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-8594987A",
+    "application_id": "APP-0034",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860017+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-AA2C9EF1",
+    "application_id": "APP-0061",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860272+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-E11A7346",
+    "application_id": "APP-0069",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860496+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-125964FF",
+    "application_id": "APP-0010",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860742+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FEC77720",
+    "application_id": "APP-0037",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000207",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000208",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000209",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000210",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000211",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000212",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860968+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-87B16B8B",
+    "application_id": "APP-0037",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.860968+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-5621DD60",
+    "application_id": "APP-0072",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861224+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-03402F34",
+    "application_id": "APP-0072",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861224+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-5F149835",
+    "application_id": "APP-0001",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861477+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-AB474DD1",
+    "application_id": "APP-0030",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861700+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-301DB0CF",
+    "application_id": "APP-0080",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861920+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-5B12316F",
+    "application_id": "APP-0080",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.861920+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-8ECA5776",
+    "application_id": "APP-0042",
+    "verification_run_id": null,
+    "category": "DATE_OF_BIRTH",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in DATE_OF_BIRTH between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "DOB_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "DOB_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000237",
+        "field": "Date of Birth"
+      },
+      {
+        "document_id": "DOC-000240",
+        "field": "DOB"
+      },
+      {
+        "document_id": "DOC-000241",
+        "field": "Date of Birth"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.862168+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-545E78DC",
+    "application_id": "APP-0042",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.862168+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-D16C4EAF",
+    "application_id": "APP-0053",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.862420+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-E334C803",
+    "application_id": "APP-0085",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.862780+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-859640A7",
+    "application_id": "APP-0019",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.863052+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FA53F013",
+    "application_id": "APP-0089",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.863309+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-805EA932",
+    "application_id": "APP-0005",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.863575+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-BDCDC467",
+    "application_id": "APP-0028",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.863831+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C00A7E83",
+    "application_id": "APP-0068",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.864091+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-2171070C",
+    "application_id": "APP-0070",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.864352+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-43BF2E7D",
+    "application_id": "APP-0006",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.864590+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C0C78EC5",
+    "application_id": "APP-0016",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.864838+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-EBF0638D",
+    "application_id": "APP-0039",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000219",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000220",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000221",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000222",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000223",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000224",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.865061+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-189801BA",
+    "application_id": "APP-0039",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.865061+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-0B65E244",
+    "application_id": "APP-0013",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.865354+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-80B4AAAD",
+    "application_id": "APP-0084",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.865603+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-B9284417",
+    "application_id": "APP-0099",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.865846+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-B45795BB",
+    "application_id": "APP-0076",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.866095+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-1341F998",
+    "application_id": "APP-0076",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.866095+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-14542004",
+    "application_id": "APP-0067",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.866371+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-311DA0D7",
+    "application_id": "APP-0011",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.866630+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FA98321C",
+    "application_id": "APP-0057",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.866890+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-14428559",
+    "application_id": "APP-0075",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.867294+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-794817D6",
+    "application_id": "APP-0075",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.867294+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-06D9C823",
+    "application_id": "APP-0060",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.867772+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-73C3BF42",
+    "application_id": "APP-0003",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.868201+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C504FA45",
+    "application_id": "APP-0077",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.868647+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-4820759B",
+    "application_id": "APP-0077",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.868647+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-48BEB536",
+    "application_id": "APP-0024",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.869120+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FA6249D6",
+    "application_id": "APP-0015",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.869538+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-6817942B",
+    "application_id": "APP-0100",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.869942+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-705AC4BC",
+    "application_id": "APP-0036",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000201",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000202",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000203",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000204",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000205",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000206",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.870370+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-124A12BA",
+    "application_id": "APP-0036",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.870370+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-DACAAA05",
+    "application_id": "APP-0066",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.870855+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F79F1454",
+    "application_id": "APP-0093",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.871277+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-AA415EEB",
+    "application_id": "APP-0049",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.871680+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-B8311ACC",
+    "application_id": "APP-0049",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.871680+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-DE2660F1",
+    "application_id": "APP-0071",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872070+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-35F72FEA",
+    "application_id": "APP-0071",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872070+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-7481E325",
+    "application_id": "APP-0094",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872336+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-5F8F6098",
+    "application_id": "APP-0038",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000213",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000214",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000215",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000216",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000217",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000218",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872563+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-09964BB0",
+    "application_id": "APP-0038",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872563+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-A53A6CBB",
+    "application_id": "APP-0021",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.872845+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-DB9FB085",
+    "application_id": "APP-0022",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.873082+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C9801271",
+    "application_id": "APP-0009",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.873305+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C56BA696",
+    "application_id": "APP-0018",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.873776+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F37B2884",
+    "application_id": "APP-0050",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874007+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-BCA7F9A3",
+    "application_id": "APP-0090",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874229+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-4BDE5A18",
+    "application_id": "APP-0092",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874450+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-53FC03BC",
+    "application_id": "APP-0045",
+    "verification_run_id": null,
+    "category": "DATE_OF_BIRTH",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in DATE_OF_BIRTH between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "DOB_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "DOB_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000255",
+        "field": "Date of Birth"
+      },
+      {
+        "document_id": "DOC-000258",
+        "field": "DOB"
+      },
+      {
+        "document_id": "DOC-000259",
+        "field": "Date of Birth"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874718+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-76EA34F2",
+    "application_id": "APP-0045",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874718+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-6166BB52",
+    "application_id": "APP-0007",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.874979+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-77C568D1",
+    "application_id": "APP-0086",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.875205+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F725EEF4",
+    "application_id": "APP-0058",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.875429+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-8D38AC47",
+    "application_id": "APP-0073",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.875653+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-60E23F4E",
+    "application_id": "APP-0073",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.875653+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-A1CDE6B9",
+    "application_id": "APP-0052",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.875903+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-4CDEC5A5",
+    "application_id": "APP-0051",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876145+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-19EE2AD6",
+    "application_id": "APP-0078",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876366+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-76513C1A",
+    "application_id": "APP-0078",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876366+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-2DD3133D",
+    "application_id": "APP-0044",
+    "verification_run_id": null,
+    "category": "DATE_OF_BIRTH",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in DATE_OF_BIRTH between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "DOB_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "DOB_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000249",
+        "field": "Date of Birth"
+      },
+      {
+        "document_id": "DOC-000252",
+        "field": "DOB"
+      },
+      {
+        "document_id": "DOC-000253",
+        "field": "Date of Birth"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876630+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-7D6ABA1E",
+    "application_id": "APP-0044",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876630+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-310A97F3",
+    "application_id": "APP-0087",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.876881+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-DB2745C9",
+    "application_id": "APP-0002",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.877100+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-A1939954",
+    "application_id": "APP-0064",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.877322+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-9D981075",
+    "application_id": "APP-0081",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.877561+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-B61CDD13",
+    "application_id": "APP-0096",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.877777+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-6E6B1750",
+    "application_id": "APP-0017",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.877999+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FCF7B447",
+    "application_id": "APP-0054",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.878337+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-088B4A7A",
+    "application_id": "APP-0082",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.878592+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-01E8B7B1",
+    "application_id": "APP-0046",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.878845+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-4EFEE35E",
+    "application_id": "APP-0046",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.878845+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F3177785",
+    "application_id": "APP-0083",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.879180+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F4D8F622",
+    "application_id": "APP-0029",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.879506+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-B2118CC7",
+    "application_id": "APP-0027",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.879748+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-3CAFE8DE",
+    "application_id": "APP-0095",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.879980+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-A43ECFB2",
+    "application_id": "APP-0062",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880202+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-DA284192",
+    "application_id": "APP-0040",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000225",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000226",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000227",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000228",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000229",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000230",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880432+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-12DB4757",
+    "application_id": "APP-0040",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880432+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-8AEBE6B4",
+    "application_id": "APP-0008",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880709+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-12ACAA91",
+    "application_id": "APP-0048",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880941+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-1E6AD242",
+    "application_id": "APP-0048",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.880941+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-2EFD622E",
+    "application_id": "APP-0055",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.881188+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-062A9F93",
+    "application_id": "APP-0098",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.881413+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-95BAB415",
+    "application_id": "APP-0091",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.881636+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-22E6A0F6",
+    "application_id": "APP-0063",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.881858+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-81431F6F",
+    "application_id": "APP-0026",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882081+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-A091EA36",
+    "application_id": "APP-0088",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882305+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-E8F94643",
+    "application_id": "APP-0032",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000177",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000178",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000179",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000180",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000181",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000182",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882524+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-2BBCA021",
+    "application_id": "APP-0032",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882524+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-24812F4F",
+    "application_id": "APP-0079",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882793+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-E6B5CC47",
+    "application_id": "APP-0079",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.882793+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-BD142633",
+    "application_id": "APP-0074",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.883044+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-E53C37EF",
+    "application_id": "APP-0074",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.883044+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-FE57227B",
+    "application_id": "APP-0097",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.883298+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-6FD578BF",
+    "application_id": "APP-0047",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.883565+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-C08F3559",
+    "application_id": "APP-0047",
+    "verification_run_id": null,
+    "category": "INCOME",
+    "deficiency_type": "THRESHOLD_FAILURE",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Reported income exceeds the configured policy threshold.",
+    "action_required": "Review income eligibility.",
+    "correction_guidance": "Provide a valid income certificate or correction if the submitted value is incorrect.",
+    "rerun_scope": "INCOME_POLICY_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-INC-001",
+    "rule_id": "PM-INC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "3, 5",
+        "source_section": "3.3. Income Criteria",
+        "source_reference": "3.3"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.883565+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-9B09AD9B",
+    "application_id": "APP-0020",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.884096+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-0403773C",
+    "application_id": "APP-0012",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.884532+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-EEF65BD5",
+    "application_id": "APP-0023",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.885017+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-74281831",
+    "application_id": "APP-0059",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.885438+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-50FBDF73",
+    "application_id": "APP-0043",
+    "verification_run_id": null,
+    "category": "DATE_OF_BIRTH",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in DATE_OF_BIRTH between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "DOB_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "DOB_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000243",
+        "field": "Date of Birth"
+      },
+      {
+        "document_id": "DOC-000246",
+        "field": "DOB"
+      },
+      {
+        "document_id": "DOC-000247",
+        "field": "Date of Birth"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.885864+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-9702FC83",
+    "application_id": "APP-0043",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.885864+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-1287679F",
+    "application_id": "APP-0056",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.886326+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F11EC6C8",
+    "application_id": "APP-0065",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.886750+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-861F7B05",
+    "application_id": "APP-0014",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.887139+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-F6694AEF",
+    "application_id": "APP-0033",
+    "verification_run_id": null,
+    "category": "IDENTITY",
+    "deficiency_type": "FIELD_MISMATCH",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Discrepancy found in IDENTITY between submitted documents.",
+    "action_required": "Verify the discrepancy.",
+    "correction_guidance": "Submit a corrected document or supporting clarification according to the applicable process.",
+    "rerun_scope": "IDENTITY_VALIDATION",
+    "source_type": "VALIDATION",
+    "source_id": "NAME_CONSISTENCY",
+    "rule_id": null,
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "document_id": "DOC-000183",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000184",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000185",
+        "field": "Applicant Name"
+      },
+      {
+        "document_id": "DOC-000186",
+        "field": "Name"
+      },
+      {
+        "document_id": "DOC-000187",
+        "field": "Student Name"
+      },
+      {
+        "document_id": "DOC-000188",
+        "field": "Applicant"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.887538+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  },
+  {
+    "deficiency_id": "DEF-7A88F44B",
+    "application_id": "APP-0033",
+    "verification_run_id": null,
+    "category": "DOCUMENT",
+    "deficiency_type": "MISSING_DOCUMENT",
+    "severity": "BLOCKING",
+    "status": "OPEN",
+    "responsible_party": "APPLICANT",
+    "message": "Required document is missing for DOCUMENT.",
+    "action_required": "Upload the required document.",
+    "correction_guidance": "Provide the missing document and resubmit the application.",
+    "rerun_scope": "REQUIRED_DOCUMENT_CHECK",
+    "source_type": "POLICY",
+    "source_id": "PM-DOC-001",
+    "rule_id": "PM-DOC-001",
+    "policy_version": "PM-2022",
+    "evidence_reference": [
+      {
+        "source_id": "SRC-PM-001",
+        "source_document": "post_matric_guidelines_2022.pdf",
+        "source_page": "12",
+        "source_section": "6. Documents required",
+        "source_reference": "6"
+      }
+    ],
+    "created_at": "2026-09-22T21:00:13.887538+00:00",
+    "machine_generated": true,
+    "officer_review_required": true
+  }
+]
