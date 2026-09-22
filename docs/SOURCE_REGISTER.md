@@ -4,18 +4,17 @@ This document tracks all official policy material used to construct the determin
 
 ## Sources
 
-### Source 001
-- **source_id:** SRC-PM-ST-2026-01
-- **title:** Post Matric Scholarship Scheme for ST Students - Guidelines
+### SRC-PM-001
+- **title:** POST MATRIC SCHOLARSHIP (CENTRALLY SPONSORED SCHEME) FOR THE STUDENTS BELONGING TO SCHEDULED TRIBE FOR STUDIES IN INDIA REGULATION GOVERNING THE AWARD OF SCHOLARSHIP
 - **publisher:** Ministry of Tribal Affairs (MoTA)
-- **official_url:** [To be added]
-- **access_date:** [To be added]
+- **official_url:** SOURCE URL VERIFICATION REQUIRED
+- **access_date:** 2026-09-22
 - **scheme:** POST_MATRIC
-- **academic_year:** 2026-2027
-- **applicable_sections:** Eligibility Criteria (Income, Category, Academic)
-- **rules_extracted:** [To be populated once verified]
-- **verification_status:** SOURCE VERIFICATION REQUIRED
-- **notes:** Need to confirm the exact income threshold and valid document list for the current academic year.
+- **academic_year:** APPLICABLE FROM 01-04-2022
+- **applicable_sections:** 1 to 15 (Pages 3-19)
+- **rules_extracted:** PM-ELIG-001 to PM-ELIG-007, PM-INC-001 to PM-INC-007, PM-INST-001, PM-INST-002, PM-VAL-001 to PM-VAL-004, PM-DOC-001, PM-DOC-002, PM-REN-001, PM-REN-002, PM-OTH-001
+- **verification_status:** VERIFIED (Local PDF Document)
+- **notes:** Extracted core eligibility, income, institution, document, and renewal rules.
 
 *(Add new sources as they are verified and integrated into the Policy Engine)*
 

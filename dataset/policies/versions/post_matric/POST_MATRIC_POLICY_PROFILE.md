@@ -1,0 +1,28 @@
+# Post-Matric Policy Source Profile
+
+- **Scheme name**: POST MATRIC SCHOLARSHIP (CENTRALLY SPONSORED SCHEME) FOR THE STUDENTS BELONGING TO SCHEDULED TRIBE FOR STUDIES IN INDIA
+- **Publisher**: MINISTRY OF TRIBAL AFFAIRS, NEW DELHI
+- **Official source document**: post_matric_guidelines_2022.pdf (Original: media_1790099399834.pdf)
+- **Applicable period**: APPLICABLE FROM 01-04-2022 (End date not explicitly stated in document body)
+- **Effective date**: 01-04-2022
+- **Source file path**: dataset/policies/official_sources/post_matric/guidelines/post_matric_guidelines_2022.pdf
+- **Document page count**: 19
+- **Major policy sections**: 
+  - 1. Introduction
+  - 2. Objective
+  - 3. Salient features of the Scheme
+  - 4. Empanelment of Institutions/universities/colleges within and outside states
+  - 5. Selection of candidates
+  - 6. Documents required
+  - 7. Duration and renewal of scholarship
+  - 8. Announcement and timeline of the scheme
+  - 9. Publicity & Inviting Application
+  - 10. Funding pattern of the scheme
+  - 11. Procedure for claiming and release of central assistance
+  - 12. Monitoring & Evaluation
+  - 13. Transitory provision for existing beneficiaries
+  - 14. Central and State PMU
+  - 15. Change in the provisions of the scheme
+- **Source status**: VERIFICATION_REQUIRED (Document establishes start date, but end date requires verification against broader ministry notifications).
+- **Known limitations**: Heavy reliance on State-level implementation (portals, fee fixation, empanelment).
+- **Verification-required items**: End date of policy period, exact ST certificate issuance authorities per state.
