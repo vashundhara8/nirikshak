@@ -1,0 +1,282 @@
+[
+    {
+        "deficiency_id": "DEF-0001",
+        "application_id": "APP-0021",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0002",
+        "application_id": "APP-0022",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0003",
+        "application_id": "APP-0023",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0004",
+        "application_id": "APP-0024",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0005",
+        "application_id": "APP-0025",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0006",
+        "application_id": "APP-0026",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0007",
+        "application_id": "APP-0027",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0008",
+        "application_id": "APP-0028",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0009",
+        "application_id": "APP-0029",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0010",
+        "application_id": "APP-0030",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0011",
+        "application_id": "APP-0071",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0012",
+        "application_id": "APP-0072",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0013",
+        "application_id": "APP-0073",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0014",
+        "application_id": "APP-0074",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0015",
+        "application_id": "APP-0075",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0016",
+        "application_id": "APP-0076",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0017",
+        "application_id": "APP-0077",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0018",
+        "application_id": "APP-0078",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0019",
+        "application_id": "APP-0079",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    },
+    {
+        "deficiency_id": "DEF-0020",
+        "application_id": "APP-0080",
+        "deficiency_type": "MISSING_DOCUMENT",
+        "severity": "HIGH",
+        "description": "Required document is missing",
+        "affected_document_ids": [],
+        "affected_fields": [],
+        "source_rule_ids": [
+            "PM-DOC-001"
+        ],
+        "expected_action": "REQUEST_CORRECTION",
+        "evidence_ids": []
+    }
+]

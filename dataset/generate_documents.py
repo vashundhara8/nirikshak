@@ -65,6 +65,10 @@ def create_synthetic_pdf(filepath, doc_id, app, doc_type, quality, defect_mods):
     income = app['income']['family_income_annum']
     category = "ST"  # Base expected
     
+    institution = app['institution']['institute_name']
+    course = app['course']['course_name']
+    academic_year = app.get('academic_year', "2026-2027")
+
     # Apply intentional defects from scenarios
     if 'NAME_MISMATCH' in defect_mods and doc_type == "MARKSHEET":
         name = name + " (Variant)"
@@ -76,6 +80,9 @@ def create_synthetic_pdf(filepath, doc_id, app, doc_type, quality, defect_mods):
     if 'INCOME_ISSUE' in defect_mods and doc_type == "INCOME_CERTIFICATE":
         # Keep the income from app which is already modified by scenario
         pass
+    if 'INSTITUTION_COURSE_ISSUE' in defect_mods and doc_type == "MARKSHEET":
+        institution = "XYZ University"
+        course = "Bachelor of Commerce"
         
     # Draw fields based on document type
     fields = []
@@ -110,6 +117,10 @@ def create_synthetic_pdf(filepath, doc_id, app, doc_type, quality, defect_mods):
     elif doc_type == "MARKSHEET":
         fields = [
             ("Student Name", name),
+            ("Date of Birth", dob),
+            ("Institution", institution),
+            ("Course / Programme", course),
+            ("Academic Year", academic_year),
             ("Examination", app['education']['last_qualified_exam']),
             ("Percentage", f"{app['education']['last_qualified_marks_percent']}%"),
             ("Result", "PASS")
@@ -125,7 +136,7 @@ def create_synthetic_pdf(filepath, doc_id, app, doc_type, quality, defect_mods):
         y -= 0.3 * inch
         
     c.save()
-    return [f[0] for f in fields]
+    return [{"field": f[0], "value": f[1]} for f in fields]
 
 for app in apps:
     app_id = app['application_id']
@@ -141,6 +152,8 @@ for app in apps:
     if "CATEGORY_ISSUE" in tags: defect_mods.append("CATEGORY_ISSUE")
     if any(t in tags for t in ["INCOME_ABOVE_LIMIT", "MULTIPLE_DEFICIENCIES"]): 
         defect_mods.append("INCOME_ISSUE")
+    if "INSTITUTION/COURSE/OTHER_SCHOLARSHIP" in tags:
+        defect_mods.append("INSTITUTION_COURSE_ISSUE")
         
     for doc in app['documents_expected']:
         doc_type = doc['document_type']

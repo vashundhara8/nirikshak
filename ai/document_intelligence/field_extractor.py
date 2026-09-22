@@ -35,6 +35,10 @@ class FieldExtractor:
 
         elif document_type == "MARKSHEET":
             fields["Student Name"] = get_match(r"Student Name:\s*(.+)")
+            fields["Date of Birth"] = get_match(r"Date of Birth:\s*(.+)")
+            fields["Institution"] = get_match(r"Institution:\s*(.+)")
+            fields["Course / Programme"] = get_match(r"Course / Programme:\s*(.+)")
+            fields["Academic Year"] = get_match(r"Academic Year:\s*(.+)")
             fields["Examination"] = get_match(r"Examination:\s*(.+)")
             fields["Percentage"] = get_match(r"Percentage:\s*(.+)")
             fields["Result"] = get_match(r"Result:\s*(.+)")

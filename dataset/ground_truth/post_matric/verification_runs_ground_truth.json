@@ -1,0 +1,502 @@
+[
+    {
+        "application_id": "APP-0001",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0002",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0003",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0004",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0005",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0006",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0007",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0008",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0009",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0010",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0011",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0012",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0013",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0014",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0015",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0016",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0017",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0018",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0019",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0020",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0021",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0022",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0023",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0024",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0025",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0026",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0027",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0028",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0029",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0030",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0031",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0032",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0033",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0034",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0035",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0036",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0037",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0038",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0039",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0040",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0041",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0042",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0043",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0044",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0045",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> deficiency -> correction -> re-verification",
+        "correction_opportunity_available": true
+    },
+    {
+        "application_id": "APP-0046",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0047",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0048",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0049",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0050",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0051",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0052",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0053",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0054",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0055",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0056",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0057",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0058",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0059",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0060",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0061",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0062",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0063",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0064",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0065",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0066",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0067",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0068",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0069",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0070",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0071",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0072",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0073",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0074",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0075",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0076",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0077",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0078",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0079",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0080",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0081",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0082",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0083",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0084",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0085",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0086",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0087",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0088",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0089",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0090",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0091",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> MANUAL_REVIEW_REQUIRED",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0092",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> MANUAL_REVIEW_REQUIRED",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0093",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> MANUAL_REVIEW_REQUIRED",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0094",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> MANUAL_REVIEW_REQUIRED",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0095",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> MANUAL_REVIEW_REQUIRED",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0096",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0097",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0098",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0099",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    },
+    {
+        "application_id": "APP-0100",
+        "expected_lifecycle": "INITIAL_SUBMISSION -> verification -> no deficiency",
+        "correction_opportunity_available": false
+    }
+]

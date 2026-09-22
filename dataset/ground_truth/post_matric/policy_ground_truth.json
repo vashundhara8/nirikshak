@@ -1,0 +1,1902 @@
+[
+    {
+        "application_id": "APP-0001",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 122097
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0002",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 76868
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0003",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 58331
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0004",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 110990
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0005",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 237700
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0006",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 204472
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0007",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 51703
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0008",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 139194
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0009",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 138236
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0010",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 75353
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0011",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 208263
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0012",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 170435
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0013",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 149230
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0014",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 214794
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0015",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 234699
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0016",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 109742
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0017",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 111024
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0018",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 168858
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0019",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 143132
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0020",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 233977
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0021",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 94862
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0022",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 149471
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0023",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 64663
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0024",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 155162
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0025",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 198682
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0026",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 180870
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0027",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 86603
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0028",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 162311
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0029",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 86262
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0030",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 62351
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0031",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 228384
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0032",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 150864
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0033",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 172696
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0034",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 53009
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0035",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 190763
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0036",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 139174
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0037",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 91460
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0038",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 239292
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0039",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 96832
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0040",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 128235
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0041",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 92349
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0042",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 178085
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0043",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 145153
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0044",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 113143
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0045",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 177399
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0046",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 460758
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0047",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 404127
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0048",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 370923
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0049",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 312730
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0050",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 226078
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0051",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 185679
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0052",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 0
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0053",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 0
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0054",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 249000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0055",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 249000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0056",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "OBC",
+            "family_income_annum": 58234
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0057",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "General",
+            "family_income_annum": 123001
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0058",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "General",
+            "family_income_annum": 84684
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0059",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "OBC",
+            "family_income_annum": 173987
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0060",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "OBC",
+            "family_income_annum": 222748
+        },
+        "expected_rule_status": "FAIL",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0061",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 172427
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0062",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 219392
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0063",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 138946
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0064",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 99862
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0065",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 98100
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0066",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 69761
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0067",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 194264
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0068",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 191711
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0069",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 111965
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0070",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 176185
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0071",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0072",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0073",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0074",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0075",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0076",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0077",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0078",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0079",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0080",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 300000
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0081",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 111657
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0082",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 199336
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0083",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 60418
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0084",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 203006
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0085",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 103545
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0086",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 153752
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0087",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 128642
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0088",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 69016
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0089",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 197585
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0090",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 105877
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0091",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 141490
+        },
+        "expected_rule_status": "MANUAL_REVIEW_REQUIRED",
+        "manual_review": true,
+        "manual_review_reason": "Central guideline does not establish sufficient information",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0092",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 146869
+        },
+        "expected_rule_status": "MANUAL_REVIEW_REQUIRED",
+        "manual_review": true,
+        "manual_review_reason": "Central guideline does not establish sufficient information",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0093",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 192401
+        },
+        "expected_rule_status": "MANUAL_REVIEW_REQUIRED",
+        "manual_review": true,
+        "manual_review_reason": "Central guideline does not establish sufficient information",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0094",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 221435
+        },
+        "expected_rule_status": "MANUAL_REVIEW_REQUIRED",
+        "manual_review": true,
+        "manual_review_reason": "Central guideline does not establish sufficient information",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0095",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 195385
+        },
+        "expected_rule_status": "MANUAL_REVIEW_REQUIRED",
+        "manual_review": true,
+        "manual_review_reason": "Central guideline does not establish sufficient information",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0096",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 77154
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0097",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 78058
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0098",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 208552
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0099",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 103371
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    },
+    {
+        "application_id": "APP-0100",
+        "policy_version": "PM-2022",
+        "applicable_rule_ids": [
+            "PM-ELIG-001",
+            "PM-INC-001",
+            "PM-INST-001"
+        ],
+        "rule_inputs": {
+            "category": "ST",
+            "family_income_annum": 115829
+        },
+        "expected_rule_status": "PASS",
+        "manual_review": false,
+        "manual_review_reason": "",
+        "policy_source_refs": [
+            "SRC-PM-001"
+        ]
+    }
+]
