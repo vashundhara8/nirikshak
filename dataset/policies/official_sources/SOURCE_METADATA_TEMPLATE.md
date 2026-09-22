@@ -1,0 +1,13 @@
+source_id:
+title:
+publisher:
+document_type:
+scheme:
+academic_year:
+document_date:
+effective_from:
+effective_to:
+official_url:
+local_filename:
+source_status:
+notes:
