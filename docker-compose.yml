@@ -1,22 +1,73 @@
 version: '3.8'
 
 services:
-  # Placeholder for PostgreSQL
-  # db:
-  #   image: postgres:15
-  #   environment:
-  #     POSTGRES_USER: mota
-  #     POSTGRES_PASSWORD: password
-  #     POSTGRES_DB: mota_db
+  postgres:
+    image: postgres:16-alpine
+    container_name: mota_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-mota}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: ${DB_NAME:-mota_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-mota} -d ${DB_NAME:-mota_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-  # Placeholder for Redis
-  # redis:
-  #   image: redis:7-alpine
+  redis:
+    image: redis:7-alpine
+    container_name: mota_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
-  # Placeholder for MinIO
-  # minio:
-  #   image: minio/minio
-  #   command: server /data --console-address ":9001"
+  minio:
+    image: minio/minio:latest
+    container_name: mota_minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-mota_admin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-mota_secret}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
-# DO NOT fully configure the application services yet.
-# The purpose is only to establish the infrastructure placeholder.
+  # Setup bucket automatically
+  minio-setup:
+    image: minio/mc:latest
+    container_name: mota_minio_setup
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER:-mota_admin} ${MINIO_ROOT_PASSWORD:-mota_secret};
+      /usr/bin/mc mb myminio/${S3_BUCKET_NAME:-mota-documents} --ignore-existing;
+      echo 'MinIO Bucket initialization complete.';
+      "
+
+volumes:
+  postgres_data:
+  redis_data:
+  minio_data:

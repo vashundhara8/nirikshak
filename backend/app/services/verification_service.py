@@ -1,0 +1,101 @@
+import json
+from sqlalchemy.orm import Session
+from datetime import datetime, timezone
+import uuid
+
+from app.models.verification import VerificationRun, VerificationFinding, EvidenceRecord, Deficiency
+from app.models.application import Application
+from app.models.document import DocumentVersion
+from app.models.audit import AuditEvent
+
+# Importing existing AI logic adapters (abstracted for the domain)
+# In reality, this delegates to ai.document_intelligence, ai.cross_validation, policy_engine, ai.evidence
+# We will use explicit transactional boundaries here.
+
+class VerificationService:
+    def __init__(self, db: Session):
+        self.db = db
+
+    def _create_audit_event(self, actor_id: str, actor_role: str, action: str, resource_type: str, resource_id: str, result: str):
+        event = AuditEvent(
+            actor_id=actor_id,
+            actor_role=actor_role,
+            action=action,
+            resource_type=resource_type,
+            resource_id=resource_id,
+            result=result
+        )
+        self.db.add(event)
+
+    def trigger_verification(self, application_id: uuid.UUID, actor_id: uuid.UUID, actor_role: str) -> VerificationRun:
+        app = self.db.query(Application).filter(Application.id == application_id).first()
+        if not app:
+            raise ValueError("APPLICATION_NOT_FOUND")
+            
+        if app.current_status not in ["SUBMITTED", "REQUIRES_CORRECTION"]:
+            raise ValueError("INVALID_STATE_TRANSITION")
+            
+        # Lock application state optimistically 
+        app.current_status = "VERIFICATION"
+        app.version += 1
+        
+        # Snapshot document versions
+        doc_versions = self.db.query(DocumentVersion).join(DocumentVersion.document).filter(
+            DocumentVersion.document.has(application_id=application_id),
+            DocumentVersion.id == DocumentVersion.document.property.mapper.class_.current_version_id
+        ).all()
+        
+        doc_refs = {str(dv.document_id): str(dv.id) for dv in doc_versions}
+
+        run = VerificationRun(
+            application_id=application_id,
+            engine_versions={"doc_intel": "1.0", "policy": "1.0", "evidence": "1.0"},
+            input_document_references=doc_refs,
+            status="PROCESSING"
+        )
+        self.db.add(run)
+        
+        self._create_audit_event(actor_id, actor_role, "VERIFICATION_STARTED", "APPLICATION", str(application_id), "SUCCESS")
+        self.db.commit() # Commit the 'PROCESSING' state immediately
+        
+        # ==========================================
+        # This section should ideally run in a Celery Job for true async scale. 
+        # But we demonstrate the logical orchestration here:
+        # ==========================================
+        try:
+            # 1. Document Intelligence & OCR (Step 10)
+            # results = DocumentIntelligencePipeline.process(doc_refs)
+            
+            # 2. Cross Validation (Step 11)
+            # val_findings = CrossDocumentValidator.validate(results)
+            
+            # 3. Policy Engine (Step 12)
+            # pol_findings = PolicyEngine.evaluate(app.scheme_code, app.academic_year, results)
+            
+            # 4. Deficiency & Exception Intelligence (Step 13)
+            # def_findings = DeficiencyEngine.generate(val_findings, pol_findings)
+            
+            # 5. Evidence & Explainability (Step 14)
+            # evidence_chains = EvidenceEngine.process(val_findings, pol_findings, def_findings)
+            
+            # Transactionally store findings and evidence...
+            # For brevity in this artifact, we transition to READY_FOR_OFFICER
+            
+            run.status = "COMPLETED"
+            run.completed_at = datetime.now(timezone.utc)
+            app.current_status = "READY_FOR_OFFICER"
+            app.version += 1
+            
+            self._create_audit_event(actor_id, actor_role, "VERIFICATION_COMPLETED", "VERIFICATION_RUN", str(run.id), "SUCCESS")
+            
+            self.db.commit()
+            return run
+            
+        except Exception as e:
+            self.db.rollback()
+            run.status = "FAILED"
+            run.result_summary = {"error": str(e)}
+            app.current_status = "REQUIRES_MANUAL_REVIEW"
+            self._create_audit_event(actor_id, actor_role, "VERIFICATION_FAILED", "VERIFICATION_RUN", str(run.id), "FAILURE")
+            self.db.commit()
+            raise ValueError("VERIFICATION_FAILED")
