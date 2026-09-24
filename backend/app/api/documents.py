@@ -9,6 +9,8 @@ from app.models.document import Document, DocumentVersion
 from app.api.dependencies import get_current_user, RoleChecker
 from app.core.storage import get_storage_provider, DocumentStorage
 from app.core.scanner import get_security_scanner, calculate_checksum
+from app.models.verification import Deficiency
+from datetime import datetime, timezone
 
 router = APIRouter()
 
@@ -75,6 +77,76 @@ async def upload_document(
     db.commit()
     
     return {"document_id": str(doc.id), "version_id": str(doc_version.id)}
+
+@router.post("/applications/{application_id}/resubmit", status_code=status.HTTP_201_CREATED)
+async def resubmit_document(
+    application_id: uuid.UUID,
+    deficiency_id: uuid.UUID = Form(...),
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    user: User = Depends(RoleChecker(["APPLICANT"])),
+    storage: DocumentStorage = Depends(get_storage_provider)
+):
+    app = db.query(Application).filter(Application.id == application_id).first()
+    if not app or app.applicant_id != user.id:
+        raise HTTPException(status_code=404, detail="RESOURCE_NOT_FOUND")
+        
+    deficiency = db.query(Deficiency).filter(Deficiency.id == deficiency_id, Deficiency.application_id == application_id).first()
+    if not deficiency or deficiency.status != "OPEN":
+        raise HTTPException(status_code=400, detail="INVALID_DEFICIENCY")
+        
+    # Security Scan
+    file_bytes = await file.read()
+    scanner = get_security_scanner()
+    is_safe, reason = scanner.scan_document(file_bytes, file.filename)
+    if not is_safe:
+        raise HTTPException(status_code=400, detail=reason)
+        
+    checksum = calculate_checksum(file_bytes)
+    storage_key = storage.save_document(file_bytes, file.filename)
+    
+    # Identify the related document (assuming deficiency_type indicates document type, e.g., 'DOCUMENT_MISSING' or 'DOCUMENT_INVALID')
+    # Actually, the deficiency should specify the document_type or the document_id in details. 
+    # For now, let's just create a generic document or we can accept document_type as Form
+    # Let's require document_type
+    document_type = "RESUBMITTED_DOC" # Or we can take it from Form
+    
+    doc = db.query(Document).filter(
+        Document.application_id == application_id,
+        Document.document_type == deficiency.deficiency_type # Assuming deficiency_type holds the doc type, or we could just use a generic resubmission type
+    ).first()
+    
+    if not doc:
+        doc = Document(application_id=application_id, document_type=deficiency.deficiency_type)
+        db.add(doc)
+        db.flush()
+        
+    version_count = db.query(DocumentVersion).filter(DocumentVersion.document_id == doc.id).count()
+    
+    doc_version = DocumentVersion(
+        document_id=doc.id,
+        version_number=version_count + 1,
+        storage_key=storage_key,
+        file_hash=checksum,
+        mime_type=file.content_type or "application/octet-stream",
+        file_size=len(file_bytes),
+        uploaded_by=user.id,
+        status="UPLOADED"
+    )
+    db.add(doc_version)
+    db.flush()
+    doc.current_version_id = doc_version.id
+    
+    deficiency.status = "CORRECTION_SUBMITTED"
+    deficiency.resolved_at = datetime.now(timezone.utc)
+    deficiency.resolution_notes = f"Resubmitted via document version {doc_version.id}"
+    
+    app.current_status = "RESUBMISSION_RECEIVED"
+    
+    # Audit log should be created here ideally
+    db.commit()
+    
+    return {"document_id": str(doc.id), "version_id": str(doc_version.id), "deficiency_status": deficiency.status}
 
 @router.get("/documents/{document_version_id}/download")
 def download_document(

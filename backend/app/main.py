@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import logging
 
-from app.api import auth, applications, documents, verification, evidence, audit
+from app.api import auth, applications, documents, verification, evidence, audit, officer
 from app.db.session import get_db
 from app.core.config import settings
 
@@ -41,6 +41,7 @@ app.include_router(documents.router, prefix="/api/v1", tags=["Documents"])
 app.include_router(verification.router, prefix="/api/v1", tags=["Verification"])
 app.include_router(evidence.router, prefix="/api/v1", tags=["Evidence & Deficiencies"])
 app.include_router(audit.router, prefix="/api/v1/audit", tags=["Audit"])
+app.include_router(officer.router, prefix="/api/v1/officer", tags=["Officer"])
 
 @app.get("/health")
 def health_check():

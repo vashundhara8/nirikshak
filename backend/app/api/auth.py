@@ -13,12 +13,39 @@ class LoginRequest(BaseModel):
     email: str
     password: str
 
+class RegisterRequest(BaseModel):
+    email: str
+    password: str
+
 class TokenResponse(BaseModel):
     access_token: str
     refresh_token: str
     token_type: str = "bearer"
 
 from app.api.dependencies import RateLimiter
+from app.models.identity import Role
+
+@router.post("/register", status_code=status.HTTP_201_CREATED)
+def register(request: RegisterRequest, db: Session = Depends(get_db)):
+    existing_user = db.query(User).filter(User.email == request.email).first()
+    if existing_user:
+        raise HTTPException(status_code=409, detail="EMAIL_ALREADY_REGISTERED")
+    
+    applicant_role = db.query(Role).filter(Role.name == "APPLICANT").first()
+    if not applicant_role:
+        applicant_role = Role(name="APPLICANT", description="Applicant")
+        db.add(applicant_role)
+        db.flush()
+        
+    new_user = User(
+        email=request.email,
+        hashed_password=get_password_hash(request.password)
+    )
+    new_user.roles.append(applicant_role)
+    db.add(new_user)
+    db.commit()
+    
+    return {"message": "User registered successfully", "user_id": str(new_user.id)}
 
 @router.post("/login", response_model=TokenResponse, dependencies=[Depends(RateLimiter(requests=5, window=60))])
 def login(request: LoginRequest, db: Session = Depends(get_db)):
