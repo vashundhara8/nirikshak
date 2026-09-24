@@ -36,6 +36,13 @@ class Settings(BaseSettings):
     MSG91_WIDGET_TOKEN: Optional[str] = None
     MSG91_AUTH_KEY: Optional[str] = None
 
+    # Ollama
+    OLLAMA_ENABLED: bool = False
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    OLLAMA_TEXT_MODEL: str = "llama3:latest"
+    OLLAMA_VISION_MODEL: Optional[str] = None
+    OLLAMA_TIMEOUT: int = 300
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

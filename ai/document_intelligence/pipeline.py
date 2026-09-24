@@ -45,14 +45,39 @@ class DocumentPipeline:
 
         fields_dict = {}
         if doc_type != "UNKNOWN" and raw_text.strip():
-            raw_fields = self.field_extractor.extract(doc_type, raw_text)
+            # Check if Ollama is available and configured
+            from ai.providers.ollama_provider import OllamaProvider
+            from .ollama_extractor import OllamaExtractor
+            
+            ollama = OllamaProvider()
+            raw_fields = {}
+            extraction_source = "RULE_BASELINE"
+            metadata = {}
+            
+            # Optional Ollama Assistance
+            if ollama.is_available():
+                ollama_ext = OllamaExtractor(ollama)
+                ollama_res = ollama_ext.extract(doc_type, raw_text)
+                
+                if ollama_res.get("status") == "SUCCESS":
+                    raw_fields = ollama_res.get("fields", {})
+                    extraction_source = "OLLAMA_ASSISTED"
+                    metadata = ollama_res.get("metadata", {})
+                    notes.append("Extraction assisted by Ollama.")
+                else:
+                    raw_fields = self.field_extractor.extract(doc_type, raw_text)
+                    notes.append("Ollama extraction failed. Fallback to rule baseline.")
+            else:
+                raw_fields = self.field_extractor.extract(doc_type, raw_text)
+
             for k, v in raw_fields.items():
                 norm = self.normalizer.normalize(v)
                 fields_dict[k] = ExtractionField(
                     field_name=k,
                     raw_value=v,
                     normalized_value=norm,
-                    extraction_method="RULE_BASELINE"
+                    extraction_method=extraction_source,
+                    metadata=metadata
                 )
 
         return DocumentExtractionResult(

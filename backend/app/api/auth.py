@@ -18,7 +18,9 @@ class TokenResponse(BaseModel):
     refresh_token: str
     token_type: str = "bearer"
 
-@router.post("/login", response_model=TokenResponse)
+from app.api.dependencies import RateLimiter
+
+@router.post("/login", response_model=TokenResponse, dependencies=[Depends(RateLimiter(requests=5, window=60))])
 def login(request: LoginRequest, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == request.email).first()
     if not user or not verify_password(request.password, user.hashed_password):

@@ -9,6 +9,7 @@ class ExtractionField(BaseModel):
     confidence: Optional[float] = None
     source_location: Optional[str] = None
     status: str = "EXTRACTED"
+    metadata: Dict[str, Any] = {}
 
 class DocumentExtractionResult(BaseModel):
     document_id: str

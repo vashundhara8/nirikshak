@@ -8,7 +8,7 @@ class OCREngine:
         try:
             from paddleocr import PaddleOCR
             # use_angle_cls=True to handle rotations properly, lang='en'
-            self.engine = PaddleOCR(use_angle_cls=True, lang='en', show_log=False)
+            self.engine = PaddleOCR(use_angle_cls=True, lang='en', enable_mkldnn=False)
             self.available = True
         except ImportError:
             self.available = False
@@ -28,7 +28,7 @@ class OCREngine:
                 img_path = filepath + "_temp.png"
                 pix.save(img_path)
                 
-                result = self.engine.ocr(img_path, cls=True)
+                result = self.engine.ocr(img_path)
                 if result and result[0]:
                     for line in result[0]:
                         text = line[1][0]

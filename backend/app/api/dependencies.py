@@ -39,3 +39,42 @@ class RoleChecker:
                 detail="Operation not permitted"
             )
         return user
+
+import time
+import redis
+from fastapi import Request
+
+redis_client = None
+
+def get_redis_client():
+    global redis_client
+    if redis_client is None and settings.REDIS_URL:
+        redis_client = redis.from_url(str(settings.REDIS_URL))
+    return redis_client
+
+class RateLimiter:
+    def __init__(self, requests: int, window: int):
+        self.requests = requests
+        self.window = window
+
+    def __call__(self, request: Request):
+        if getattr(settings, "APP_ENV", "") == "testing":
+            return True
+            
+        client = get_redis_client()
+        if not client:
+            return True
+            
+        ip = request.client.host if request.client else "unknown"
+        key = f"rate_limit:{request.url.path}:{ip}"
+        
+        current = client.get(key)
+        if current and int(current) >= self.requests:
+            raise HTTPException(status_code=429, detail="Too Many Requests")
+            
+        if not current:
+            client.set(key, 1, ex=self.window)
+        else:
+            client.incr(key)
+            
+        return True

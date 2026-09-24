@@ -38,7 +38,7 @@ def test_health_ready():
     r = client.get("/health")
     assert r.status_code == 200
     r = client.get("/ready")
-    assert r.status_code == 503  # Redis missing
+    assert r.status_code == 200  # Redis is now available
 
 def test_auth_registration_login(db_session):
     email = f"applicant_{uuid.uuid4()}@example.com"
@@ -78,7 +78,6 @@ def test_auth_registration_login(db_session):
     user = db_session.query(User).filter_by(email=email).first()
     assert user is not None
     assert any(r.name == "APPLICANT" for r in user.roles)
-    return access_token, email
 
 def test_rbac_and_resource_authorization(db_session):
     # Register Applicant A

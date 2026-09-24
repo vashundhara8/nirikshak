@@ -59,43 +59,30 @@ class VerificationService:
         self.db.commit() # Commit the 'PROCESSING' state immediately
         
         # ==========================================
-        # This section should ideally run in a Celery Job for true async scale. 
-        # But we demonstrate the logical orchestration here:
+        # Dispatch to Celery for async processing
         # ==========================================
-        try:
-            # 1. Document Intelligence & OCR (Step 10)
-            # results = DocumentIntelligencePipeline.process(doc_refs)
+        from app.core.celery_app import run_verification_task
+        run_verification_task.delay(str(run.id), str(actor_id), actor_role)
+        
+        return run
+    def complete_verification(self, run_id: uuid.UUID, actor_id: str, actor_role: str, success: bool, error: str = None):
+        run = self.db.query(VerificationRun).filter(VerificationRun.id == run_id).first()
+        if not run:
+            return
             
-            # 2. Cross Validation (Step 11)
-            # val_findings = CrossDocumentValidator.validate(results)
-            
-            # 3. Policy Engine (Step 12)
-            # pol_findings = PolicyEngine.evaluate(app.scheme_code, app.academic_year, results)
-            
-            # 4. Deficiency & Exception Intelligence (Step 13)
-            # def_findings = DeficiencyEngine.generate(val_findings, pol_findings)
-            
-            # 5. Evidence & Explainability (Step 14)
-            # evidence_chains = EvidenceEngine.process(val_findings, pol_findings, def_findings)
-            
-            # Transactionally store findings and evidence...
-            # For brevity in this artifact, we transition to READY_FOR_OFFICER
-            
+        app = run.application
+        
+        if success:
             run.status = "COMPLETED"
             run.completed_at = datetime.now(timezone.utc)
             app.current_status = "READY_FOR_OFFICER"
             app.version += 1
-            
             self._create_audit_event(actor_id, actor_role, "VERIFICATION_COMPLETED", "VERIFICATION_RUN", str(run.id), "SUCCESS")
-            
-            self.db.commit()
-            return run
-            
-        except Exception as e:
-            self.db.rollback()
+        else:
             run.status = "FAILED"
-            run.result_summary = {"error": str(e)}
+            run.result_summary = {"error": error}
             app.current_status = "REQUIRES_MANUAL_REVIEW"
+            app.version += 1
             self._create_audit_event(actor_id, actor_role, "VERIFICATION_FAILED", "VERIFICATION_RUN", str(run.id), "FAILURE")
-            self.db.commit()
-            raise ValueError("VERIFICATION_FAILED")
+            
+        self.db.commit()
