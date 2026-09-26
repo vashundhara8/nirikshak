@@ -77,6 +77,17 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
             <h1 className="text-xl font-bold text-slate-900">Application: {app.application_id.substring(0,8)}...</h1>
             <p className="text-sm text-slate-500">{app.scheme_code} • {app.academic_year}</p>
           </div>
+          
+          <div className="flex-1 text-center hidden md:block">
+            <span className="inline-flex items-center space-x-2 bg-slate-900 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-wider">
+              <span className="text-teal-400">AI ASSISTS</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-gold-400">RULES GOVERN</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-white">OFFICER DECIDES</span>
+            </span>
+          </div>
+
           <div className="text-right">
             <span className="px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-sm font-bold border border-slate-200">
               {app.status}
@@ -87,35 +98,23 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-0">
         
-        {/* PANEL 1: Documents */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col overflow-hidden">
-          <div className="p-4 border-b border-slate-200 bg-slate-50">
-            <h2 className="font-bold text-slate-900 flex items-center"><FileText className="mr-2" size={18}/> Documents</h2>
+        {/* LEFT COLUMN: Metadata & Findings */}
+        <div className="lg:col-span-1 space-y-6 overflow-y-auto">
+          {/* Metadata */}
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+            <div className="p-4 border-b border-slate-200 bg-slate-50">
+              <h2 className="font-bold text-slate-900">Applicant Declared Data</h2>
+            </div>
+            <div className="p-4 space-y-3 text-sm">
+              <div className="flex justify-between"><span className="text-slate-500">Name:</span><span className="font-medium">{app.applicant_profile?.applicant?.name || 'N/A'}</span></div>
+              <div className="flex justify-between"><span className="text-slate-500">DOB:</span><span className="font-medium">{app.applicant_profile?.applicant?.dob || 'N/A'}</span></div>
+              <div className="flex justify-between"><span className="text-slate-500">Category:</span><span className="font-medium">{app.applicant_profile?.demographic?.category || 'N/A'}</span></div>
+              <div className="flex justify-between"><span className="text-slate-500">Income:</span><span className="font-medium">{app.applicant_profile?.demographic?.annual_family_income || 'N/A'}</span></div>
+              <div className="flex justify-between"><span className="text-slate-500">Institution:</span><span className="font-medium">{app.applicant_profile?.academic?.institution_name || 'N/A'}</span></div>
+            </div>
           </div>
-          <div className="p-4 overflow-y-auto flex-1 space-y-4">
-            {app.documents?.map((doc: any) => (
-              <div key={doc.document_id} className="p-3 border border-slate-200 rounded bg-slate-50">
-                <div className="flex justify-between items-start mb-2">
-                  <span className="font-medium text-sm text-slate-900">{doc.document_type}</span>
-                  <span className="text-xs text-slate-500 bg-slate-200 px-1.5 py-0.5 rounded">v{doc.versions?.[doc.versions.length - 1]?.version_number || 1}</span>
-                </div>
-                <a 
-                  href={`${process.env.NEXT_PUBLIC_API_BASE_URL}/documents/${doc.document_id}/download`} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="text-xs text-teal-700 hover:underline flex items-center"
-                >
-                  <Search size={12} className="mr-1"/> View Document
-                </a>
-              </div>
-            ))}
-            {(!app.documents || app.documents.length === 0) && (
-              <p className="text-sm text-slate-500">No documents submitted.</p>
-            )}
-          </div>
-        </div>
 
-        {/* PANEL 2: Verification Findings */}
+          {/* PANEL 2: Verification Findings */}
         <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col overflow-hidden">
           <div className="p-4 border-b border-slate-200 bg-slate-50">
             <h2 className="font-bold text-slate-900 flex items-center"><CheckCircle className="mr-2" size={18}/> Policy Findings</h2>
@@ -155,6 +154,29 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
             ))}
           </div>
         </div>
+
+        {/* RIGHT COLUMN: Document Viewer & Decision */}
+        <div className="lg:col-span-2 space-y-6 flex flex-col">
+          {/* Document Viewer */}
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex-1 flex flex-col overflow-hidden min-h-[400px]">
+            <div className="p-4 border-b border-slate-200 bg-slate-50 flex space-x-4 overflow-x-auto">
+              <span className="font-bold text-slate-900 flex items-center mr-4"><FileText className="mr-2" size={18}/> Documents</span>
+              {app.documents?.map((doc: any) => (
+                <a 
+                  key={doc.document_id}
+                  href={`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000/api/v1'}/documents/${doc.versions?.[doc.versions.length - 1]?.version_id}/download`} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="px-3 py-1.5 bg-white border border-slate-300 rounded text-sm text-slate-700 hover:bg-slate-50 whitespace-nowrap"
+                >
+                  {doc.document_type} (v{doc.versions?.[doc.versions.length - 1]?.version_number || 1})
+                </a>
+              ))}
+            </div>
+            <div className="flex-1 bg-slate-100 flex items-center justify-center text-slate-400 border-2 border-dashed border-slate-300 m-4 rounded">
+              <p>Select a document above to view (Opens in new tab/viewer)</p>
+            </div>
+          </div>
 
         {/* PANEL 3: Officer Decision */}
         <div className="bg-slate-900 rounded-lg border border-slate-800 shadow-sm flex flex-col overflow-hidden text-white">

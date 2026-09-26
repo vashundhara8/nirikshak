@@ -198,10 +198,16 @@ export default function ApplicationDetailPage({ params }: { params: Promise<{ id
                 <li key={doc.document_id} className="flex justify-between items-center p-3 bg-slate-50 rounded border border-slate-100">
                   <div>
                     <p className="text-sm font-medium text-slate-800">{doc.document_type}</p>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-slate-500 mt-1">
                       v{doc.versions?.[doc.versions.length - 1]?.version_number || 1} &bull;{" "}
                       {doc.versions?.[doc.versions.length - 1]?.status || "UPLOADED"}
                     </p>
+                    {doc.versions?.[doc.versions.length - 1]?.file_hash && (
+                      <div className="mt-2 text-[10px] text-slate-400 font-mono break-all">
+                        <p>File: {doc.versions?.[doc.versions.length - 1]?.storage_key.split('/').pop()}</p>
+                        <p>SHA256: {doc.versions?.[doc.versions.length - 1]?.file_hash}</p>
+                      </div>
+                    )}
                   </div>
                 </li>
               ))}

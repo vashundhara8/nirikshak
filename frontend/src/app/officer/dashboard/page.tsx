@@ -42,22 +42,56 @@ export default function OfficerDashboard() {
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-        <h1 className="text-2xl font-bold text-slate-900">Verification Workspace</h1>
-        
-        <div className="flex items-center space-x-2 bg-white rounded-md border border-slate-300 p-1">
-          <Filter className="text-slate-400 ml-2" size={16} />
-          <select 
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="p-1.5 text-sm outline-none bg-transparent font-medium text-slate-700"
-          >
-            <option value="REQUIRES_MANUAL_REVIEW">Requires Review</option>
-            <option value="READY_FOR_OFFICER">Ready for Officer</option>
-            <option value="SUBMITTED">Submitted (Queue)</option>
-            <option value="RESUBMISSION_RECEIVED">Resubmission Received</option>
-            <option value="ALL">All Applications</option>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: "Total Applications", value: queue.length || "N/A" },
+          { label: "Pending OCR", value: "N/A" },
+          { label: "Pending Review", value: queue.filter(a => a.status === 'REQUIRES_MANUAL_REVIEW').length || "N/A" },
+          { label: "Anomaly Flags", value: "N/A" }
+        ].map((kpi, i) => (
+          <div key={i} className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+            <span className="text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1 text-center">{kpi.label}</span>
+            <span className="text-2xl font-bold text-slate-900">{kpi.value}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row flex-wrap gap-4 items-end">
+        <div className="flex-1 min-w-[200px]">
+          <label className="block text-xs font-medium text-slate-700 mb-1">Status</label>
+          <div className="flex items-center space-x-2 bg-white rounded-md border border-slate-300 p-1">
+            <Filter className="text-slate-400 ml-2" size={16} />
+            <select 
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value)}
+              className="w-full p-1 text-sm outline-none bg-transparent font-medium text-slate-700"
+            >
+              <option value="REQUIRES_MANUAL_REVIEW">Requires Review</option>
+              <option value="READY_FOR_OFFICER">Ready for Officer</option>
+              <option value="SUBMITTED">Submitted (Queue)</option>
+              <option value="RESUBMISSION_RECEIVED">Resubmission Received</option>
+              <option value="ALL">All Applications</option>
+            </select>
+          </div>
+        </div>
+        <div className="flex-1 min-w-[200px]">
+          <label className="block text-xs font-medium text-slate-700 mb-1">Scheme</label>
+          <select className="w-full p-2 border border-slate-300 rounded-md text-sm outline-none text-slate-700" disabled>
+            <option>All Schemes</option>
           </select>
+        </div>
+        <div className="flex-1 min-w-[200px]">
+          <label className="block text-xs font-medium text-slate-700 mb-1">District</label>
+          <select className="w-full p-2 border border-slate-300 rounded-md text-sm outline-none text-slate-700" disabled>
+            <option>All Districts</option>
+          </select>
+        </div>
+        <div className="flex-1 min-w-[200px]">
+          <label className="block text-xs font-medium text-slate-700 mb-1">App ID / Name</label>
+          <div className="relative">
+            <Search className="absolute left-2 top-2 text-slate-400" size={16} />
+            <input type="text" placeholder="Search..." className="w-full pl-8 p-2 border border-slate-300 rounded-md text-sm outline-none" disabled />
+          </div>
         </div>
       </div>
 

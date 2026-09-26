@@ -30,8 +30,11 @@ async def upload_document(
     if "APPLICANT" in [r.name for r in user.roles] and app.applicant_id != user.id:
         raise HTTPException(status_code=403, detail="AUTHORIZATION_DENIED")
 
-    file_bytes = await file.read()
-    
+    MAX_FILE_SIZE = 10 * 1024 * 1024 # 10MB
+    file_bytes = await file.read(MAX_FILE_SIZE + 1)
+    if len(file_bytes) > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail="DOCUMENT_TOO_LARGE")
+
     # 1. Security Scan
     scanner = get_security_scanner()
     is_safe, reason = scanner.scan_document(file_bytes, file.filename)
@@ -96,7 +99,11 @@ async def resubmit_document(
         raise HTTPException(status_code=400, detail="INVALID_DEFICIENCY")
         
     # Security Scan
-    file_bytes = await file.read()
+    MAX_FILE_SIZE = 10 * 1024 * 1024 # 10MB
+    file_bytes = await file.read(MAX_FILE_SIZE + 1)
+    if len(file_bytes) > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail="DOCUMENT_TOO_LARGE")
+        
     scanner = get_security_scanner()
     is_safe, reason = scanner.scan_document(file_bytes, file.filename)
     if not is_safe:
@@ -160,6 +167,18 @@ def download_document(
     # Strict Authorization
     if "APPLICANT" in user_roles and app.applicant_id != user.id:
         raise HTTPException(status_code=403, detail="AUTHORIZATION_DENIED")
+    elif "APPLICANT" not in user_roles and not any(r in user_roles for r in ["INSTITUTE_OFFICER", "DISTRICT_OFFICER", "STATE_OFFICER"]):
+        raise HTTPException(status_code=403, detail="AUTHORIZATION_DENIED")
+        
+    # Audit access
+    from app.models.document import DocumentAccess
+    access_record = DocumentAccess(
+        document_version_id=dv.id,
+        user_id=user.id,
+        reason="Presigned URL generation"
+    )
+    db.add(access_record)
+    db.commit()
         
     url = storage.get_signed_url(dv.storage_key, expires_in_sec=300)
     return {"signed_url": url}
