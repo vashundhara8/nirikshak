@@ -58,8 +58,8 @@ def test_auth_registration_login(db_session):
     db_session.commit()
     
     # Login
-    r = client.post("/api/v1/auth/login", json={
-        "email": email,
+    r = client.post("/api/v1/auth/login", data={
+        "username": email,
         "password": pwd
     })
     assert r.status_code == 200
@@ -68,8 +68,8 @@ def test_auth_registration_login(db_session):
     access_token = token_data["access_token"]
     
     # Wrong password
-    r = client.post("/api/v1/auth/login", json={
-        "email": email,
+    r = client.post("/api/v1/auth/login", data={
+        "username": email,
         "password": "WrongPassword!"
     })
     assert r.status_code == 401
@@ -88,7 +88,7 @@ def test_rbac_and_resource_authorization(db_session):
     db_session.add(user_a)
     db_session.commit()
     
-    token_a = client.post("/api/v1/auth/login", json={"email": email_a, "password": "Pwd"}).json()["access_token"]
+    token_a = client.post("/api/v1/auth/login", data={"username": email_a, "password": "Pwd"}).json()["access_token"]
     
     # Register Applicant B
     email_b = f"applicant_b_{uuid.uuid4()}@example.com"
@@ -97,7 +97,7 @@ def test_rbac_and_resource_authorization(db_session):
     db_session.add(user_b)
     db_session.commit()
     
-    token_b = client.post("/api/v1/auth/login", json={"email": email_b, "password": "Pwd"}).json()["access_token"]
+    token_b = client.post("/api/v1/auth/login", data={"username": email_b, "password": "Pwd"}).json()["access_token"]
     
     # Create Application as A
     r = client.post("/api/v1/applications/", headers={"Authorization": f"Bearer {token_a}"}, json={

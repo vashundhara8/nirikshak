@@ -34,7 +34,8 @@ def test_temp_file_cleaned_up_on_ocr_exception(tmp_path):
         importlib.reload(ocr_mod)
 
         engine = ocr_mod.OCREngine()
-        engine.available = True
+        engine._initialized = True   # skip lazy init; we provide the engine manually
+        engine._available = True
         engine.engine = FakePaddleOCR()
 
         # Create a minimal fake PDF that fitz can open
@@ -73,7 +74,8 @@ def test_temp_file_cleaned_up_on_success(tmp_path):
         importlib.reload(ocr_mod)
 
         engine = ocr_mod.OCREngine()
-        engine.available = True
+        engine._initialized = True   # skip lazy init; we provide the engine manually
+        engine._available = True
         engine.engine = FakePaddleOCRSuccess()
 
         import fitz

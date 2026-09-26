@@ -19,7 +19,7 @@ client = TestClient(app)
 
 # Helper functions
 def get_auth_token(email: str, password: str = "testpass123"):
-    response = client.post("/api/v1/auth/login", json={"email": email, "password": password})
+    response = client.post("/api/v1/auth/login", data={"username": email, "password": password})
     assert response.status_code == 200, f"Login failed: {response.text}"
     return response.json()["access_token"]
 

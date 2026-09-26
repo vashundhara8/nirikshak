@@ -7,12 +7,13 @@ import json
 
 @pytest.fixture
 def mock_settings():
-    with patch("ai.providers.ollama_provider.settings") as mock_set:
-        mock_set.OLLAMA_ENABLED = True
-        mock_set.OLLAMA_BASE_URL = "http://localhost:11434"
-        mock_set.OLLAMA_TEXT_MODEL = "llama3:latest"
-        mock_set.OLLAMA_TIMEOUT = 5
-        yield mock_set
+    with patch.dict("os.environ", {
+        "OLLAMA_ENABLED": "true",
+        "OLLAMA_BASE_URL": "http://localhost:11434",
+        "OLLAMA_TEXT_MODEL": "llama3:latest",
+        "OLLAMA_TIMEOUT": "5"
+    }):
+        yield
 
 @pytest.fixture
 def provider(mock_settings):
@@ -23,8 +24,7 @@ def extractor(provider):
     return OllamaExtractor(provider)
 
 def test_ollama_disabled():
-    with patch("ai.providers.ollama_provider.settings") as mock_set:
-        mock_set.OLLAMA_ENABLED = False
+    with patch.dict("os.environ", {"OLLAMA_ENABLED": "false"}):
         p = OllamaProvider()
         assert not p.is_available()
         res = p.generate("test")
