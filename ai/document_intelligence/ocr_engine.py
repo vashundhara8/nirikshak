@@ -19,7 +19,7 @@ class OCREngine:
     def extract(self, filepath: str) -> str:
         if not self.available:
             return ""
-        
+
         try:
             doc = fitz.open(filepath)
             full_text = []
@@ -27,15 +27,15 @@ class OCREngine:
                 pix = page.get_pixmap()
                 img_path = filepath + "_temp.png"
                 pix.save(img_path)
-                
-                result = self.engine.ocr(img_path)
-                if result and result[0]:
-                    for line in result[0]:
-                        text = line[1][0]
-                        full_text.append(text)
-                
-                if os.path.exists(img_path):
-                    os.remove(img_path)
+                try:
+                    result = self.engine.ocr(img_path)
+                    if result and result[0]:
+                        for line in result[0]:
+                            text = line[1][0]
+                            full_text.append(text)
+                finally:
+                    if os.path.exists(img_path):
+                        os.remove(img_path)
             return "\n".join(full_text)
         except Exception as e:
             print(f"OCR Exception: {e}")

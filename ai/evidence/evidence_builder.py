@@ -48,21 +48,18 @@ def build_validation_evidence(app_id: str, validation: Dict[str, Any], created_a
 def build_policy_evidence(app_id: str, policy: Dict[str, Any], created_at: str) -> List[EvidenceRecord]:
     rule_id = policy.get("rule_id", "")
     ev_id = _generate_evidence_id(app_id, rule_id)
-    
+
     expected = str(policy.get("expected_condition", "NOT_AVAILABLE"))
-    actual = str(policy.get("actual_value", "NOT_AVAILABLE"))
-    
-    # Check if this is a missing document specifically
-    if "DOC" in rule_id and actual == "NOT_PRESENT":
-        # Note: In Step 12, 'actual_value' might be a list of documents present. 
-        # But if we want to represent NOT_PRESENT, we do it via explanation builder or explicitly here.
-        # Let's map actual to NOT_PRESENT if expected document is not in actual_value list.
-        pass
-        
-    if isinstance(policy.get("actual_value"), list):
-        # We can format list nicely
-        actual = ", ".join(policy.get("actual_value"))
-        
+    actual_raw = policy.get("actual_value")
+
+    # Handle NOT_PRESENT case explicitly for missing-document rules
+    if "DOC" in rule_id and (actual_raw == "NOT_PRESENT" or actual_raw is None):
+        actual = "NOT_PRESENT"
+    elif isinstance(actual_raw, list):
+        actual = ", ".join(str(v) for v in actual_raw)
+    else:
+        actual = str(actual_raw) if actual_raw is not None else "NOT_AVAILABLE"
+
     record = EvidenceRecord(
         evidence_id=ev_id,
         application_id=app_id,

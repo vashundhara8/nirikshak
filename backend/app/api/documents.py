@@ -105,12 +105,7 @@ async def resubmit_document(
     checksum = calculate_checksum(file_bytes)
     storage_key = storage.save_document(file_bytes, file.filename)
     
-    # Identify the related document (assuming deficiency_type indicates document type, e.g., 'DOCUMENT_MISSING' or 'DOCUMENT_INVALID')
-    # Actually, the deficiency should specify the document_type or the document_id in details. 
-    # For now, let's just create a generic document or we can accept document_type as Form
-    # Let's require document_type
-    document_type = "RESUBMITTED_DOC" # Or we can take it from Form
-    
+    # Locate the Document record matching the deficiency type so we can add a new version
     doc = db.query(Document).filter(
         Document.application_id == application_id,
         Document.document_type == deficiency.deficiency_type # Assuming deficiency_type holds the doc type, or we could just use a generic resubmission type

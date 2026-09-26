@@ -1,17 +1,17 @@
+import os
 import requests
 import json
 import logging
-from backend.app.core.config import settings
 from typing import Dict, Any, Optional
 
 logger = logging.getLogger(__name__)
 
 class OllamaProvider:
     def __init__(self):
-        self.enabled = settings.OLLAMA_ENABLED
-        self.base_url = settings.OLLAMA_BASE_URL.rstrip('/')
-        self.model = settings.OLLAMA_TEXT_MODEL
-        self.timeout = settings.OLLAMA_TIMEOUT
+        self.enabled = os.getenv("OLLAMA_ENABLED", "false").lower() in ("1", "true", "yes")
+        self.base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").rstrip('/')
+        self.model = os.getenv("OLLAMA_TEXT_MODEL", "llama3:latest")
+        self.timeout = int(os.getenv("OLLAMA_TIMEOUT", "300"))
         
     def is_available(self) -> bool:
         """Check if Ollama is running and the model is available."""

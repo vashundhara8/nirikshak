@@ -31,14 +31,14 @@ class VerificationService:
         app = self.db.query(Application).filter(Application.id == application_id).first()
         if not app:
             raise ValueError("APPLICATION_NOT_FOUND")
-            
+
         if app.current_status not in ["SUBMITTED", "REQUIRES_CORRECTION"]:
             raise ValueError("INVALID_STATE_TRANSITION")
-            
-        # Lock application state optimistically 
+
+        # Lock application state optimistically
         app.current_status = "VERIFICATION"
         app.version += 1
-        
+
         # Snapshot current active document versions
         from app.models.document import Document
         docs = self.db.query(Document).filter(Document.application_id == application_id).all()
@@ -47,23 +47,41 @@ class VerificationService:
             if doc.current_version_id:
                 doc_refs[str(doc.id)] = str(doc.current_version_id)
 
+        # Resolve the active PolicyVersion for this scheme so it is stamped
+        # on the VerificationRun — this makes the audit trail complete.
+        from app.models.verification import PolicyVersion
+        from sqlalchemy import and_, or_
+        from datetime import datetime, timezone as tz
+        now = datetime.now(tz.utc)
+        active_policy = (
+            self.db.query(PolicyVersion)
+            .filter(
+                PolicyVersion.scheme_code == app.scheme_code,
+                PolicyVersion.active_from <= now,
+                or_(PolicyVersion.active_until.is_(None), PolicyVersion.active_until >= now),
+            )
+            .order_by(PolicyVersion.active_from.desc())
+            .first()
+        )
+
         run = VerificationRun(
             application_id=application_id,
+            policy_version_id=active_policy.id if active_policy else None,
             engine_versions={"doc_intel": "1.0", "policy": "1.0", "evidence": "1.0"},
             input_document_references=doc_refs,
             status="PROCESSING"
         )
         self.db.add(run)
-        
+
         self._create_audit_event(actor_id, actor_role, "VERIFICATION_STARTED", "APPLICATION", str(application_id), "SUCCESS")
-        self.db.commit() # Commit the 'PROCESSING' state immediately
-        
+        self.db.commit()  # Commit the 'PROCESSING' state immediately
+
         # ==========================================
         # Dispatch to Celery for async processing
         # ==========================================
         from app.core.celery_app import run_verification_task
         run_verification_task.delay(str(run.id), str(actor_id), actor_role)
-        
+
         return run
     def complete_verification(self, run_id: uuid.UUID, actor_id: str, actor_role: str, success: bool, error: str = None):
         from app.models.application import Application

@@ -14,7 +14,7 @@ def get_audit_logs(
     resource_type: str = None,
     resource_id: str = None,
     db: Session = Depends(get_db),
-    user: User = Depends(RoleChecker(["AUDITOR", "MINISTRY_ADMIN"]))
+    user: User = Depends(RoleChecker(["AUDITOR", "MINISTRY_OFFICER"]))
 ):
     query = db.query(AuditEvent)
     if resource_type:

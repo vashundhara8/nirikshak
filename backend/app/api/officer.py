@@ -48,13 +48,23 @@ def get_officer_workspace(
     for app in apps:
         latest_run = db.query(VerificationRun).filter(VerificationRun.application_id == app.id).order_by(desc(VerificationRun.started_at)).first()
         def_count = db.query(Deficiency).filter(Deficiency.application_id == app.id, Deficiency.status == "OPEN").count()
-        
+
+        # Fetch applicant identity for officer display (name + email only)
+        from app.models.identity import User as UserModel
+        from app.models.profiles import ApplicantProfile
+        applicant = db.query(UserModel).filter(UserModel.id == app.applicant_id).first()
+        applicant_profile = db.query(ApplicantProfile).filter(ApplicantProfile.user_id == app.applicant_id).first()
+        applicant_name = (applicant_profile.full_name if applicant_profile else None) or (applicant.email.split("@")[0] if applicant else "Unknown")
+        applicant_email = applicant.email if applicant else None
+
         results.append({
             "application_id": str(app.id),
             "scheme_code": app.scheme_code,
             "academic_year": app.academic_year,
             "status": app.current_status,
             "submitted_date": app.created_at,
+            "applicant_name": applicant_name,
+            "applicant_email": applicant_email,
             "verification_status": latest_run.status if latest_run else "NOT_STARTED",
             "deficiency_count": def_count
         })

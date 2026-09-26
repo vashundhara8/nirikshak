@@ -1,0 +1,17 @@
+[tool.pytest.ini_options]
+# Run from the repository root with:  pytest
+# The rootdir must be the nirikshak repo root so both `backend` and `ai` packages resolve.
+testpaths = ["tests"]
+pythonpath = ["."]         # Adds repo root to sys.path so ai/, backend/, policy_engine/ are importable
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["ai", "backend/app", "policy_engine"]
+omit = [
+    "*/migrations/*",
+    "*/tests/*",
+    "*/dataset/*",
+]
