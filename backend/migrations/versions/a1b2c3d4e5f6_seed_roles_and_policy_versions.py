@@ -15,7 +15,9 @@ Down revisions delete only the seeded rows, leaving the schema intact.
 from typing import Sequence, Union
 from alembic import op
 import sqlalchemy as sa
+from sqlalchemy.dialects import postgresql
 from datetime import datetime, timezone
+import uuid
 
 revision: str = 'a1b2c3d4e5f6'
 down_revision: Union[str, Sequence[str], None] = '50b9949a751a'
@@ -38,24 +40,26 @@ POLICY_ACTIVE_FROM = datetime(2022, 4, 1, tzinfo=timezone.utc)
 
 
 def upgrade() -> None:
+    from sqlalchemy.dialects.postgresql import insert
+    
     # ── 1. Roles ──────────────────────────────────────────────────────────
     roles_table = sa.table(
         "roles",
-        sa.column("id", sa.String),
+        sa.column("id", sa.UUID),
         sa.column("name", sa.String),
         sa.column("description", sa.String),
     )
-    op.bulk_insert(
-        roles_table,
-        [
-            {"id": ROLE_IDS["APPLICANT"],        "name": "APPLICANT",        "description": "Scholarship applicant"},
-            {"id": ROLE_IDS["INSTITUTE_OFFICER"],"name": "INSTITUTE_OFFICER","description": "Institute-level verification officer"},
-            {"id": ROLE_IDS["DISTRICT_OFFICER"], "name": "DISTRICT_OFFICER", "description": "District-level verification officer"},
-            {"id": ROLE_IDS["STATE_OFFICER"],    "name": "STATE_OFFICER",    "description": "State-level verification officer"},
-            {"id": ROLE_IDS["MINISTRY_OFFICER"], "name": "MINISTRY_OFFICER", "description": "MoTA Ministry-level officer and auditor"},
-            {"id": ROLE_IDS["AUDITOR"],          "name": "AUDITOR",          "description": "Read-only audit role"},
-        ],
-    )
+    
+    stmt = insert(roles_table).values([
+        {"id": ROLE_IDS["APPLICANT"],        "name": "APPLICANT",        "description": "Scholarship applicant"},
+        {"id": ROLE_IDS["INSTITUTE_OFFICER"],"name": "INSTITUTE_OFFICER","description": "Institute-level verification officer"},
+        {"id": ROLE_IDS["DISTRICT_OFFICER"], "name": "DISTRICT_OFFICER", "description": "District-level verification officer"},
+        {"id": ROLE_IDS["STATE_OFFICER"],    "name": "STATE_OFFICER",    "description": "State-level verification officer"},
+        {"id": ROLE_IDS["MINISTRY_OFFICER"], "name": "MINISTRY_OFFICER", "description": "MoTA Ministry-level officer and auditor"},
+        {"id": ROLE_IDS["AUDITOR"],          "name": "AUDITOR",          "description": "Read-only audit role"},
+    ]).on_conflict_do_nothing(index_elements=['name'])
+    
+    op.get_bind().execute(stmt)
 
     # ── 2. PolicyVersion for PM-2022 ──────────────────────────────────────
     # Stores a lightweight version descriptor; the actual rule definitions
@@ -64,7 +68,7 @@ def upgrade() -> None:
     # exact rules used for a VerificationRun can be reconstructed.
     policy_table = sa.table(
         "policy_versions",
-        sa.column("id", sa.String),
+        sa.column("id", sa.UUID),
         sa.column("scheme_code", sa.String),
         sa.column("version_tag", sa.String),
         sa.column("rules", sa.JSON),
@@ -72,32 +76,31 @@ def upgrade() -> None:
         sa.column("active_until", sa.DateTime),
         sa.column("created_at", sa.DateTime),
     )
-    op.bulk_insert(
-        policy_table,
-        [
-            {
-                "id": POLICY_VERSION_ID,
-                "scheme_code": "PM-2022",
-                "version_tag": "PM-2022_V1",
-                "rules": {
-                    "rule_files": [
-                        "document_rules.md",
-                        "eligibility_rules.md",
-                        "income_rules.md",
-                        "institution_rules.md",
-                        "other_rules.md",
-                        "renewal_rules.md",
-                        "scholarship_rules.md",
-                    ],
-                    "rules_base_path": "dataset/policies/extracted_rules/post_matric",
-                    "description": "Post Matric Scholarship for ST students — 2022 policy rules",
-                },
-                "active_from": POLICY_ACTIVE_FROM,
-                "active_until": None,
-                "created_at": datetime.now(timezone.utc),
-            }
-        ],
-    )
+    policy_stmt = insert(policy_table).values([
+        {
+            "id": POLICY_VERSION_ID,
+            "scheme_code": "PM-2022",
+            "version_tag": "PM-2022_V1",
+            "rules": {
+                "rule_files": [
+                    "document_rules.md",
+                    "eligibility_rules.md",
+                    "income_rules.md",
+                    "institution_rules.md",
+                    "other_rules.md",
+                    "renewal_rules.md",
+                    "scholarship_rules.md",
+                ],
+                "rules_base_path": "dataset/policies/extracted_rules/post_matric",
+                "description": "Post Matric Scholarship for ST students — 2022 policy rules",
+            },
+            "active_from": POLICY_ACTIVE_FROM,
+            "active_until": None,
+            "created_at": datetime.now(timezone.utc),
+        }
+    ]).on_conflict_do_nothing(index_elements=['id'])
+    
+    op.get_bind().execute(policy_stmt)
 
 
 def downgrade() -> None:

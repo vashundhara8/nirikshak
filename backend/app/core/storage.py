@@ -53,6 +53,7 @@ class MinIOStorage(DocumentStorage):
                 endpoint_url=settings.S3_ENDPOINT,
                 aws_access_key_id=settings.S3_ACCESS_KEY,
                 aws_secret_access_key=settings.S3_SECRET_KEY,
+                region_name='us-east-1',
                 config=Config(signature_version='s3v4'),
                 use_ssl=settings.S3_USE_SSL
             )
@@ -85,8 +86,8 @@ class MinIOStorage(DocumentStorage):
 
 def get_storage_provider() -> DocumentStorage:
     # Use MinIO natively if configured properly, but fallback safely only in DEV
-    if settings.APP_ENV == "production":
-        # Force production S3/MinIO
+    if settings.APP_ENV == "production" or settings.USE_MINIO:
+        # Force production S3/MinIO or if explicitly enabled in DEV
         return MinIOStorage()
     else:
         # Development fallback

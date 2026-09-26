@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     REDIS_URL: RedisDsn
     
     # MinIO / S3
+    USE_MINIO: bool = False
     S3_ENDPOINT: str
     S3_ACCESS_KEY: str
     S3_SECRET_KEY: str
