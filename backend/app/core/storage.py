@@ -15,6 +15,11 @@ class DocumentStorage(ABC):
         """Returns a short-lived signed URL for downloading"""
         pass
 
+    @abstractmethod
+    def get_document_bytes(self, storage_key: str) -> bytes:
+        """Returns the raw bytes of the document"""
+        pass
+
 class LocalDevelopmentStorage(DocumentStorage):
     def __init__(self):
         self.storage_dir = os.path.join(os.getcwd(), "scratch", "dev_storage")
@@ -32,6 +37,11 @@ class LocalDevelopmentStorage(DocumentStorage):
         # Development only: Returning a local path URL.
         # In a real local setup, we might serve this via a dedicated FastAPI route.
         return f"http://localhost:8000/api/v1/documents/dev-download/{storage_key}"
+
+    def get_document_bytes(self, storage_key: str) -> bytes:
+        path = os.path.join(self.storage_dir, storage_key)
+        with open(path, "rb") as f:
+            return f.read()
 
 class MinIOStorage(DocumentStorage):
     def __init__(self):
@@ -66,6 +76,12 @@ class MinIOStorage(DocumentStorage):
             Params={'Bucket': self.bucket_name, 'Key': storage_key},
             ExpiresIn=expires_in_sec
         )
+
+    def get_document_bytes(self, storage_key: str) -> bytes:
+        if not self.s3:
+            raise Exception("PROVIDER_NOT_CONFIGURED")
+        response = self.s3.get_object(Bucket=self.bucket_name, Key=storage_key)
+        return response['Body'].read()
 
 def get_storage_provider() -> DocumentStorage:
     # Use MinIO natively if configured properly, but fallback safely only in DEV

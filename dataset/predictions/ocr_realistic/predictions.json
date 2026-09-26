@@ -1,0 +1,452 @@
+[
+    {
+        "document_id": "OCR-TEST-0001",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0002",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0003",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0004",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0005",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0006",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0007",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0008",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0009",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0010",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0011",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0012",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0013",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0014",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0015",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0016",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0017",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0018",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0019",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0020",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0021",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0022",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0023",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0024",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0025",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0026",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0027",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0028",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0029",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0030",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0031",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0032",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0033",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0034",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0035",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0036",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0037",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0038",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0039",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0040",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0041",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0042",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0043",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0044",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    },
+    {
+        "document_id": "OCR-TEST-0045",
+        "application_id": "OCR_TEST_APP",
+        "document_type": "UNKNOWN",
+        "classification_method": "RULE_BASELINE",
+        "extraction_method": "PRETRAINED_MODEL",
+        "fields": {},
+        "status": "FAILED",
+        "notes": "Extracted using PaddleOCR fallback."
+    }
+]

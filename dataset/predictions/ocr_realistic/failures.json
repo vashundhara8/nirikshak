@@ -1,0 +1,1523 @@
+[
+    {
+        "doc_id": "OCR-TEST-0001",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0001",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0001",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0001",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0001",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0001",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0002",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0003",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0004",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0005",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0006",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0007",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0008",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "error": "Expected ST_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "field": "Category",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "field": "Domicile State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0009",
+        "field": "Issuing Authority",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0010",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0010",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0010",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0010",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0010",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0011",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0011",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0011",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0011",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0011",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0012",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0012",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0012",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0012",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0012",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0013",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0013",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0013",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0013",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0013",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0014",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0014",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0014",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0014",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0014",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0015",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0015",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0015",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0015",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0015",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0016",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0016",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0016",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0016",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0016",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0017",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0017",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0017",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0017",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0017",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0018",
+        "error": "Expected INCOME_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0018",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0018",
+        "field": "Annual Family Income",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0018",
+        "field": "Income Source",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0018",
+        "field": "Financial Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0019",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0019",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0019",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0019",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0020",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0020",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0020",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0020",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0021",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0021",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0021",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0021",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0022",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0022",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0022",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0022",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0023",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0023",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0023",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0023",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0024",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0024",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0024",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0024",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0025",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0025",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0025",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0025",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0026",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0026",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0026",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0026",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0027",
+        "error": "Expected DOMICILE_CERTIFICATE, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0027",
+        "field": "Applicant Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0027",
+        "field": "Resident State",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0027",
+        "field": "Status",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0028",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0028",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0028",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0028",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0028",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0029",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0029",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0029",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0029",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0029",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0030",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0030",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0030",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0030",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0030",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0031",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0031",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0031",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0031",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0031",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0032",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0032",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0032",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0032",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0032",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0033",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0033",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0033",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0033",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0033",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0034",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0034",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0034",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0034",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0034",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0035",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0035",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0035",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0035",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0035",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0036",
+        "error": "Expected AADHAR, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0036",
+        "field": "Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0036",
+        "field": "DOB",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0036",
+        "field": "Gender",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0036",
+        "field": "Aadhar Number",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0037",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0038",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0039",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0040",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0041",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0042",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0043",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0044",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "error": "Expected MARKSHEET, got UNKNOWN",
+        "cause": "OCR recognition/preprocessing"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Student Name",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Date of Birth",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Institution",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Course / Programme",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Academic Year",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Examination",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Percentage",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    },
+    {
+        "doc_id": "OCR-TEST-0045",
+        "field": "Result",
+        "error": "Field not extracted",
+        "cause": "field extraction/OCR recognition"
+    }
+]

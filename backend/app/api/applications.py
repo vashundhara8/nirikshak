@@ -5,8 +5,9 @@ import uuid
 
 from app.db.session import get_db
 from app.models.identity import User
-from app.models.application import Application
+from app.models.application import Application, ApplicationStatusHistory
 from app.api.dependencies import get_current_user, RoleChecker
+from app.models.audit import AuditEvent
 from app.models.document import Document, DocumentVersion
 from app.models.verification import VerificationRun, Deficiency
 
@@ -42,6 +43,57 @@ def create_application(
     db.add(app)
     db.commit()
     db.refresh(app)
+    return {"application_id": str(app.id), "status": app.current_status}
+
+@router.post("/{application_id}/submit")
+def submit_application(
+    application_id: uuid.UUID,
+    db: Session = Depends(get_db),
+    user: User = Depends(RoleChecker(["APPLICANT"]))
+):
+    app = db.query(Application).filter(Application.id == application_id).first()
+    if not app:
+        raise HTTPException(status_code=404, detail="RESOURCE_NOT_FOUND")
+    if app.applicant_id != user.id:
+        raise HTTPException(status_code=403, detail="AUTHORIZATION_DENIED")
+        
+    if app.current_status != "DRAFT":
+        raise HTTPException(status_code=409, detail="INVALID_STATE_TRANSITION")
+        
+    if not app.documents:
+        raise HTTPException(status_code=400, detail="DOCUMENTS_REQUIRED")
+        
+    # Transition DRAFT -> SUBMITTED
+    app.current_status = "SUBMITTED"
+    app.version += 1
+    
+    # Status History
+    history = ApplicationStatusHistory(
+        application_id=app.id,
+        previous_status="DRAFT",
+        new_status="SUBMITTED",
+        changed_by_user_id=user.id,
+        reason="Applicant submitted application"
+    )
+    db.add(history)
+    
+    user_roles = [r.name for r in user.roles]
+    primary_role = user_roles[0] if user_roles else "APPLICANT"
+    
+    # Audit Event
+    audit = AuditEvent(
+        actor_id=user.id,
+        actor_role=primary_role,
+        action="APPLICATION_SUBMITTED",
+        resource_type="APPLICATION",
+        resource_id=str(app.id),
+        result="SUCCESS"
+    )
+    db.add(audit)
+    
+    db.commit()
+    db.refresh(app)
+    
     return {"application_id": str(app.id), "status": app.current_status}
 
 @router.get("/")

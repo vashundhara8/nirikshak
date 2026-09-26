@@ -4,7 +4,7 @@ pydantic
 pydantic-settings
 sqlalchemy
 alembic
-psycopg2-binary
+psycopg[binary]
 argon2-cffi
 python-jose[cryptography]
 python-multipart
@@ -13,5 +13,18 @@ redis
 boto3
 minio
 pyjwt
-pytest
 httpx
+python-magic
+python-magic-bin; sys_platform == 'win32'
+requests
+python-dotenv
+
+# AI / Documents / OCR / Policy Engine
+PyMuPDF
+paddleocr
+PyYAML
+
+# Development & Testing
+pytest
+Pillow
+reportlab

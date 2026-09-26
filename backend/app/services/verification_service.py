@@ -39,13 +39,13 @@ class VerificationService:
         app.current_status = "VERIFICATION"
         app.version += 1
         
-        # Snapshot document versions
-        doc_versions = self.db.query(DocumentVersion).join(DocumentVersion.document).filter(
-            DocumentVersion.document.has(application_id=application_id),
-            DocumentVersion.id == DocumentVersion.document.property.mapper.class_.current_version_id
-        ).all()
-        
-        doc_refs = {str(dv.document_id): str(dv.id) for dv in doc_versions}
+        # Snapshot current active document versions
+        from app.models.document import Document
+        docs = self.db.query(Document).filter(Document.application_id == application_id).all()
+        doc_refs = {}
+        for doc in docs:
+            if doc.current_version_id:
+                doc_refs[str(doc.id)] = str(doc.current_version_id)
 
         run = VerificationRun(
             application_id=application_id,
@@ -66,11 +66,14 @@ class VerificationService:
         
         return run
     def complete_verification(self, run_id: uuid.UUID, actor_id: str, actor_role: str, success: bool, error: str = None):
+        from app.models.application import Application
         run = self.db.query(VerificationRun).filter(VerificationRun.id == run_id).first()
         if not run:
             return
             
-        app = run.application
+        app = self.db.query(Application).filter(Application.id == run.application_id).first()
+        if not app:
+            return
         
         if success:
             run.status = "COMPLETED"

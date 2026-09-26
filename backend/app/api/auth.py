@@ -47,9 +47,11 @@ def register(request: RegisterRequest, db: Session = Depends(get_db)):
     
     return {"message": "User registered successfully", "user_id": str(new_user.id)}
 
-@router.post("/login", response_model=TokenResponse, dependencies=[Depends(RateLimiter(requests=5, window=60))])
-def login(request: LoginRequest, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.email == request.email).first()
+from fastapi.security import OAuth2PasswordRequestForm
+
+@router.post("/login", dependencies=[Depends(RateLimiter(requests=5, window=60))])
+def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.email == request.username).first()
     if not user or not verify_password(request.password, user.hashed_password):
         if user:
             user.failed_login_attempts += 1
@@ -75,4 +77,13 @@ def login(request: LoginRequest, db: Session = Depends(get_db)):
     db.add(db_token)
     db.commit()
     
-    return {"access_token": access_token, "refresh_token": refresh_token}
+    return {
+        "access_token": access_token, 
+        "refresh_token": refresh_token,
+        "token_type": "bearer",
+        "user": {
+            "id": str(user.id),
+            "email": user.email,
+            "roles": [{"name": r} for r in roles]
+        }
+    }

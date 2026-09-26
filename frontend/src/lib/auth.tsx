@@ -1,0 +1,71 @@
+"use client";
+
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { fetchApi } from "./api";
+
+type Role = {
+  id: string;
+  name: string;
+};
+
+export type User = {
+  id: string;
+  email: string;
+  full_name: string;
+  is_active: boolean;
+  roles: Role[];
+};
+
+type AuthContextType = {
+  user: User | null;
+  loading: boolean;
+  login: (token: string, user_data: User) => void;
+  logout: () => void;
+};
+
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  loading: true,
+  login: () => {},
+  logout: () => {},
+});
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const token = localStorage.getItem("nirikshak_token");
+    const storedUser = localStorage.getItem("nirikshak_user");
+    if (token && storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (e) {
+        localStorage.removeItem("nirikshak_token");
+        localStorage.removeItem("nirikshak_user");
+      }
+    }
+    setLoading(false);
+  }, []);
+
+  const login = (token: string, userData: User) => {
+    localStorage.setItem("nirikshak_token", token);
+    localStorage.setItem("nirikshak_user", JSON.stringify(userData));
+    setUser(userData);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("nirikshak_token");
+    localStorage.removeItem("nirikshak_user");
+    setUser(null);
+    window.location.href = "/";
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, loading, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export const useAuth = () => useContext(AuthContext);
