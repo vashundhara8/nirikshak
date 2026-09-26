@@ -16,6 +16,7 @@ class LoginRequest(BaseModel):
 class RegisterRequest(BaseModel):
     email: str
     password: str
+    full_name: str = ""  # Optional — defaults to email prefix if not provided
 
 class TokenResponse(BaseModel):
     access_token: str
@@ -43,8 +44,18 @@ def register(request: RegisterRequest, db: Session = Depends(get_db)):
     )
     new_user.roles.append(applicant_role)
     db.add(new_user)
+    db.flush()  # Flush so new_user.id is available before creating the profile
+
+    # Create ApplicantProfile so officer workspace can display a real name
+    from app.models.profiles import ApplicantProfile
+    display_name = request.full_name.strip() or request.email.split("@")[0]
+    profile = ApplicantProfile(
+        user_id=new_user.id,
+        full_name=display_name,
+    )
+    db.add(profile)
     db.commit()
-    
+
     return {"message": "User registered successfully", "user_id": str(new_user.id)}
 
 from fastapi.security import OAuth2PasswordRequestForm

@@ -9,7 +9,7 @@ from app.models.application import Application, ApplicationStatusHistory
 from app.api.dependencies import get_current_user, RoleChecker
 from app.models.audit import AuditEvent
 from app.models.document import Document, DocumentVersion
-from app.models.verification import VerificationRun, Deficiency
+from app.models.verification import VerificationRun, Deficiency, VerificationFinding
 
 router = APIRouter()
 
