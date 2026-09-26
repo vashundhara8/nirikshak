@@ -32,7 +32,7 @@ export default function RegisterPage() {
 
       setSuccess("Registration successful! You can now sign in.");
       setTimeout(() => {
-        router.push("/");
+        router.push("/login");
       }, 2000);
     } catch (err: any) {
       setError(err.message || "Registration failed");

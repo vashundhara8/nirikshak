@@ -46,6 +46,52 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
     });
 
     if (!response.ok) {
+      if (response.status === 401 && requireAuth) {
+        // Attempt refresh
+        const refresh_token = typeof window !== "undefined" ? localStorage.getItem("nirikshak_refresh_token") : null;
+        if (refresh_token) {
+          try {
+            const refreshRes = await fetch(`${API_BASE_URL}/auth/refresh`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ refresh_token })
+            });
+
+            if (refreshRes.ok) {
+              const refreshData = await refreshRes.json();
+              if (typeof window !== "undefined") {
+                localStorage.setItem("nirikshak_token", refreshData.access_token);
+                localStorage.setItem("nirikshak_refresh_token", refreshData.refresh_token);
+              }
+              // Retry original request
+              requestHeaders.set("Authorization", `Bearer ${refreshData.access_token}`);
+              const retryRes = await fetch(`${API_BASE_URL}${endpoint}`, {
+                ...rest,
+                headers: requestHeaders,
+              });
+
+              if (!retryRes.ok) {
+                let errorData;
+                try { errorData = await retryRes.json(); } catch (e) { errorData = { detail: retryRes.statusText }; }
+                throw new ApiError(retryRes.status, typeof errorData.detail === "string" ? errorData.detail : "API Request Failed", errorData);
+              }
+              if (retryRes.status === 204) return {} as T;
+              return await retryRes.json() as T;
+            }
+          } catch (e) {
+            // refresh failed
+          }
+        }
+        
+        // Refresh failed or not available, clear session
+        if (typeof window !== "undefined") {
+          localStorage.removeItem("nirikshak_token");
+          localStorage.removeItem("nirikshak_refresh_token");
+          localStorage.removeItem("nirikshak_user");
+          window.location.href = "/";
+        }
+      }
+
       let errorData;
       try {
         errorData = await response.json();

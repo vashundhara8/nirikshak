@@ -32,7 +32,7 @@ class VerificationService:
         if not app:
             raise ValueError("APPLICATION_NOT_FOUND")
 
-        if app.current_status not in ["SUBMITTED", "REQUIRES_CORRECTION"]:
+        if app.current_status not in ["SUBMITTED", "REQUIRES_CORRECTION", "RESUBMISSION_RECEIVED"]:
             raise ValueError("INVALID_STATE_TRANSITION")
 
         # Lock application state optimistically

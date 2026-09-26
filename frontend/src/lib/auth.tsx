@@ -19,7 +19,7 @@ export type User = {
 type AuthContextType = {
   user: User | null;
   loading: boolean;
-  login: (token: string, user_data: User) => void;
+  login: (token: string, refresh_token: string, user_data: User) => void;
   logout: () => void;
 };
 
@@ -42,20 +42,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setUser(JSON.parse(storedUser));
       } catch (e) {
         localStorage.removeItem("nirikshak_token");
+        localStorage.removeItem("nirikshak_refresh_token");
         localStorage.removeItem("nirikshak_user");
       }
     }
     setLoading(false);
   }, []);
 
-  const login = (token: string, userData: User) => {
+  const login = (token: string, refresh_token: string, userData: User) => {
     localStorage.setItem("nirikshak_token", token);
+    if (refresh_token) {
+      localStorage.setItem("nirikshak_refresh_token", refresh_token);
+    }
     localStorage.setItem("nirikshak_user", JSON.stringify(userData));
     setUser(userData);
   };
 
-  const logout = () => {
+  const logout = async () => {
+    const refresh_token = localStorage.getItem("nirikshak_refresh_token");
+    if (refresh_token) {
+      try {
+        await fetchApi("/auth/logout", {
+          method: "POST",
+          body: JSON.stringify({ refresh_token })
+        });
+      } catch (e) {
+        // Ignore logout errors on the client
+      }
+    }
+    
     localStorage.removeItem("nirikshak_token");
+    localStorage.removeItem("nirikshak_refresh_token");
     localStorage.removeItem("nirikshak_user");
     setUser(null);
     window.location.href = "/";

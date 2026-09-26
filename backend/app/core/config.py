@@ -5,6 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     APP_ENV: str = "development"
+    CORS_ORIGINS: str = "https://mota.gov.in"
     
     # Security
     SECRET_KEY: str

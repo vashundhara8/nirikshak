@@ -204,8 +204,7 @@ export default function ApplicationDetailPage({ params }: { params: Promise<{ id
                     </p>
                     {doc.versions?.[doc.versions.length - 1]?.file_hash && (
                       <div className="mt-2 text-[10px] text-slate-400 font-mono break-all">
-                        <p>File: {doc.versions?.[doc.versions.length - 1]?.storage_key.split('/').pop()}</p>
-                        <p>SHA256: {doc.versions?.[doc.versions.length - 1]?.file_hash}</p>
+                        <p>SHA-256: {doc.versions?.[doc.versions.length - 1]?.file_hash}</p>
                       </div>
                     )}
                   </div>

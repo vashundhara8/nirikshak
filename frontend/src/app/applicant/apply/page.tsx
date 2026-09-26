@@ -156,13 +156,13 @@ export default function CreateApplicationWizard() {
           <div className="space-y-4">
             <h2 className="text-xl font-bold text-slate-900 mb-4">1. Personal & Demographic</h2>
             <div className="grid grid-cols-2 gap-4">
-              <div><label className={labelCls}>Scheme</label><select className={inputCls} value={schemeCode} onChange={e=>setSchemeCode(e.target.value)}>{SCHEME_OPTIONS.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}</select></div>
-              <div><label className={labelCls}>Academic Year</label><select className={inputCls} value={academicYear} onChange={e=>setAcademicYear(e.target.value)}>{ACADEMIC_YEAR_OPTIONS.map(y => <option key={y} value={y}>{y}</option>)}</select></div>
-              <div className="col-span-2"><label className={labelCls}>Full Name *</label><input type="text" className={inputCls} value={fullName} onChange={e=>setFullName(e.target.value)} /></div>
-              <div><label className={labelCls}>Date of Birth *</label><input type="date" className={inputCls} value={dob} onChange={e=>setDob(e.target.value)} /></div>
-              <div><label className={labelCls}>Category *</label><select className={inputCls} value={category} onChange={e=>setCategory(e.target.value)}>{CATEGORY_OPTIONS.map(c => <option key={c.value} value={c.value}>{c.label}</option>)}</select></div>
-              <div><label className={labelCls}>Domicile State *</label><input type="text" className={inputCls} value={domicileState} onChange={e=>setDomicileState(e.target.value)} /></div>
-              <div><label className={labelCls}>Aadhaar Last 4</label><input type="text" className={inputCls} value={maskedAadhaar} onChange={e=>setMaskedAadhaar(e.target.value)} maxLength={4} /></div>
+              <div><label className={labelCls}>Scheme</label><select name="scheme_code" className={inputCls} value={schemeCode} onChange={e=>setSchemeCode(e.target.value)}>{SCHEME_OPTIONS.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}</select></div>
+              <div><label className={labelCls}>Academic Year</label><select name="academic_year" className={inputCls} value={academicYear} onChange={e=>setAcademicYear(e.target.value)}>{ACADEMIC_YEAR_OPTIONS.map(y => <option key={y} value={y}>{y}</option>)}</select></div>
+              <div className="col-span-2"><label className={labelCls}>Full Name *</label><input name="full_name" type="text" className={inputCls} value={fullName} onChange={e=>setFullName(e.target.value)} /></div>
+              <div><label className={labelCls}>Date of Birth *</label><input name="dob" type="date" className={inputCls} value={dob} onChange={e=>setDob(e.target.value)} /></div>
+              <div><label className={labelCls}>Category *</label><select name="category" className={inputCls} value={category} onChange={e=>setCategory(e.target.value)}>{CATEGORY_OPTIONS.map(c => <option key={c.value} value={c.value}>{c.label}</option>)}</select></div>
+              <div><label className={labelCls}>Domicile State *</label><input name="domicile_state" type="text" className={inputCls} value={domicileState} onChange={e=>setDomicileState(e.target.value)} /></div>
+              <div><label className={labelCls}>Aadhaar Last 4</label><input name="aadhaar" type="text" className={inputCls} value={maskedAadhaar} onChange={e=>setMaskedAadhaar(e.target.value)} maxLength={4} /></div>
             </div>
             <div className="flex justify-end pt-4"><button onClick={() => setStep(2)} className="bg-teal-700 text-white px-4 py-2 rounded flex items-center">Next <ArrowRight size={16} className="ml-2"/></button></div>
           </div>
@@ -172,11 +172,11 @@ export default function CreateApplicationWizard() {
           <div className="space-y-4">
             <h2 className="text-xl font-bold text-slate-900 mb-4">2. Academic & Institution</h2>
             <div className="grid grid-cols-2 gap-4">
-              <div className="col-span-2"><label className={labelCls}>Institution Name *</label><input type="text" className={inputCls} value={institutionName} onChange={e=>setInstitutionName(e.target.value)} /></div>
-              <div><label className={labelCls}>Institution Code</label><input type="text" className={inputCls} value={institutionId} onChange={e=>setInstitutionId(e.target.value)} /></div>
-              <div className="col-span-2"><label className={labelCls}>Course Name *</label><input type="text" className={inputCls} value={courseName} onChange={e=>setCourseName(e.target.value)} /></div>
-              <div><label className={labelCls}>Course Code</label><input type="text" className={inputCls} value={courseId} onChange={e=>setCourseId(e.target.value)} /></div>
-              <div><label className={labelCls}>Last Exam %</label><input type="number" className={inputCls} value={examPercentage} onChange={e=>setExamPercentage(e.target.value)} /></div>
+              <div className="col-span-2"><label className={labelCls}>Institution Name *</label><input name="institution_name" type="text" className={inputCls} value={institutionName} onChange={e=>setInstitutionName(e.target.value)} /></div>
+              <div><label className={labelCls}>Institution Code</label><input name="institution_id" type="text" className={inputCls} value={institutionId} onChange={e=>setInstitutionId(e.target.value)} /></div>
+              <div className="col-span-2"><label className={labelCls}>Course Name *</label><input name="course_name" type="text" className={inputCls} value={courseName} onChange={e=>setCourseName(e.target.value)} /></div>
+              <div><label className={labelCls}>Course Code</label><input name="course_id" type="text" className={inputCls} value={courseId} onChange={e=>setCourseId(e.target.value)} /></div>
+              <div><label className={labelCls}>Last Exam %</label><input name="exam_percentage" type="number" className={inputCls} value={examPercentage} onChange={e=>setExamPercentage(e.target.value)} /></div>
             </div>
             <div className="flex justify-between pt-4">
               <button onClick={() => setStep(1)} className="text-slate-600 px-4 py-2 hover:bg-slate-100 rounded">Back</button>
@@ -189,8 +189,8 @@ export default function CreateApplicationWizard() {
           <div className="space-y-4">
             <h2 className="text-xl font-bold text-slate-900 mb-4">3. Income & Financial</h2>
             <div className="grid grid-cols-2 gap-4">
-              <div><label className={labelCls}>Annual Family Income (Rs.) *</label><input type="number" className={inputCls} value={annualFamilyIncome} onChange={e=>setAnnualFamilyIncome(e.target.value)} /></div>
-              <div><label className={labelCls}>Income Source</label><input type="text" className={inputCls} value={incomeSource} onChange={e=>setIncomeSource(e.target.value)} /></div>
+              <div><label className={labelCls}>Annual Family Income (Rs.) *</label><input name="annual_family_income" type="number" className={inputCls} value={annualFamilyIncome} onChange={e=>setAnnualFamilyIncome(e.target.value)} /></div>
+              <div><label className={labelCls}>Income Source</label><input name="income_source" type="text" className={inputCls} value={incomeSource} onChange={e=>setIncomeSource(e.target.value)} /></div>
             </div>
             <div className="flex justify-between pt-4">
               <button onClick={() => setStep(2)} className="text-slate-600 px-4 py-2 hover:bg-slate-100 rounded">Back</button>

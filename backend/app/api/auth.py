@@ -98,3 +98,44 @@ def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(
             "roles": [{"name": r} for r in roles]
         }
     }
+
+class RefreshRequest(BaseModel):
+    refresh_token: str
+
+@router.post("/refresh")
+def refresh(request: RefreshRequest, db: Session = Depends(get_db)):
+    from datetime import datetime, timezone
+    db_token = db.query(RefreshToken).filter(RefreshToken.token == request.refresh_token).first()
+    
+    if not db_token or db_token.is_revoked or db_token.expires_at < datetime.now(timezone.utc):
+        raise HTTPException(status_code=401, detail="INVALID_REFRESH_TOKEN")
+        
+    user = db_token.user
+    if not user or not user.is_active or user.is_locked:
+        raise HTTPException(status_code=403, detail="AUTHORIZATION_DENIED")
+        
+    roles = [r.name for r in user.roles]
+    access_token = create_access_token(subject=user.id, roles=roles)
+    
+    # Rotate refresh token
+    db_token.is_revoked = True
+    new_refresh_token, exp = create_refresh_token(subject=user.id)
+    new_db_token = RefreshToken(user_id=user.id, token=new_refresh_token, expires_at=exp)
+    db.add(new_db_token)
+    db.commit()
+    
+    return {
+        "access_token": access_token,
+        "refresh_token": new_refresh_token,
+        "token_type": "bearer"
+    }
+
+from app.api.dependencies import get_current_user
+
+@router.post("/logout")
+def logout(request: RefreshRequest, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    db_token = db.query(RefreshToken).filter(RefreshToken.token == request.refresh_token, RefreshToken.user_id == current_user.id).first()
+    if db_token:
+        db_token.is_revoked = True
+        db.commit()
+    return {"message": "LOGGED_OUT"}

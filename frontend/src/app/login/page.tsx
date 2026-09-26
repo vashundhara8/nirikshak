@@ -33,7 +33,7 @@ export default function LoginPage() {
         requireAuth: false,
       });
 
-      login(response.access_token, response.user);
+      login(response.access_token, response.refresh_token, response.user);
 
       // Redirect based on role
       const roles = response.user.roles.map((r: any) => r.name);

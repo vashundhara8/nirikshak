@@ -139,13 +139,13 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
                     {finding.source_identifier}
                   </span>
                 </div>
-                <p className="text-slate-700 mt-1">{finding.details}</p>
+                <p className="text-slate-700 mt-1">{typeof finding.details === 'object' ? JSON.stringify(finding.details) : finding.details}</p>
                 {finding.evidence?.length > 0 && (
                   <div className="mt-2 text-xs border-t border-slate-200/50 pt-2 text-slate-600">
                     <strong>Evidence trace:</strong>
                     {finding.evidence.map((ev: any, idx: number) => (
                       <div key={idx} className="mt-1 font-mono">
-                        {ev.field}: "{ev.extracted_value}"
+                        {ev.field}: "{typeof ev.extracted_value === 'object' ? JSON.stringify(ev.extracted_value) : ev.extracted_value}"
                       </div>
                     ))}
                   </div>
@@ -154,7 +154,8 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
             ))}
           </div>
         </div>
-
+        </div>
+        
         {/* RIGHT COLUMN: Document Viewer & Decision */}
         <div className="lg:col-span-2 space-y-6 flex flex-col">
           {/* Document Viewer */}
@@ -242,6 +243,7 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
           </div>
         </div>
 
+        </div>
       </div>
     </div>
   );

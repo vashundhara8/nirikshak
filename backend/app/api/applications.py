@@ -134,8 +134,7 @@ def get_application(
                 "version_number": v.version_number,
                 "status": v.status,
                 "created_at": v.created_at,
-                "file_hash": v.file_hash,
-                "storage_key": v.storage_key
+                "file_hash": v.file_hash
             })
         documents.append({
             "document_id": str(doc.id),

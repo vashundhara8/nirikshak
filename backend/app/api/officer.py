@@ -181,6 +181,9 @@ def record_officer_decision(
         raise HTTPException(status_code=404, detail="RESOURCE_NOT_FOUND")
         
     previous_status = app.current_status
+    if previous_status in ["APPROVED", "REJECTED"]:
+        raise HTTPException(status_code=400, detail="INVALID_STATE_TRANSITION")
+        
     new_status = previous_status
     
     user_roles = [r.name for r in user.roles]
@@ -189,6 +192,8 @@ def record_officer_decision(
     if decision.action == "REQUEST_CORRECTION":
         if not decision.deficiency_type:
             raise HTTPException(status_code=400, detail="Deficiency type required for REQUEST_CORRECTION")
+        if not decision.reason or len(decision.reason.strip()) == 0:
+            raise HTTPException(status_code=400, detail="Reason required for REQUEST_CORRECTION")
         
         latest_run = db.query(VerificationRun).filter(VerificationRun.application_id == app.id).order_by(desc(VerificationRun.started_at)).first()
         
@@ -206,6 +211,8 @@ def record_officer_decision(
     elif decision.action == "APPROVE":
         new_status = "APPROVED"
     elif decision.action == "REJECT":
+        if not decision.reason or len(decision.reason.strip()) == 0:
+            raise HTTPException(status_code=400, detail="Reason required for REJECT")
         new_status = "REJECTED"
     else:
         raise HTTPException(status_code=400, detail="Invalid action")
