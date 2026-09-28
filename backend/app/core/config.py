@@ -33,10 +33,10 @@ class Settings(BaseSettings):
     ALLOW_MOCK_PROVIDERS: bool = False
     DATA_GOV_API_KEY: Optional[str] = None
     
-    # MSG91
-    MSG91_WIDGET_ID: Optional[str] = None
-    MSG91_WIDGET_TOKEN: Optional[str] = None
-    MSG91_AUTH_KEY: Optional[str] = None
+    # Twilio Verify
+    TWILIO_ACCOUNT_SID: Optional[str] = None
+    TWILIO_AUTH_TOKEN: Optional[str] = None
+    TWILIO_VERIFY_SERVICE_SID: Optional[str] = None
 
     # Ollama
     OLLAMA_ENABLED: bool = False
@@ -57,8 +57,8 @@ class Settings(BaseSettings):
                 raise ValueError("Insecure SECRET_KEY in production.")
             if self.ALLOW_MOCK_PROVIDERS:
                 raise ValueError("ALLOW_MOCK_PROVIDERS must be false in production.")
-            if self.OTP_PROVIDER != "production":
-                raise ValueError("OTP_PROVIDER must be 'production' in production environment.")
+            if self.OTP_PROVIDER not in ("production", "twilio"):
+                raise ValueError("OTP_PROVIDER must be 'twilio' in production environment.")
             if not self.DATA_GOV_API_KEY:
                 raise ValueError("DATA_GOV_API_KEY is required in production.")
 

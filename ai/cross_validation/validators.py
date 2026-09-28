@@ -16,13 +16,13 @@ class Validator:
             for sf in self.semantic_fields:
                 if sf in doc['fields']:
                     f = doc['fields'][sf]
-                    if f.raw_value:
-                        norm = self.normalizer_func(f.raw_value)
+                    if f.get('raw_value'):
+                        norm = self.normalizer_func(f.get('raw_value'))
                         vals.append(ValidationValue(
                             document_id=doc['document_id'],
                             document_type=doc['document_type'],
                             field=sf,
-                            raw_value=f.raw_value,
+                            raw_value=f.get('raw_value'),
                             normalized_value=norm
                         ))
                         evidences.append(ValidationEvidence(

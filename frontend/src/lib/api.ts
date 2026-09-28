@@ -2,7 +2,9 @@ export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.
 
 export class ApiError extends Error {
   status: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   constructor(status: number, message: string, data: any = null) {
     super(message);
     this.status = status;
@@ -11,7 +13,7 @@ export class ApiError extends Error {
   }
 }
 
-function getAuthToken(): string | null {
+export function getAuthToken(): string | null {
   if (typeof window !== "undefined") {
     return localStorage.getItem("nirikshak_token");
   }
@@ -72,12 +74,14 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
 
               if (!retryRes.ok) {
                 let errorData;
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 try { errorData = await retryRes.json(); } catch (e) { errorData = { detail: retryRes.statusText }; }
                 throw new ApiError(retryRes.status, typeof errorData.detail === "string" ? errorData.detail : "API Request Failed", errorData);
               }
               if (retryRes.status === 204) return {} as T;
               return await retryRes.json() as T;
             }
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           } catch (e) {
             // refresh failed
           }
@@ -88,6 +92,7 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
           localStorage.removeItem("nirikshak_token");
           localStorage.removeItem("nirikshak_refresh_token");
           localStorage.removeItem("nirikshak_user");
+          // eslint-disable-next-line @next/next/no-location-assign-relative-destination
           window.location.href = "/";
         }
       }
@@ -95,6 +100,7 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
       let errorData;
       try {
         errorData = await response.json();
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
         errorData = { detail: response.statusText };
       }

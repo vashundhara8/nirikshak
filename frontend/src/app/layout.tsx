@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Nirikshak Platform",
@@ -17,10 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-900`}>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+      <body className={`${inter.variable} font-sans min-h-screen bg-base-bg text-text-primary`}>
+        <I18nProvider>
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </I18nProvider>
       </body>
     </html>
   );

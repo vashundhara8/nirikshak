@@ -23,8 +23,10 @@ role_permission_table = Table(
 class User(Base):
     __tablename__ = 'users'
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    email = Column(String(255), unique=True, index=True, nullable=False)
-    hashed_password = Column(String(255), nullable=False)
+    email = Column(String(255), unique=True, index=True, nullable=True) # made nullable because mobile might be primary
+    mobile_number = Column(String(20), unique=True, index=True, nullable=True)
+    mobile_verified = Column(Boolean, default=False)
+    hashed_password = Column(String(255), nullable=True) # password might not be needed for OTP
     is_active = Column(Boolean, default=True)
     is_locked = Column(Boolean, default=False)
     failed_login_attempts = Column(Integer, default=0)

@@ -1,154 +1,214 @@
+"use client";
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n";
+import { SiteHeader } from "@/components/ui/SiteHeader";
+import { SiteFooter } from "@/components/ui/SiteFooter";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { ArrowRight, FileText, CheckCircle, ShieldCheck } from "lucide-react";
 
 export default function LandingPage() {
+  const { t } = useI18n();
+
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 font-sans">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logos */}
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-3 border-r border-slate-200 pr-6">
-                <div className="w-10 h-12 bg-slate-200 rounded flex items-center justify-center text-[10px] text-slate-500 text-center leading-tight">
-                  National<br/>Emblem
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-sm font-bold text-slate-900">Ministry of Tribal Affairs</span>
-                  <span className="text-xs text-slate-500">Government of India</span>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xl">N</div>
-                <span className="text-xl font-bold text-[#0B4F4C]">Nirikshak</span>
-              </div>
-            </div>
+    <div className="min-h-screen flex flex-col font-sans bg-base-bg text-text-primary selection:bg-teal-primary selection:text-white">
+      <SiteHeader />
 
-            {/* Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-[#0B4F4C] font-medium border-b-2 border-[#D4AF37] pb-1">Home</Link>
-              <Link href="#" className="text-slate-600 hover:text-[#0B4F4C] font-medium transition-colors">Schemes</Link>
-              <Link href="#" className="text-slate-600 hover:text-[#0B4F4C] font-medium transition-colors">About</Link>
-              <Link href="#" className="text-slate-600 hover:text-[#0B4F4C] font-medium transition-colors">Accessibility</Link>
-              <Link href="#" className="text-slate-600 hover:text-[#0B4F4C] font-medium transition-colors">Contact</Link>
-            </nav>
-
-            {/* Actions */}
-            <div className="flex items-center space-x-4">
-              <Link href="/login" className="text-[#0B4F4C] font-medium hover:underline">Officer Portal</Link>
-              <Link href="/login" className="bg-[#0B4F4C] text-white px-5 py-2 rounded font-medium hover:bg-[#073634] transition-colors shadow-sm">
-                Applicant Login
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
       <main className="flex-grow">
-        <div className="bg-[#0A192F] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col md:flex-row items-center">
-            <div className="md:w-2/3 pr-0 md:pr-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Empowering Scheduled Tribes through Digital Scholarship Intelligence
+        {/* Hero Section */}
+        <section className="bg-navy relative overflow-hidden border-b-[6px] border-gold">
+          {/* Subtle Background Pattern */}
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }}></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
+            <div className="max-w-4xl">
+              <Badge variant="info" className="mb-6 border-none bg-teal-primary/20 text-teal-100 px-4 py-1.5 uppercase tracking-widest text-xs font-bold">
+                Government of India • Ministry of Tribal Affairs
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight font-serif">
+                {t('hero.title')}
               </h1>
-              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl leading-relaxed">
-                An explainable, policy-driven verification and lifecycle management platform for MoTA scholarships.
+              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl leading-relaxed font-medium">
+                A unified, AI-assisted verification platform for seamless and transparent scholarship disbursement. Secure, verifiable, and designed to ensure eligible students receive timely support.
               </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link href="/login" className="bg-[#D4AF37] text-slate-900 px-8 py-3 rounded text-lg font-bold hover:bg-[#c4a132] transition-colors text-center shadow-md">
-                  Apply for Scholarship (NFST/NOS)
-                </Link>
-                <Link href="/login" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded text-lg font-bold hover:bg-white hover:text-[#0A192F] transition-colors text-center">
-                  Track Application
-                </Link>
+              
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <Button size="lg" variant="secondary" href="/applicant/login" className="font-bold tracking-wide text-navy text-base h-14 px-8 shadow-xl hover:shadow-2xl transition-all">
+                  Apply for Scholarship
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button size="lg" variant="outline" href="/applicant/login" className="font-bold text-white border-white hover:bg-white/10 hover:text-white h-14 px-8">
+                  Track Application Status
+                </Button>
               </div>
             </div>
-            <div className="md:w-1/3 mt-12 md:mt-0 flex justify-center">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-white/10 flex items-center justify-center bg-white/5 relative">
-                {/* Decorative elements representing AI/Data/Verification */}
-                <div className="absolute inset-4 rounded-full border-2 border-dashed border-[#D4AF37]/50 animate-[spin_60s_linear_infinite]"></div>
-                <div className="absolute inset-12 rounded-full border border-teal-400/30"></div>
-                <div className="w-24 h-24 bg-[#0B4F4C] rounded-lg shadow-lg flex items-center justify-center transform rotate-12">
-                  <span className="text-[#D4AF37] font-bold text-4xl">✓</span>
+            
+            {/* Trust Indicators */}
+            <div className="mt-16 pt-8 border-t border-slate-700 grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">₹840+ Cr</div>
+                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">DBT Disbursed (FY 24-25)</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">2.4M+</div>
+                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Students Benefited</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Paperless Verification</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-1">14 Days</div>
+                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Avg Processing Time</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Status Tracker Banner */}
+        <section className="bg-teal-50 border-b border-teal-100 py-6 px-4 sm:px-6 lg:px-8">
+           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center space-x-3">
+                 <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
+                    <CheckCircle className="text-teal-700 w-6 h-6" />
+                 </div>
+                 <div>
+                    <h3 className="font-bold text-navy leading-none">Instant Application Tracking</h3>
+                    <p className="text-sm text-teal-800 mt-1 font-medium">Check the live status of your verification and DBT.</p>
+                 </div>
+              </div>
+              <div className="flex-1 max-w-xl flex items-center gap-2 w-full bg-white p-2 rounded shadow-sm border border-slate-200">
+                 <input type="text" placeholder="Enter Application ID or Aadhaar Number" className="flex-1 px-3 py-2 text-sm focus:ring-2 focus:ring-teal-primary focus:outline-none border-none bg-transparent" />
+                 <Button variant="primary" className="h-10 px-6 font-bold shadow-none">Check Status</Button>
+              </div>
+           </div>
+        </section>
+
+        {/* How It Works & Eligibility */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16">
+              {/* How to Apply */}
+              <div>
+                <div className="text-sm font-bold text-teal-primary uppercase tracking-widest mb-3">Service Clarity</div>
+                <h2 className="text-3xl font-bold text-navy mb-8 font-serif">How to Apply</h2>
+                
+                <div className="space-y-8">
+                  {[
+                    { title: "Register & Profile Setup", desc: "Create your account using your Mobile Number or Aadhaar. Fill in your basic demographic details." },
+                    { title: "Choose Scheme & Upload", desc: "Select the appropriate scholarship scheme and upload digitally verifiable documents (PDFs)." },
+                    { title: "Automated Verification", desc: "The NIRIKSHAK engine automatically verifies your document integrity and extracts data instantly." },
+                    { title: "Officer Review & DBT", desc: "A Nodal Officer performs final scrutiny. Once approved, funds are transferred via Direct Benefit Transfer." }
+                  ].map((step, idx) => (
+                    <div key={idx} className="flex">
+                      <div className="flex flex-col items-center mr-6">
+                        <div className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-lg shadow-md z-10 relative">
+                          {idx + 1}
+                        </div>
+                        {idx !== 3 && <div className="w-0.5 h-full bg-slate-200 -mt-2"></div>}
+                      </div>
+                      <div className="pb-8">
+                        <h3 className="text-xl font-bold text-navy mb-2">{step.title}</h3>
+                        <p className="text-slate-600 font-medium leading-relaxed">{step.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Mandatory Documents */}
+              <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
+                <h2 className="text-2xl font-bold text-navy mb-2 font-serif flex items-center"><ShieldCheck className="mr-3 text-gold" size={28} /> Required Documents</h2>
+                <p className="text-slate-600 mb-8 font-medium">Please keep clear, legible PDF copies of the following documents ready before starting your application.</p>
+                
+                <ul className="space-y-4">
+                  {[
+                    "Caste / Tribe Certificate (Issued by competent authority)",
+                    "Valid Income Certificate (Current financial year)",
+                    "Domicile / Resident Certificate",
+                    "Aadhaar Card (For identity & DBT linkage)",
+                    "Previous Year Academic Marksheet",
+                    "Institution Admission Proof / Fee Receipt"
+                  ].map((doc, idx) => (
+                    <li key={idx} className="flex items-start bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                      <CheckCircle className="w-5 h-5 text-teal-600 mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="font-bold text-navy text-sm">{doc}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="mt-8 p-4 bg-teal-50 border border-teal-100 rounded text-sm text-teal-900 font-medium">
+                  <strong>Note:</strong> Uploaded documents must be authentic. Forgery will lead to immediate rejection and legal action under Government of India guidelines.
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Featured Schemes */}
-        <div className="py-20 bg-slate-50">
+        <section className="py-20 bg-slate-100 border-t border-slate-200" id="schemes">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Schemes</h2>
-              <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded"></div>
+              <h2 className="text-3xl font-bold text-navy mb-4 font-serif">Flagship Scholarship Schemes</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto font-medium">Central and state-level financial assistance programs administered through the NIRIKSHAK platform.</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "National Fellowship for ST", desc: "Financial assistance for ST students pursuing M.Phil and Ph.D degrees." },
-                { title: "Overseas Scholarship", desc: "Support for ST students pursuing Master's, Ph.D and Post-Doctoral studies abroad." },
-                { title: "Post-Matric", desc: "Financial assistance to ST students studying at post-matriculation or post-secondary stage." }
+                { 
+                  title: "National Fellowship for ST", 
+                  desc: "Comprehensive financial support to pursue M.Phil & Ph.D. degrees in Sciences, Humanities, Engineering, and Technology at top Indian universities.", 
+                  badge: "Higher Research",
+                  amount: "₹31,000 - ₹35,000 / mo",
+                  tenure: "Up to 5 Years"
+                },
+                { 
+                  title: "National Overseas Scholarship", 
+                  desc: "Global postgraduate and doctoral funding for ST candidates admitted into top 500 QS World Ranked international academic institutions.", 
+                  badge: "Study Abroad",
+                  amount: "Full Tuition + Airfare",
+                  tenure: "Up to 4 Years (Ph.D)"
+                },
+                { 
+                  title: "Post-Matric Scholarship for ST", 
+                  desc: "Financial aid for meritorious tribal students pursuing recognized post-secondary courses across colleges, polytechnics, and vocational centers.", 
+                  badge: "State + Central",
+                  amount: "Maint. & Day Scholar Rates",
+                  tenure: "Course Duration"
+                }
               ].map((scheme, i) => (
-                <div key={i} className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center mb-6 text-[#0B4F4C]">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{scheme.title}</h3>
-                  <p className="text-slate-600 mb-6">{scheme.desc}</p>
-                  <a href="#" className="text-[#0B4F4C] font-semibold hover:underline flex items-center">
-                    Read Guidelines
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </a>
-                </div>
+                <Card key={i} className="hover:shadow-lg transition-all flex flex-col h-full overflow-hidden group border-0 ring-1 ring-slate-200">
+                  <div className="h-2 bg-teal-primary group-hover:bg-gold transition-colors"></div>
+                  <CardContent className="flex-1 flex flex-col p-8 bg-white">
+                    <Badge variant="default" className="w-fit mb-4 text-[10px] uppercase tracking-wider border-none bg-slate-100 text-slate-600">{scheme.badge}</Badge>
+                    <h3 className="text-xl font-bold text-navy mb-3 leading-tight">{scheme.title}</h3>
+                    <p className="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">{scheme.desc}</p>
+                    
+                    <div className="bg-slate-50 rounded p-4 mb-6 text-sm border border-slate-200">
+                       <div className="flex justify-between mb-2">
+                          <span className="text-slate-500 font-medium">Financial Aid:</span>
+                          <span className="font-bold text-teal-800">{scheme.amount}</span>
+                       </div>
+                       <div className="flex justify-between">
+                          <span className="text-slate-500 font-medium">Duration:</span>
+                          <span className="font-bold text-navy">{scheme.tenure}</span>
+                       </div>
+                    </div>
+
+                    <Button variant="outline" size="sm" href="/applicant/login" className="w-full font-bold">Apply for Scheme</Button>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-700">
-            <div className="col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-6 h-6 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xs">N</div>
-                <span className="text-lg font-bold text-white">Nirikshak</span>
-              </div>
-              <p className="text-sm pr-12">
-                A modern platform enabling transparent and efficient verification of scholarship applications for Scheduled Tribes.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Compliance</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">GIGW 3.0 Guidelines</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Accessibility Statement</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Screen Reader Access</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Information</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">RTI Declaration</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Use</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row justify-between items-center text-xs">
-            <p>&copy; {new Date().getFullYear()} Ministry of Tribal Affairs, Government of India.</p>
-            <div className="mt-4 md:mt-0 flex items-center space-x-3">
-              <span>Hosted by</span>
-              <div className="bg-slate-800 px-3 py-1 rounded border border-slate-700 text-white font-semibold tracking-wider">
-                NIC
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

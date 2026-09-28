@@ -17,11 +17,20 @@ settings.APP_ENV = "testing"
 
 client = TestClient(app)
 
-# Helper functions
-def get_auth_token(email: str, password: str = "testpass123"):
-    response = client.post("/api/v1/auth/login", data={"username": email, "password": password})
-    assert response.status_code == 200, f"Login failed: {response.text}"
-    return response.json()["access_token"]
+def get_auth_token(mobile: str):
+    # Request OTP
+    req_resp = client.post("/api/v1/auth/request-otp", json={"mobile_number": mobile})
+    assert req_resp.status_code == 200, f"OTP request failed: {req_resp.text}"
+    challenge_id = req_resp.json()["challenge_id"]
+    
+    # Verify OTP
+    ver_resp = client.post("/api/v1/auth/verify-otp", json={
+        "mobile_number": mobile,
+        "challenge_id": challenge_id,
+        "otp": "123456" # Fixed for dev provider
+    })
+    assert ver_resp.status_code == 200, f"OTP verify failed: {ver_resp.text}"
+    return ver_resp.json()["access_token"]
 
 @pytest.fixture(scope="module")
 def setup_users():
@@ -40,44 +49,46 @@ def setup_users():
         db_session.commit()
         
         # Create test applicant
-        applicant_email = f"applicant_{uuid.uuid4().hex[:8]}@test.com"
-        applicant = User(email=applicant_email, hashed_password=get_password_hash("testpass123"))
+        import random
+        applicant_mobile = f"+9199{random.randint(10000000, 99999999)}"
+        applicant = User(mobile_number=applicant_mobile, mobile_verified=True)
         applicant.roles.append(applicant_role)
         db_session.add(applicant)
         
         # Create test officer
-        officer_email = f"officer_{uuid.uuid4().hex[:8]}@test.com"
-        officer = User(email=officer_email, hashed_password=get_password_hash("testpass123"))
+        officer_mobile = f"+9198{random.randint(10000000, 99999999)}"
+        officer = User(mobile_number=officer_mobile, mobile_verified=True)
         officer.roles.append(officer_role)
         db_session.add(officer)
         
         db_session.commit()
         
         yield {
-            "applicant": {"id": str(applicant.id), "email": applicant_email, "password": "testpass123"},
-            "officer": {"id": str(officer.id), "email": officer_email, "password": "testpass123"}
+            "applicant": {"id": str(applicant.id), "mobile_number": applicant_mobile},
+            "officer": {"id": str(officer.id), "mobile_number": officer_mobile}
         }
     finally:
         db_session.close()
 
 def test_applicant_registration():
-    email = f"new_applicant_{uuid.uuid4().hex[:8]}@test.com"
+    import random
+    mobile = f"+9188{random.randint(10000000, 99999999)}"
     response = client.post("/api/v1/auth/register", json={
-        "email": email,
-        "password": "securepassword123"
+        "mobile_number": mobile,
+        "full_name": "Test User"
     })
     assert response.status_code == 201
     assert "user_id" in response.json()
     
     # Duplicate registration
     response2 = client.post("/api/v1/auth/register", json={
-        "email": email,
-        "password": "securepassword123"
+        "mobile_number": mobile,
+        "full_name": "Test User"
     })
     assert response2.status_code == 409
 
 def test_create_and_list_application(setup_users):
-    token = get_auth_token(setup_users["applicant"]["email"])
+    token = get_auth_token(setup_users["applicant"]["mobile_number"])
     headers = {"Authorization": f"Bearer {token}"}
     
     app_data = {
@@ -107,7 +118,7 @@ def test_create_and_list_application(setup_users):
 
 def test_unauthorized_application_access(setup_users):
     # Applicant 1 creates app
-    token1 = get_auth_token(setup_users["applicant"]["email"])
+    token1 = get_auth_token(setup_users["applicant"]["mobile_number"])
     headers1 = {"Authorization": f"Bearer {token1}"}
     
     app_data = {
@@ -119,16 +130,17 @@ def test_unauthorized_application_access(setup_users):
     app_id = response.json()["application_id"]
     
     # Applicant 2 tries to access
-    applicant2_email = f"applicant2_{uuid.uuid4().hex[:8]}@test.com"
-    client.post("/api/v1/auth/register", json={"email": applicant2_email, "password": "pass"})
-    token2 = get_auth_token(applicant2_email, "pass")
+    import random
+    applicant2_mobile = f"+9177{random.randint(10000000, 99999999)}"
+    client.post("/api/v1/auth/register", json={"mobile_number": applicant2_mobile, "full_name": "Applicant 2"})
+    token2 = get_auth_token(applicant2_mobile)
     headers2 = {"Authorization": f"Bearer {token2}"}
     
     resp2 = client.get(f"/api/v1/applications/{app_id}", headers=headers2)
     assert resp2.status_code == 403
 
 def test_document_upload(setup_users):
-    token = get_auth_token(setup_users["applicant"]["email"])
+    token = get_auth_token(setup_users["applicant"]["mobile_number"])
     headers = {"Authorization": f"Bearer {token}"}
     
     # Create app
@@ -150,7 +162,7 @@ def test_document_upload(setup_users):
 
 def test_officer_workspace_and_decision(setup_users):
     # Applicant creates app
-    app_token = get_auth_token(setup_users["applicant"]["email"])
+    app_token = get_auth_token(setup_users["applicant"]["mobile_number"])
     app_headers = {"Authorization": f"Bearer {app_token}"}
     app_resp = client.post("/api/v1/applications/", json={
         "scheme_code": "OFFICER-TEST",
@@ -171,7 +183,7 @@ def test_officer_workspace_and_decision(setup_users):
         db_session.close()
     
     # Officer views workspace
-    off_token = get_auth_token(setup_users["officer"]["email"])
+    off_token = get_auth_token(setup_users["officer"]["mobile_number"])
     off_headers = {"Authorization": f"Bearer {off_token}"}
     
     ws_resp = client.get("/api/v1/officer/workspace?status=DRAFT", headers=off_headers)
@@ -212,7 +224,7 @@ def test_officer_workspace_and_decision(setup_users):
     assert resubmit_resp.json()["deficiency_status"] == "CORRECTION_SUBMITTED"
 
 def test_officer_cannot_be_accessed_by_applicant(setup_users):
-    app_token = get_auth_token(setup_users["applicant"]["email"])
+    app_token = get_auth_token(setup_users["applicant"]["mobile_number"])
     app_headers = {"Authorization": f"Bearer {app_token}"}
     
     ws_resp = client.get("/api/v1/officer/workspace", headers=app_headers)
@@ -220,7 +232,7 @@ def test_officer_cannot_be_accessed_by_applicant(setup_users):
 
 def test_verification_status_endpoints(setup_users):
     # App creation
-    app_token = get_auth_token(setup_users["applicant"]["email"])
+    app_token = get_auth_token(setup_users["applicant"]["mobile_number"])
     app_headers = {"Authorization": f"Bearer {app_token}"}
     app_resp = client.post("/api/v1/applications/", json={
         "scheme_code": "VERIF-TEST",
@@ -235,7 +247,7 @@ def test_verification_status_endpoints(setup_users):
     assert v_resp.json()["status"] == "NOT_STARTED"
     
     # Get officer verification status
-    off_token = get_auth_token(setup_users["officer"]["email"])
+    off_token = get_auth_token(setup_users["officer"]["mobile_number"])
     off_headers = {"Authorization": f"Bearer {off_token}"}
     ov_resp = client.get(f"/api/v1/officer/applications/{app_id}/verification", headers=off_headers)
     assert ov_resp.status_code == 200

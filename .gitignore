@@ -1,25 +1,61 @@
+# ── Secrets & Environment ─────────────────────────────────────
 .env
 .env.*
 !.env.example
 
+# ── Python ────────────────────────────────────────────────────
 __pycache__/
 *.pyc
-
-node_modules/
-.next/
-
+*.pyo
+*.pyd
+.Python
+*.egg-info/
 .venv/
 venv/
+env/
+celery_results.sqlite
 
+# ── Node / Next.js ────────────────────────────────────────────
+node_modules/
+.next/
+out/
 dist/
 build/
 
+# ── Test & Coverage ───────────────────────────────────────────
 coverage/
+.coverage
+htmlcov/
+test-results/
+playwright-report/
+*.spec.js.snap
 
+# ── Logs ──────────────────────────────────────────────────────
 *.log
+logs/
 
+# ── OS ────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Cache
+# ── Dev local storage (uploaded PDFs, not for git) ────────────
+scratch/dev_storage/
+scratch/
+
+# ── Dataset / generated docs (large, not for git) ─────────────
 dataset/reference/cache/
+dataset/multilingual/
+dataset/sih_demo/
+
+# ── Lint reports ──────────────────────────────────────────────
+frontend/grouped_lint.txt
+frontend/lint_output.txt
+frontend/lint_report.json
+frontend/lint_summary.json
+results.json
+
+# ── AI model cache (large, download separately) ───────────────
+ai/models/
+*.onnx
+*.pdparams

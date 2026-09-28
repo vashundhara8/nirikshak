@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useEffect, useState, useCallback, use } from "react";
 import { fetchApi } from "@/lib/api";
 import Link from "next/link";
 import { ArrowLeft, Upload, FileText, CheckCircle, AlertCircle, RefreshCw } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import { useDropzone } from "react-dropzone";
 
 // Supported document types matching backend document model / policy engine expectations
@@ -303,6 +307,44 @@ export default function ApplicationDetailPage({ params }: { params: Promise<{ id
           )}
         </div>
       </div>
+
+      {/* Verification Breakdown */}
+      {verification && verification.findings && verification.findings.length > 0 && (
+        <Card className="shadow-sm border-base-border mt-6">
+          <CardHeader className="bg-slate-50 border-b border-base-border py-4">
+            <CardTitle className="text-base flex items-center text-navy"><CheckCircle size={18} className="mr-2 text-teal-primary"/> AI Verification Breakdown</CardTitle>
+          </CardHeader>
+          <CardContent className="p-5">
+            <div className="space-y-4">
+              {verification.findings.map((f: any, idx: number) => (
+                <div key={idx} className="p-3 border rounded bg-white text-sm">
+                  <strong>{f.document_type.replace(/_/g, ' ')}</strong> - {f.rule_id}: 
+                  <Badge variant={f.result === 'PASS' ? 'success' : 'warning'} className="ml-2">{f.result}</Badge>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Historical Deficiencies */}
+      {deficiencies.length > 0 && (
+        <Card className="shadow-sm border-base-border mt-6">
+          <CardHeader className="bg-slate-50 border-b border-base-border py-4">
+            <CardTitle className="text-base flex items-center text-navy"><AlertCircle size={18} className="mr-2 text-teal-primary"/> Correction History</CardTitle>
+          </CardHeader>
+          <CardContent className="p-5">
+            <div className="space-y-3">
+              {deficiencies.map((d: any, idx: number) => (
+                <div key={idx} className="flex justify-between items-center p-3 border rounded text-sm">
+                  <span><strong>{d.type.replace(/_/g, ' ')}</strong> - {d.reason}</span>
+                  <Badge variant={d.status === 'OPEN' ? 'error' : 'success'}>{d.status}</Badge>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

@@ -12,6 +12,7 @@ class OCREngine:
     @property
     def available(self) -> bool:
         """Returns True only after a successful lazy initialization."""
+        self._ensure_initialized()
         return self._available
 
     def _ensure_initialized(self) -> None:
@@ -21,8 +22,8 @@ class OCREngine:
         self._initialized = True
         try:
             from paddleocr import PaddleOCR
-            # use_angle_cls=True to handle rotations properly, lang='en'
-            self.engine = PaddleOCR(use_angle_cls=True, lang='en', enable_mkldnn=False)
+            # use_textline_orientation=True to handle rotations properly, lang='en'
+            self.engine = PaddleOCR(use_textline_orientation=True, lang='en', enable_mkldnn=False)
             self._available = True
         except ImportError:
             self._available = False
@@ -43,11 +44,12 @@ class OCREngine:
                 img_path = filepath + "_temp.png"
                 pix.save(img_path)
                 try:
-                    result = self.engine.ocr(img_path)
-                    if result and result[0]:
-                        for line in result[0]:
-                            text = line[1][0]
-                            full_text.append(text)
+                    if self.engine:
+                        result = self.engine.ocr(img_path)
+                        if result and result[0]:
+                            for line in result[0]:
+                                text = line[1][0]
+                                full_text.append(text)
                 finally:
                     if os.path.exists(img_path):
                         os.remove(img_path)

@@ -182,3 +182,18 @@ def download_document(
         
     url = storage.get_signed_url(dv.storage_key, expires_in_sec=300)
     return {"signed_url": url}
+
+from fastapi.responses import Response
+
+@router.get("/documents/dev-download/{storage_key}")
+def dev_download_document(
+    storage_key: str,
+    storage: DocumentStorage = Depends(get_storage_provider)
+):
+    try:
+        data = storage.get_document_bytes(storage_key)
+        # We assume PDF here, although it could be PNG/JPEG depending on the upload. 
+        # The browser will usually sniff the bytes or it doesn't matter too much for a new tab.
+        return Response(content=data, media_type="application/pdf")
+    except Exception as e:
+        raise HTTPException(status_code=404, detail="Not Found")

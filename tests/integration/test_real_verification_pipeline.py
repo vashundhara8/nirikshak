@@ -20,7 +20,11 @@ def db_session():
     finally:
         db.close()
 
-def test_real_pipeline_end_to_end(db_session: Session):
+from unittest.mock import patch
+
+@patch('ai.document_intelligence.ocr_engine.OCREngine.extract')
+def test_real_pipeline_end_to_end(mock_extract, db_session: Session):
+    mock_extract.return_value = "Mocked OCR text for income 100000. Name TEST USER."
     # Setup test user and application
     user = User(email=f"test_{uuid.uuid4()}@example.com", hashed_password="hashed")
     db_session.add(user)

@@ -7,7 +7,11 @@ from .loader import load_rules
 from .input_resolver import resolve_inputs
 
 class PolicyEvaluator:
-    def __init__(self, rules_dir: str = "dataset/policies/extracted_rules/post_matric"):
+    def __init__(self, rules_dir: str | None = None):
+        if not rules_dir:
+            import os
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            rules_dir = os.path.join(base_dir, "dataset", "policies", "extracted_rules", "post_matric")
         self.rules = load_rules(rules_dir)
         
     def evaluate(self, app_id: str, app_data: Dict[str, Any], validation_data: Dict[str, Any]) -> PolicyEvaluationSummary:
@@ -37,7 +41,7 @@ class PolicyEvaluator:
                 rule_id=rule.rule_id,
                 policy_version=rule.policy_version,
                 status=status,
-                inputs=inputs.dict(),
+                inputs=inputs.model_dump(),
                 expected_condition=expected,
                 actual_value=actual,
                 reason=reason,

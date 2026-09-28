@@ -72,17 +72,20 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
 
     try:
         db = SessionLocal()
-    except Exception:
+    except Exception as e:
+        logger.error(f"Failed to connect to db: {e}")
         return
 
     try:
         from app.models.application import Application
         run = db.query(VerificationRun).filter(VerificationRun.id == run_id).first()
         if not run:
+            logger.error(f"Run not found: {run_id}")
             return
 
         app = db.query(Application).filter(Application.id == run.application_id).first()
         if not app:
+            logger.error(f"App not found: {run.application_id}")
             return
 
         storage = get_storage_provider()
@@ -114,7 +117,7 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
                     os.remove(tmp_path)
 
         # ── Phase 2: Cross-Document Validation ───────────────────────────
-        cv_findings = cv_engine.validate_application(str(app.id), extracted_docs)
+        cv_findings = cv_engine.validate_application(str(app.id), extracted_docs, app.submitted_data)
         cv_findings_dicts = [f.model_dump() for f in cv_findings]
 
         # ── Phase 3: Policy Engine ───────────────────────────────────────
@@ -225,7 +228,7 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
         # Store result summary on the run
         run = db.query(VerificationRun).filter(VerificationRun.id == run_id).first()
         if run:
-            run.result_summary = {
+            setattr(run, "result_summary", {
                 "operational_status": operational_summary.operational_status.value,
                 "total_deficiencies": operational_summary.total_deficiencies,
                 "blocking_count": operational_summary.blocking_count,
@@ -236,7 +239,7 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
                 "policy_pass": policy_summary.pass_count,
                 "policy_fail": policy_summary.fail_count,
                 "policy_manual_review": policy_summary.manual_review_count,
-            }
+            })
             db.commit()
 
         service.complete_verification(uuid.UUID(run_id), actor_id, actor_role, success=success)

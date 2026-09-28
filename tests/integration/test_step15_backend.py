@@ -52,52 +52,66 @@ def test_auth_registration_login(db_session):
         db_session.commit()
 
     # Create user
-    user = User(email=email, hashed_password=get_password_hash(pwd))
+    import random
+    mobile = f"+9199{random.randint(10000000, 99999999)}"
+    user = User(mobile_number=mobile, mobile_verified=True)
     user.roles.append(role)
     db_session.add(user)
     db_session.commit()
     
-    # Login
-    r = client.post("/api/v1/auth/login", data={
-        "username": email,
-        "password": pwd
+    # Request OTP
+    r = client.post("/api/v1/auth/request-otp", json={
+        "mobile_number": mobile
+    })
+    assert r.status_code == 200
+    challenge_id = r.json()["challenge_id"]
+    
+    # Verify OTP
+    r = client.post("/api/v1/auth/verify-otp", json={
+        "mobile_number": mobile,
+        "challenge_id": challenge_id,
+        "otp": "123456"
     })
     assert r.status_code == 200
     token_data = r.json()
     assert "access_token" in token_data
     access_token = token_data["access_token"]
     
-    # Wrong password
-    r = client.post("/api/v1/auth/login", data={
-        "username": email,
-        "password": "WrongPassword!"
+    # Wrong OTP
+    r = client.post("/api/v1/auth/verify-otp", json={
+        "mobile_number": mobile,
+        "challenge_id": challenge_id,
+        "otp": "000000"
     })
     assert r.status_code == 401
     
     # Check persistence
-    user = db_session.query(User).filter_by(email=email).first()
+    user = db_session.query(User).filter_by(mobile_number=mobile).first()
     assert user is not None
     assert any(r.name == "APPLICANT" for r in user.roles)
 
 def test_rbac_and_resource_authorization(db_session):
     # Register Applicant A
-    email_a = f"applicant_a_{uuid.uuid4()}@example.com"
+    import random
+    mobile_a = f"+9188{random.randint(10000000, 99999999)}"
     role = db_session.query(Role).filter_by(name="APPLICANT").first()
-    user_a = User(email=email_a, hashed_password=get_password_hash("Pwd"))
+    user_a = User(mobile_number=mobile_a, mobile_verified=True)
     user_a.roles.append(role)
     db_session.add(user_a)
     db_session.commit()
     
-    token_a = client.post("/api/v1/auth/login", data={"username": email_a, "password": "Pwd"}).json()["access_token"]
+    req_a = client.post("/api/v1/auth/request-otp", json={"mobile_number": mobile_a}).json()
+    token_a = client.post("/api/v1/auth/verify-otp", json={"mobile_number": mobile_a, "challenge_id": req_a["challenge_id"], "otp": "123456"}).json()["access_token"]
     
     # Register Applicant B
-    email_b = f"applicant_b_{uuid.uuid4()}@example.com"
-    user_b = User(email=email_b, hashed_password=get_password_hash("Pwd"))
+    mobile_b = f"+9177{random.randint(10000000, 99999999)}"
+    user_b = User(mobile_number=mobile_b, mobile_verified=True)
     user_b.roles.append(role)
     db_session.add(user_b)
     db_session.commit()
     
-    token_b = client.post("/api/v1/auth/login", data={"username": email_b, "password": "Pwd"}).json()["access_token"]
+    req_b = client.post("/api/v1/auth/request-otp", json={"mobile_number": mobile_b}).json()
+    token_b = client.post("/api/v1/auth/verify-otp", json={"mobile_number": mobile_b, "challenge_id": req_b["challenge_id"], "otp": "123456"}).json()["access_token"]
     
     # Create Application as A
     r = client.post("/api/v1/applications/", headers={"Authorization": f"Bearer {token_a}"}, json={

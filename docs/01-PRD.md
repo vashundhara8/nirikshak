@@ -39,6 +39,7 @@ The platform explains every important finding using:
 **VALUE → EVIDENCE → RULE → REASON.**
 
 ## 8. Product Objectives
+
 - Automate document classification and data extraction.
 - Provide cross-document consistency checks.
 - Apply deterministic scheme-specific and academic-year-specific government rules.

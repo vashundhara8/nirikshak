@@ -307,11 +307,11 @@ class TestRegisterEndpointCreatesProfile:
     def test_register_request_has_full_name_field(self):
         """RegisterRequest Pydantic model must accept full_name."""
         from app.api.auth import RegisterRequest
-        req = RegisterRequest(email="test@test.com", password="pass", full_name="Test User")
+        req = RegisterRequest(mobile_number="+919999999999", full_name="Test User")
         assert req.full_name == "Test User"
 
     def test_register_request_full_name_optional(self):
         """full_name must be optional (backward compat) — existing callers without it still work."""
         from app.api.auth import RegisterRequest
-        req = RegisterRequest(email="test@test.com", password="pass")
+        req = RegisterRequest(mobile_number="+919999999999")
         assert req.full_name == ""  # default empty string

@@ -6,6 +6,8 @@ from pydantic import BaseModel
 import uuid
 from datetime import datetime, timezone
 
+from app.services.notification_service import NotificationService
+
 from app.db.session import get_db
 from app.models.identity import User
 from app.models.application import Application, ApplicationStatusHistory
@@ -54,8 +56,8 @@ def get_officer_workspace(
         from app.models.profiles import ApplicantProfile
         applicant = db.query(UserModel).filter(UserModel.id == app.applicant_id).first()
         applicant_profile = db.query(ApplicantProfile).filter(ApplicantProfile.user_id == app.applicant_id).first()
-        applicant_name = (applicant_profile.full_name if applicant_profile else None) or (applicant.email.split("@")[0] if applicant else "Unknown")
-        applicant_email = applicant.email if applicant else None
+        applicant_name = (applicant_profile.full_name if applicant_profile else None) or (applicant.mobile_number if applicant and applicant.mobile_number else "Unknown")
+        applicant_email = applicant.mobile_number if applicant else None
 
         results.append({
             "application_id": str(app.id),
@@ -242,10 +244,32 @@ def record_officer_decision(
         result="SUCCESS"
     )
     db.add(audit)
-    
-    # Send Notification Event (This would be picked up by Celery or an event bus)
-    # emit_event("OFFICER_DECISION_RECORDED", {"application_id": str(app.id), "new_status": new_status})
-    
+
+    # ── In-app notifications to applicant ─────────────────────────────
+    try:
+        scheme = app.scheme_code or "the scholarship"
+        if decision.action == "APPROVE":
+            NotificationService.application_approved(
+                db, applicant_id=str(app.applicant_id),
+                application_id=str(app.id), scheme_code=scheme
+            )
+        elif decision.action == "REJECT":
+            NotificationService.application_rejected(
+                db, applicant_id=str(app.applicant_id),
+                application_id=str(app.id), reason=decision.reason or ""
+            )
+        elif decision.action == "REQUEST_CORRECTION":
+            NotificationService.correction_requested(
+                db, applicant_id=str(app.applicant_id),
+                application_id=str(app.id),
+                deficiency_type=decision.deficiency_type or "",
+                reason=decision.reason or ""
+            )
+    except Exception as e:
+        # Notification failure must not block the decision
+        import logging
+        logging.getLogger(__name__).warning(f"Notification dispatch failed: {e}")
+
     db.commit()
     return {"message": "Decision recorded", "new_status": new_status}
 

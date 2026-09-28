@@ -23,26 +23,23 @@ def resolve_inputs(application_data: Dict[str, Any], validation_data: Dict[str, 
     if checks.get("COURSE_CONSISTENCY") == "FAIL": inputs.conflicted_fields.append("course")
         
     # 3. Resolve Fields (only if NOT conflicted, else leave None for strict deterministic evaluation)
-    cat_data = application_data.get("category", {})
+    demo_data = application_data.get("demographic", {})
     if "category" not in inputs.conflicted_fields:
-        inputs.category = cat_data.get("claimed_category")
-        inputs.domicile = cat_data.get("domicile_state")
+        inputs.category = demo_data.get("category")
+        inputs.domicile = demo_data.get("domicile_state")
         
-    inc_data = application_data.get("income", {})
     if "income" not in inputs.conflicted_fields:
-        inputs.income = inc_data.get("family_income_annum")
+        inputs.income = demo_data.get("annual_family_income")
         
-    inst_data = application_data.get("institution", {})
+    acad_data = application_data.get("academic", {})
     if "institution" not in inputs.conflicted_fields:
-        inputs.institution = inst_data.get("institute_name")
+        inputs.institution = acad_data.get("institution_name")
         
-    course_data = application_data.get("course", {})
     if "course" not in inputs.conflicted_fields:
-        inputs.course = course_data.get("course_name")
+        inputs.course = acad_data.get("course_name")
         
-    edu_data = application_data.get("education", {})
-    inputs.academic_percentage = float(edu_data.get("last_qualified_marks_percent", 0))
-    inputs.last_exam = edu_data.get("last_qualified_exam")
+    inputs.academic_percentage = float(acad_data.get("last_exam_percentage", 0))
+    inputs.last_exam = acad_data.get("last_exam", "High School")
     
     # 4. Resolve application attributes
     inputs.renewal = application_data.get("is_renewal", False)
@@ -57,7 +54,7 @@ def resolve_inputs(application_data: Dict[str, Any], validation_data: Dict[str, 
         inputs.ambiguous_conditions.append("MARRIED_CANDIDATE")
         
     # Gross income ambiguity for non-salaried
-    if inc_data.get("income_source", "").upper() not in ["SALARY", "PARENTS"]:
+    if demo_data.get("income_source", "").upper() not in ["SALARY", "PARENTS"]:
         inputs.ambiguous_conditions.append("COMPLEX_GROSS_INCOME")
         
     return inputs

@@ -1,10 +1,28 @@
 version: '3.8'
 
+# ─────────────────────────────────────────────────────────────
+#  NIRIKSHAK — Full Stack Docker Compose
+#  Ministry of Tribal Affairs · Scholarship Verification Platform
+#
+#  Services:
+#    postgres   → Primary database
+#    redis      → Celery broker + result backend
+#    minio      → Object storage (documents)
+#    minio-setup→ Auto-creates S3 bucket on first run
+#    backend    → FastAPI application server
+#    worker     → Celery worker (OCR + verification jobs)
+#    frontend   → Next.js application
+#    migrate    → Runs DB migrations on startup (one-shot)
+# ─────────────────────────────────────────────────────────────
+
 services:
+
+  # ── Infrastructure ────────────────────────────────────────────
+
   postgres:
     image: postgres:16-alpine
-    container_name: mota_postgres
-    restart: always
+    container_name: nirikshak_postgres
+    restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USER:-mota}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
@@ -17,12 +35,12 @@ services:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-mota} -d ${DB_NAME:-mota_db}"]
       interval: 5s
       timeout: 5s
-      retries: 5
+      retries: 10
 
   redis:
     image: redis:7-alpine
-    container_name: mota_redis
-    restart: always
+    container_name: nirikshak_redis
+    restart: unless-stopped
     ports:
       - "6379:6379"
     volumes:
@@ -32,12 +50,12 @@ services:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 3s
-      retries: 5
+      retries: 10
 
   minio:
     image: minio/minio:latest
-    container_name: mota_minio
-    restart: always
+    container_name: nirikshak_minio
+    restart: unless-stopped
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-mota_admin}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-mota_secret}
@@ -49,23 +67,110 @@ services:
     command: server /data --console-address ":9001"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 5s
-      timeout: 3s
+      interval: 10s
+      timeout: 5s
       retries: 5
 
-  # Setup bucket automatically
   minio-setup:
     image: minio/mc:latest
-    container_name: mota_minio_setup
+    container_name: nirikshak_minio_setup
     depends_on:
       minio:
         condition: service_healthy
+    restart: "no"
     entrypoint: >
       /bin/sh -c "
       /usr/bin/mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER:-mota_admin} ${MINIO_ROOT_PASSWORD:-mota_secret};
       /usr/bin/mc mb myminio/${S3_BUCKET_NAME:-mota-documents} --ignore-existing;
-      echo 'MinIO Bucket initialization complete.';
+      /usr/bin/mc anonymous set download myminio/${S3_BUCKET_NAME:-mota-documents};
+      echo 'MinIO bucket ready.';
       "
+
+  # ── Application ────────────────────────────────────────────────
+
+  migrate:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nirikshak_migrate
+    restart: "no"
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-mota}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-mota_db}
+    env_file: .env
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nirikshak_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-mota}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-mota_db}
+      REDIS_URL: redis://redis:6379/0
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:-mota_admin}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-mota_secret}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME:-mota-documents}
+      APP_ENV: ${APP_ENV:-development}
+    env_file: .env
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nirikshak_worker
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-mota}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-mota_db}
+      REDIS_URL: redis://redis:6379/0
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:-mota_admin}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-mota_secret}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME:-mota-documents}
+      APP_ENV: ${APP_ENV:-development}
+    env_file: .env
+    command: ["celery", "-A", "app.core.celery_app.celery_app", "worker", "--loglevel=info", "--concurrency=2", "-Q", "default"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nirikshak_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://backend:8000/api/v1
+      NODE_ENV: production
+    depends_on:
+      backend:
+        condition: service_healthy
 
 volumes:
   postgres_data:
