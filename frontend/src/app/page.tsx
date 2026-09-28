@@ -8,8 +8,7 @@ import { SiteFooter } from "@/components/ui/SiteFooter";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { ArrowRight, FileText, CheckCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileText, CheckCircle, ShieldCheck, Clock, Check, GraduationCap, AlertCircle } from "lucide-react";
 
 export default function LandingPage() {
   const { t } = useI18n();
@@ -20,52 +19,105 @@ export default function LandingPage() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-navy relative overflow-hidden border-b-[6px] border-gold">
-          {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1.5px, transparent 1.5px)', backgroundSize: '32px 32px' }}></div>
+        <section className="bg-[linear-gradient(135deg,#041e42_0%,#0f4c75_100%)] relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-500 via-transparent to-transparent"></div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
-            <div className="max-w-4xl">
-              <Badge variant="info" className="mb-6 border-none bg-teal-primary/20 text-teal-100 px-4 py-1.5 uppercase tracking-widest text-xs font-bold">
-                Government of India • Ministry of Tribal Affairs
-              </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight font-serif">
-                {t('hero.title')}
+          <div className="max-w-[1400px] mx-auto px-6 py-16 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-8">
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <Badge className="bg-teal-400 hover:bg-teal-500 text-navy font-bold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase border-none shadow-sm">
+                  GLOBAL MASTERS & PH.D. IN STEM, MEDICINE & HUMANITIES
+                </Badge>
+                <Badge className="bg-slate-800/80 text-gold border border-gold/30 hover:bg-slate-800 font-bold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase shadow-sm flex items-center">
+                  <Check className="w-3 h-3 mr-1" /> AI-Assisted Verification & Scoring
+                </Badge>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.15] mb-4 tracking-tight">
+                National Overseas Scholarship for ST Candidates (NOS)
               </h1>
-              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl leading-relaxed font-medium">
-                {t('hero.subtitle')}
+              <p className="text-lg text-slate-300 mb-8 font-medium">
+                Study at Top 500 QS-Ranked Global Universities with 100% Funding
               </p>
               
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button size="lg" variant="secondary" href="/applicant/login" className="font-bold tracking-wide text-navy text-base h-14 px-8 shadow-xl hover:shadow-2xl transition-all">
-                  {t('hero.apply')}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button size="lg" variant="outline" href="/applicant/login" className="font-bold text-white border-white hover:bg-white/10 hover:text-white h-14 px-8">
-                  {t('hero.track')}
-                </Button>
+              {/* Financial Assistance Box */}
+              <div className="bg-navy/40 border border-slate-700 rounded-xl p-5 mb-8 inline-flex items-center backdrop-blur-sm max-w-2xl w-full">
+                <div className="w-10 h-10 rounded bg-gold text-navy font-bold text-xl flex items-center justify-center mr-4 flex-shrink-0">
+                  ₹
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-1">Financial Assistance</p>
+                  <p className="text-gold font-bold text-lg md:text-xl leading-tight">100% Tuition Fees + USD/GBP 15,400 Living Grant + Airfare</p>
+                </div>
+              </div>
+
+              {/* Perks Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 max-w-2xl">
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-teal-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-slate-300 font-medium">Complete overseas university tuition fee coverage</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-teal-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-slate-300 font-medium">Annual living maintenance grant of USD 15,400 / GBP 9,900</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-teal-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-slate-300 font-medium">Return economy international airfare</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-teal-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-slate-300 font-medium">Pre-departure orientation & automated visa clearances</span>
+                </div>
               </div>
             </div>
             
-            {/* Trust Indicators */}
-            <div className="mt-16 pt-8 border-t border-slate-700 grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">₹840+ Cr</div>
-                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">DBT Disbursed (FY 24-25)</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">2.4M+</div>
-                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Students Benefited</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">100%</div>
-                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Paperless Verification</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-1">14 Days</div>
-                <div className="text-xs font-semibold text-teal-300 uppercase tracking-wider">Avg Processing Time</div>
-              </div>
+            {/* Right Content - Key Scheme Dates Card */}
+            <div className="lg:col-span-4">
+               <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6 shadow-2xl">
+                 <div className="flex justify-between items-center border-b border-slate-700/50 pb-4 mb-5">
+                   <h3 className="text-white font-bold flex items-center">
+                     <Clock className="w-4 h-4 text-gold mr-2" /> Key Scheme Dates
+                   </h3>
+                   <span className="bg-teal-900 text-teal-300 border border-teal-700/50 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                     OPEN FOR 2026-27
+                   </span>
+                 </div>
+                 
+                 <div className="space-y-4 mb-6">
+                   <div className="flex justify-between items-center text-sm">
+                     <span className="text-slate-400 flex items-center"><Clock className="w-3.5 h-3.5 mr-2" /> Application Deadline:</span>
+                     <span className="text-gold font-bold">15 November 2026</span>
+                   </div>
+                   <div className="flex justify-between items-center text-sm">
+                     <span className="text-slate-400">Mode of Selection:</span>
+                     <span className="text-white font-medium">National Merit + Scrutiny</span>
+                   </div>
+                   <div className="flex justify-between items-center text-sm">
+                     <span className="text-slate-400">Disbursement:</span>
+                     <span className="text-white font-medium">Direct Benefit Transfer (DBT)</span>
+                   </div>
+                   <div className="flex justify-between items-center text-sm">
+                     <span className="text-slate-400">AI Validation Time:</span>
+                     <span className="text-teal-400 font-bold">&lt; 5 Minutes</span>
+                   </div>
+                 </div>
+
+                 <div className="bg-navy/50 border border-slate-700/50 p-4 rounded-xl flex items-start text-xs text-slate-400 leading-relaxed">
+                    <AlertCircle className="w-4 h-4 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong className="text-slate-300">Note:</strong> Only registered Scheduled Tribe students with validated ST caste certificates from competent revenue officers are eligible.</span>
+                 </div>
+                 
+                 <div className="mt-6 flex justify-end">
+                    <Button variant="primary" href="/applicant/login" className="w-full justify-center bg-teal-500 hover:bg-teal-600 text-white font-bold h-12 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+                      Start Application
+                    </Button>
+                 </div>
+               </div>
             </div>
+
           </div>
         </section>
 

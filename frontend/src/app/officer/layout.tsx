@@ -19,13 +19,13 @@ export default function OfficerLayout({ children }: { children: React.ReactNode 
     if (isAuthPage) return;
     if (!loading) {
       if (!user) {
-        router.push("/");
+        router.push("/officer/login");
         return;
       }
       
       const roles = user.roles.map((r) => r.name);
       if (!roles.includes("INSTITUTE_OFFICER") && !roles.includes("DISTRICT_OFFICER") && !roles.includes("STATE_OFFICER") && !roles.includes("MINISTRY_OFFICER") && !roles.includes("ADMIN")) {
-        router.push("/");
+        router.push("/officer/login");
       }
     }
   }, [user, loading, router, isAuthPage]);

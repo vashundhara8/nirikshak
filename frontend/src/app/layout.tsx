@@ -7,6 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 import { I18nProvider } from "@/lib/i18n";
 
+import { ScholarBot } from "@/components/ui/ScholarBot";
+
 export const metadata: Metadata = {
   title: "Nirikshak Platform",
   description: "MoTA Scholarship Intelligence & Lifecycle Platform",
@@ -23,6 +25,7 @@ export default function RootLayout({
         <I18nProvider>
           <AuthProvider>
             {children}
+            <ScholarBot />
           </AuthProvider>
         </I18nProvider>
       </body>

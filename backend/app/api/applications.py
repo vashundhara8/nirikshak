@@ -131,7 +131,9 @@ def list_applications(
         "academic_year": app.academic_year,
         "status": app.current_status,
         "created_at": app.created_at,
-        "updated_at": app.updated_at
+        "updated_at": app.updated_at,
+        "document_count": len(app.documents) if app.documents else 0,
+        "open_deficiency_count": len([d for d in app.deficiencies if d.status == "OPEN"]) if app.deficiencies else 0
     } for app in apps]
 
 @router.get("/{application_id}")

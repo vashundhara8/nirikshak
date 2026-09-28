@@ -67,12 +67,13 @@ export default function ApplicantDashboard() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center bg-white p-6 rounded-lg border border-base-border shadow-sm">
-        <div>
-           <h1 className="text-2xl font-bold text-navy tracking-tight">My Applications</h1>
-           <p className="text-text-muted text-sm mt-1">Manage and track your MoTA scholarship applications.</p>
+      <div className="bg-[linear-gradient(135deg,#041e42_0%,#0f4c75_100%)] relative overflow-hidden rounded-2xl shadow-xl flex justify-between items-center p-8 mb-6">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-500 via-transparent to-transparent"></div>
+        <div className="relative z-10">
+           <h1 className="text-3xl font-black text-white tracking-tight mb-2">My Applications</h1>
+           <p className="text-slate-300 text-sm font-medium">Manage and track your MoTA scholarship applications.</p>
         </div>
-        <Button href="/applicant/apply" className="font-semibold tracking-wide">
+        <Button href="/applicant/apply" className="relative z-10 bg-teal-500 hover:bg-teal-600 text-white font-bold h-12 px-6 shadow-[0_0_15px_rgba(20,184,166,0.3)] border-none">
           <PlusCircle size={18} className="mr-2" />
           New Application
         </Button>
@@ -158,36 +159,35 @@ export default function ApplicantDashboard() {
               href={`/applicant/applications/${app.application_id}`}
               className="block group"
             >
-              <Card className="h-full transition-shadow group-hover:shadow-md group-hover:border-teal-primary/50 flex flex-col overflow-hidden">
-                <div className="h-1 bg-teal-primary group-hover:bg-gold transition-colors"></div>
-                <CardContent className="p-6 flex-1 flex flex-col">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 rounded bg-teal-light flex items-center justify-center">
-                         <FileText className="text-teal-primary h-4 w-4" />
+              <Card className="hover:shadow-lg transition-all flex flex-col h-full overflow-hidden group border-0 ring-1 ring-slate-200">
+                <div className="h-2 bg-teal-primary group-hover:bg-gold transition-colors"></div>
+                <CardContent className="flex-1 flex flex-col p-6 bg-white">
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center">
+                         <FileText className="text-teal-600 h-5 w-5" />
                       </div>
-                      <span className="font-bold text-navy">{app.scheme_code}</span>
+                      <span className="font-bold text-navy text-lg leading-tight">{app.scheme_code}</span>
                     </div>
                     {getStatusIcon(app.status)}
                   </div>
                   
-                  <div className="space-y-3 text-sm mt-4">
-                    <div className="flex justify-between border-b border-base-border/50 pb-2">
-                      <span className="text-text-muted font-medium">Academic Year</span>
+                  <div className="bg-slate-50 rounded p-4 mb-4 text-sm border border-slate-200 space-y-2 flex-1">
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-500 font-medium">Academic Year:</span>
                       <span className="font-bold text-navy">{app.academic_year}</span>
                     </div>
-                    <div className="flex justify-between items-center border-b border-base-border/50 pb-2">
-                      <span className="text-text-muted font-medium">Status</span>
-                      <Badge variant={getStatusVariant(app.status)}>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-500 font-medium">Submitted:</span>
+                      <span className="font-bold text-navy">{format(new Date(app.created_at), "MMM d, yyyy")}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                      <span className="text-slate-500 font-medium text-sm">Status:</span>
+                      <Badge variant={getStatusVariant(app.status)} className="font-bold px-3 py-1 text-[10px] tracking-wider uppercase">
                         {app.status.replace(/_/g, " ")}
                       </Badge>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-text-muted font-medium">Submitted</span>
-                      <span className="font-semibold text-navy">
-                        {format(new Date(app.created_at), "MMM d, yyyy")}
-                      </span>
-                    </div>
                   </div>
                 </CardContent>
               </Card>

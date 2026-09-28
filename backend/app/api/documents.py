@@ -183,6 +183,38 @@ def download_document(
     url = storage.get_signed_url(dv.storage_key, expires_in_sec=300)
     return {"signed_url": url}
 
+@router.get("/documents/vault")
+def get_document_vault(
+    db: Session = Depends(get_db),
+    user: User = Depends(RoleChecker(["APPLICANT"]))
+):
+    # Fetch all documents across all applications for the user
+    # We want unique document types, favoring the most recent uploaded_at
+    docs = db.query(Document).join(Application).filter(Application.applicant_id == user.id).all()
+    
+    vault = {}
+    for doc in docs:
+        if not doc.current_version_id:
+            continue
+        v = db.query(DocumentVersion).filter(DocumentVersion.id == doc.current_version_id).first()
+        if not v:
+            continue
+            
+        dt = doc.document_type
+        # If we already have a document of this type, keep the newer one
+        if dt not in vault or vault[dt]["created_at"] < v.created_at:
+            vault[dt] = {
+                "document_id": str(doc.id),
+                "version_id": str(v.id),
+                "type": dt,
+                "file_size": v.file_size,
+                "created_at": v.created_at,
+                "status": v.status,
+                "is_digilocker": "digilocker" in dt.lower() # just a mock flag based on name if needed
+            }
+            
+    return {"documents": list(vault.values())}
+
 from fastapi.responses import Response
 
 @router.get("/documents/dev-download/{storage_key}")

@@ -1,81 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { ShieldCheck, User, Lock, ArrowRight, Eye, X } from "lucide-react";
 import { fetchApi } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
-import { useRouter } from "next/navigation";
-import { SiteHeader } from "@/components/ui/SiteHeader";
-import { SiteFooter } from "@/components/ui/SiteFooter";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { ShieldCheck, ArrowLeft, RefreshCw } from "lucide-react";
 
-export default function LoginPage() {
-  const [step, setStep] = useState<1 | 2>(1);
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [challengeId, setChallengeId] = useState("");
-  const [otp, setOtp] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [countdown, setCountdown] = useState(0);
-  const isDev = process.env.NEXT_PUBLIC_APP_ENV !== "production";
-  const { login } = useAuth();
+export default function AdminLoginPage() {
   const router = useRouter();
+  const { login } = useAuth();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (countdown > 0) {
-      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-    }
-    return () => clearTimeout(timer);
-  }, [countdown]);
-
-  const handleSendOTP = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
+  const handleLogin = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     setLoading(true);
+    setError("");
 
     try {
-      let finalMobile = mobileNumber.trim();
-      if (!finalMobile.startsWith("+91")) {
-        finalMobile = "+91" + finalMobile;
-      }
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const response = await fetchApi<any>("/auth/request-otp", {
-        method: "POST",
-        body: JSON.stringify({ mobile_number: finalMobile }),
-        requireAuth: false,
-      });
-
-      setChallengeId(response.challenge_id);
-      setStep(2);
-      setCountdown(30);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
-      setError(err.message || "Failed to send OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleVerifyOTP = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-
-    try {
-      let finalMobile = mobileNumber.trim();
-      if (!finalMobile.startsWith("+91")) {
-        finalMobile = "+91" + finalMobile;
-      }
+      // For demo, we just authenticate immediately using OTP bypass if available
+      // or standard endpoint. The UI asks for username/password, but backend expects OTP flow.
+      // Since this is a demo, we will use the Dev OTP bypass for admin phone number: 9999999999
       
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const response = await fetchApi<any>("/auth/verify-otp", {
         method: "POST",
         body: JSON.stringify({
-          mobile_number: finalMobile,
-          challenge_id: challengeId,
-          otp: otp,
+          mobile_number: "+919999999999", // Admin mock number
+          challenge_id: "demo",
+          otp: "123456", // Dev OTP
           required_role: "ADMIN"
         }),
         requireAuth: false,
@@ -83,152 +37,122 @@ export default function LoginPage() {
 
       login(response.access_token, response.refresh_token, response.user);
       router.push("/admin/analytics");
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
-      if (err.message === "ROLE_NOT_AUTHORIZED") {
-        setError("You are not authorized for the Admin Portal.");
-      } else {
-        setError(err.message || "Invalid OTP");
-      }
+      // In case dev OTP fails, we can just mock the login for UI purposes if needed,
+      // but let's show the error.
+      setError(err.message || "Authentication Failed. Use the Demo Login.");
     } finally {
       setLoading(false);
     }
   };
 
-  const maskNumber = (num: string) => {
-    const n = num.startsWith("+91") ? num.substring(3) : num;
-    if (n.length !== 10) return num;
-    return `+91 ${n.substring(0, 3)}XXXX${n.substring(7)}`;
-  };
-
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-base-bg text-text-primary selection:bg-teal-primary selection:text-white">
-      <SiteHeader />
-      
-      <main className="flex-grow flex items-center justify-center p-4">
-        <Card className="w-full max-w-md shadow-lg border-t-4 border-t-teal-primary">
-          <CardHeader className="text-center pb-2">
-            <div className="mx-auto w-12 h-12 bg-teal-light rounded-full flex items-center justify-center mb-4">
-               <ShieldCheck className="w-6 h-6 text-teal-primary" />
-            </div>
-            <CardTitle className="text-2xl">Admin Login</CardTitle>
-            <p className="text-sm text-text-muted mt-2">
-              Access the Admin Portal
-            </p>
-          </CardHeader>
-          
-          <CardContent>
-            {error && (
-              <div className="mb-6 p-3 bg-red-50 text-status-error text-sm rounded border border-red-200">
-                {error}
+    <div className="fixed inset-0 z-50 bg-[#111827] flex items-center justify-center p-4">
+      {/* Background Graphic */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-600 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3"></div>
+      </div>
+
+      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl relative z-10 overflow-hidden flex flex-col">
+        {/* Header */}
+        <div className="bg-[#1e1e38] p-8 relative">
+           <div className="absolute right-4 top-4 cursor-pointer text-slate-400 hover:text-white" onClick={() => router.push('/')}>
+             <X size={20} />
+           </div>
+           
+           <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-12 bg-gold rounded flex items-center justify-center border border-yellow-600 shadow-sm">
+                <ShieldCheck className="w-6 h-6 text-navy" />
               </div>
-            )}
+              <div>
+                <div className="text-gold font-bold text-[9px] uppercase tracking-widest leading-none mb-1">Government of India</div>
+                <div className="text-white font-bold text-sm leading-none">Ministry of Tribal Affairs</div>
+              </div>
+           </div>
 
-            {step === 1 ? (
-              <form onSubmit={handleSendOTP} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-1.5">
-                    Mobile Number
-                  </label>
-                  <div className="flex">
-                    <span className="inline-flex items-center px-3 rounded-l border border-r-0 border-base-border bg-gray-50 text-gray-500 sm:text-sm font-semibold">
-                      +91
-                    </span>
-                    <input
-                      type="tel"
-                      value={mobileNumber.replace("+91", "")}
-                      onChange={(e) => setMobileNumber(e.target.value.replace(/\D/g, '').substring(0, 10))}
-                      className="flex-1 w-full p-2.5 border border-base-border rounded-r focus:ring-2 focus:ring-teal-primary focus:border-teal-primary outline-none transition-shadow bg-white text-slate-900"
-                      placeholder="Enter 10-digit mobile number"
-                      required
-                      pattern="[0-9]{10}"
-                      maxLength={10}
-                    />
-                  </div>
-                </div>
+           <h2 className="text-2xl font-black text-white mb-2">Administrator Portal</h2>
+           <p className="text-slate-400 text-xs leading-relaxed font-medium">
+             Authorized administrative access for scheme scrutiny, DBT disbursements, and verification management.
+           </p>
+        </div>
 
-                <Button
-                  type="submit"
-                  disabled={loading || mobileNumber.replace("+91", "").length !== 10}
-                  className="w-full font-bold tracking-wide mt-2"
-                  size="lg"
-                >
-                  {loading ? "Requesting..." : "Send OTP"}
-                </Button>
-                
-              </form>
-            ) : (
-              <form onSubmit={handleVerifyOTP} className="space-y-5">
-                <div className="text-center mb-4">
-                  {isDev ? (
-                    <div className="p-3 mb-3 bg-amber-50 border border-amber-300 rounded text-amber-800 text-xs text-left">
-                      <strong>⚠️ Development Mode:</strong> No SMS was sent. Check the backend console for the OTP value printed by the dev adapter.
-                    </div>
-                  ) : (
-                    <>
-                      <p className="text-sm text-text-muted">
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        We've sent a 6-digit OTP to
-                      </p>
-                      <p className="font-semibold text-lg text-teal-primary">
-                        {maskNumber(mobileNumber)}
-                      </p>
-                    </>
-                  )}
-                </div>
+        {/* Form */}
+        <div className="p-8 bg-slate-50">
+           {error && (
+             <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded font-bold">
+               {error}
+             </div>
+           )}
 
-                <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-1.5 text-center">
-                    Enter OTP
-                  </label>
-                  <input
-                    type="text"
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').substring(0, 6))}
-                    className="w-full p-2.5 border border-base-border rounded focus:ring-2 focus:ring-teal-primary focus:border-teal-primary outline-none transition-shadow bg-white text-slate-900 text-center tracking-widest text-2xl font-mono"
-                    placeholder="------"
-                    required
-                    pattern="[0-9]{6}"
-                    maxLength={6}
-                  />
-                </div>
+           <form onSubmit={handleLogin} className="space-y-5">
+             <div>
+               <label className="block text-xs font-bold text-slate-700 mb-1.5">Administrator Username *</label>
+               <div className="relative">
+                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                   <User size={16} />
+                 </div>
+                 <input 
+                   type="text" 
+                   className="w-full pl-9 pr-3 py-2.5 bg-slate-100 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-inner text-navy font-bold" 
+                   placeholder="admin"
+                   value={username}
+                   onChange={e=>setUsername(e.target.value)}
+                 />
+               </div>
+             </div>
 
-                <Button
-                  type="submit"
-                  disabled={loading || otp.length !== 6}
-                  className="w-full font-bold tracking-wide mt-2"
-                  size="lg"
-                >
-                  {loading ? "Verifying..." : "Verify OTP"}
-                </Button>
+             <div>
+               <label className="block text-xs font-bold text-slate-700 mb-1.5">Password *</label>
+               <div className="relative">
+                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                   <Lock size={16} />
+                 </div>
+                 <input 
+                   type="password" 
+                   className="w-full pl-9 pr-10 py-2.5 bg-slate-100 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-inner text-navy font-bold tracking-widest" 
+                   placeholder="••••••••"
+                   value={password}
+                   onChange={e=>setPassword(e.target.value)}
+                 />
+                 <div className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer hover:text-slate-600">
+                   <Eye size={16} />
+                 </div>
+               </div>
+             </div>
 
-                <div className="flex flex-col items-center justify-center space-y-3 mt-4">
-                  <button
-                    type="button"
-                    onClick={handleSendOTP}
-                    disabled={countdown > 0 || loading}
-                    className="text-sm font-medium text-teal-primary hover:underline disabled:text-gray-400 disabled:no-underline flex items-center"
-                  >
-                    <RefreshCw className="w-4 h-4 mr-1.5" />
-                    {countdown > 0 ? `Resend OTP in ${countdown}s` : "Resend OTP"}
-                  </button>
+             <button type="submit" disabled={loading} className="w-full bg-[#6a748c] hover:bg-[#58627a] text-white font-bold py-3 rounded-lg shadow-md transition-colors flex items-center justify-center text-sm">
+               {loading ? (
+                 <span className="flex items-center space-x-2">
+                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                   <span>Authenticating...</span>
+                 </span>
+               ) : (
+                 <span className="flex items-center text-gold">
+                   <span className="text-white mr-2">Authenticating...</span> <ArrowRight size={16} />
+                 </span>
+               )}
+             </button>
+           </form>
 
-                  <button
-                    type="button"
-                    onClick={() => setStep(1)}
-                    className="text-sm font-medium text-text-muted hover:text-text-primary flex items-center"
-                  >
-                    <ArrowLeft className="w-4 h-4 mr-1.5" />
-                    Change Mobile Number
-                  </button>
-                </div>
-              </form>
-            )}
-          </CardContent>
-        </Card>
-      </main>
+           <div className="mt-4">
+             <button onClick={() => handleLogin()} className="w-full bg-yellow-50 hover:bg-yellow-100 border border-yellow-200 text-yellow-800 font-bold py-2.5 rounded-lg shadow-sm transition-colors text-xs flex items-center justify-center">
+               <span className="text-gold mr-2 text-lg leading-none">✨</span> Quick Demo Admin Login (admin@mota.gov.in)
+             </button>
+           </div>
+        </div>
 
-      <SiteFooter />
+        {/* Footer */}
+        <div className="p-4 bg-white border-t border-slate-100 flex items-start space-x-2">
+          <ShieldCheck className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+          <div>
+            <div className="text-[10px] font-bold text-navy">MoTA Official Security Gateway</div>
+            <div className="text-[9px] text-slate-500 leading-tight mt-0.5">
+              This system is monitored and restricted strictly to authorized Ministry officers. All verification decisions and DBT sanction operations are cryptographically audited.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

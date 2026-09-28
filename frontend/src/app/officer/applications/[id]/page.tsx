@@ -8,7 +8,7 @@ import {
   ArrowLeft, CheckCircle, XCircle, AlertTriangle, FileText,
   Check, Shield, ChevronDown, ChevronUp, User, BookOpen,
   Banknote, Home, GraduationCap, ClipboardList, AlertCircle,
-  Eye, RotateCcw, ThumbsUp, ThumbsDown, MessageSquare
+  Eye, RotateCcw, ThumbsUp, ThumbsDown, MessageSquare, ShieldCheck
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -20,6 +20,8 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
   const [app, setApp] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const [showDossierModal, setShowDossierModal] = useState(true); // Open by default for demo
 
   const [decisionAction, setDecisionAction] = useState("");
   const [decisionNotes, setDecisionNotes] = useState("");
@@ -461,112 +463,11 @@ export default function OfficerApplicationView({ params }: { params: Promise<{ i
           </div>
 
           {/* ═══ OFFICER DECISION PANEL ═══ */}
-          <div className="border-t border-slate-200 bg-[#12263F] flex-shrink-0">
-            <div className="px-4 py-3 border-b border-slate-700">
-              <div className="flex items-center">
-                <Shield size={14} className="text-[#4ade80] mr-2" />
-                <span className="text-xs font-extrabold text-white uppercase tracking-widest">Officer Decision</span>
-              </div>
-            </div>
-
-            {decisionSuccess ? (
-              <div className="p-6 flex flex-col items-center">
-                <CheckCircle size={32} className="text-[#4ade80] mb-2" />
-                <p className="text-white font-bold text-sm">Decision Recorded</p>
-                <p className="text-slate-400 text-xs mt-1">Redirecting to queue...</p>
-              </div>
-            ) : (
-              <form onSubmit={handleDecision} className="p-4 space-y-3">
-                {/* Action Buttons */}
-                <div className="grid grid-cols-2 gap-2">
-                  <button type="button" onClick={() => setDecisionAction("APPROVE")}
-                    className={`flex items-center justify-center py-2 px-3 rounded-lg text-xs font-bold border transition-all ${
-                      decisionAction === "APPROVE"
-                        ? "bg-green-500 border-green-500 text-white"
-                        : "border-slate-600 text-slate-300 hover:border-green-500 hover:text-green-400"
-                    }`}>
-                    <ThumbsUp size={12} className="mr-1.5" /> Approve
-                  </button>
-                  <button type="button" onClick={() => setDecisionAction("REJECT")}
-                    className={`flex items-center justify-center py-2 px-3 rounded-lg text-xs font-bold border transition-all ${
-                      decisionAction === "REJECT"
-                        ? "bg-red-500 border-red-500 text-white"
-                        : "border-slate-600 text-slate-300 hover:border-red-500 hover:text-red-400"
-                    }`}>
-                    <ThumbsDown size={12} className="mr-1.5" /> Reject
-                  </button>
-                  <button type="button" onClick={() => setDecisionAction("REQUEST_CORRECTION")}
-                    className={`flex items-center justify-center py-2 px-3 rounded-lg text-xs font-bold border transition-all ${
-                      decisionAction === "REQUEST_CORRECTION"
-                        ? "bg-amber-500 border-amber-500 text-white"
-                        : "border-slate-600 text-slate-300 hover:border-amber-500 hover:text-amber-400"
-                    }`}>
-                    <MessageSquare size={12} className="mr-1.5" /> Request Fix
-                  </button>
-                  <button type="button" onClick={() => setDecisionAction("ACCEPT_VERIFICATION")}
-                    className={`flex items-center justify-center py-2 px-3 rounded-lg text-xs font-bold border transition-all ${
-                      decisionAction === "ACCEPT_VERIFICATION"
-                        ? "bg-blue-500 border-blue-500 text-white"
-                        : "border-slate-600 text-slate-300 hover:border-blue-500 hover:text-blue-400"
-                    }`}>
-                    <RotateCcw size={12} className="mr-1.5" /> Accept AI
-                  </button>
-                </div>
-
-                {/* Deficiency Type (conditional) */}
-                {decisionAction === "REQUEST_CORRECTION" && (
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Deficiency Document</label>
-                    <select
-                      value={deficiencyType}
-                      onChange={(e) => setDeficiencyType(e.target.value)}
-                      required
-                      className="w-full p-2 bg-slate-800 border border-slate-600 rounded-lg text-white text-xs outline-none focus:border-amber-500"
-                    >
-                      <option value="">Select document type...</option>
-                      <option value="INCOME_CERTIFICATE">Income Certificate</option>
-                      <option value="CASTE_CERTIFICATE">Caste Certificate</option>
-                      <option value="DOMICILE_CERTIFICATE">Domicile Certificate</option>
-                      <option value="MARKSHEET">Marksheet</option>
-                      <option value="BANK_PASSBOOK">Bank Passbook</option>
-                      <option value="AADHAAR">Aadhaar</option>
-                      <option value="PHOTO">Photograph</option>
-                    </select>
-                  </div>
-                )}
-
-                {/* Reason */}
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
-                    Remarks {["REJECT", "REQUEST_CORRECTION"].includes(decisionAction) && <span className="text-red-400">*</span>}
-                  </label>
-                  <textarea
-                    value={decisionNotes}
-                    onChange={(e) => setDecisionNotes(e.target.value)}
-                    rows={3}
-                    placeholder="Enter your reasoning or remarks..."
-                    required={["REJECT", "REQUEST_CORRECTION"].includes(decisionAction)}
-                    className="w-full p-2.5 bg-slate-800 border border-slate-600 rounded-lg text-white text-xs outline-none focus:border-[#4ade80] placeholder-slate-500 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={submitting || !decisionAction}
-                  className={`w-full py-2.5 rounded-lg text-xs font-extrabold uppercase tracking-wider transition-all flex items-center justify-center ${
-                    decisionAction === "APPROVE" ? "bg-green-500 hover:bg-green-400 text-white" :
-                    decisionAction === "REJECT" ? "bg-red-500 hover:bg-red-400 text-white" :
-                    decisionAction === "REQUEST_CORRECTION" ? "bg-amber-500 hover:bg-amber-400 text-white" :
-                    decisionAction === "ACCEPT_VERIFICATION" ? "bg-blue-500 hover:bg-blue-400 text-white" :
-                    "bg-slate-700 text-slate-400 cursor-not-allowed"
-                  } disabled:opacity-50`}
-                >
-                  {submitting ? (
-                    <><div className="animate-spin w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full mr-2" /> Recording...</>
-                  ) : !decisionAction ? "Select an action above" : `Confirm: ${decisionAction.replace(/_/g, " ")}`}
-                </button>
-              </form>
-            )}
+          <div className="border-t border-slate-200 bg-white flex-shrink-0 p-4">
+             <button onClick={() => setShowDossierModal(true)} className="w-full bg-navy hover:bg-navy-light text-white font-bold py-3 rounded-lg shadow-lg flex items-center justify-center transition-colors">
+                <ShieldCheck size={18} className="mr-2 text-gold" />
+                Launch Dossier Scrutiny Modal
+             </button>
           </div>
         </div>
       </div>
