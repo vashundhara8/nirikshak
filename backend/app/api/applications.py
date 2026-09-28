@@ -32,7 +32,13 @@ def create_application(
     ).first()
     
     if existing:
-        raise HTTPException(status_code=409, detail="IDEMPOTENCY_CONFLICT: Active application exists.")
+        if existing.current_status in ["DRAFT", "REQUIRES_CORRECTION"]:
+            existing.submitted_data = req.submitted_data
+            db.commit()
+            db.refresh(existing)
+            return {"application_id": str(existing.id), "status": existing.current_status}
+        else:
+            raise HTTPException(status_code=409, detail="IDEMPOTENCY_CONFLICT: Active application exists.")
         
     app = Application(
         applicant_id=user.id,
@@ -63,9 +69,26 @@ def submit_application(
     if not app.documents:
         raise HTTPException(status_code=400, detail="DOCUMENTS_REQUIRED")
         
+    # PRE-SUBMISSION VERIFICATION CHECK
+    latest_run = db.query(VerificationRun).filter(VerificationRun.application_id == app.id).order_by(VerificationRun.started_at.desc()).first()
+    if not latest_run or latest_run.status != "COMPLETED":
+        raise HTTPException(status_code=400, detail="VERIFICATION_REQUIRED")
+
+    # Check for blocking issues
+    summary = latest_run.result_summary or {}
+    if summary.get("blocking_count", 0) > 0 or summary.get("operational_status") != "NO_DEFICIENCY":
+        raise HTTPException(status_code=400, detail="UNRESOLVED_BLOCKING_ISSUES")
+
+    # Check if any document was uploaded AFTER verification started
+    for doc in app.documents:
+        if doc.versions:
+            latest_version_date = max((v.created_at for v in doc.versions if v.created_at), default=None)
+            if latest_version_date and latest_run.started_at and latest_version_date > latest_run.started_at:
+                raise HTTPException(status_code=400, detail="VERIFICATION_OUTDATED")
+        
     # Transition DRAFT -> SUBMITTED
-    app.current_status = "SUBMITTED"
-    app.version += 1
+    app.current_status = "SUBMITTED"  # type: ignore
+    app.version += 1  # type: ignore
     
     # Status History
     history = ApplicationStatusHistory(
@@ -148,7 +171,8 @@ def get_application(
         "run_id": str(run.id),
         "status": run.status,
         "started_at": run.started_at,
-        "completed_at": run.completed_at
+        "completed_at": run.completed_at,
+        "result_summary": run.result_summary
     } for run in runs]
 
     deficiencies = db.query(Deficiency).filter(Deficiency.application_id == app.id).all()
@@ -156,7 +180,8 @@ def get_application(
         "deficiency_id": str(d.id),
         "type": d.deficiency_type,
         "status": d.status,
-        "created_at": d.created_at
+        "created_at": d.created_at,
+        "details": d.source_finding.details if getattr(d, 'source_finding', None) else None
     } for d in deficiencies]
 
     return {
@@ -189,7 +214,8 @@ def get_deficiencies(
         "deficiency_id": str(d.id),
         "type": d.deficiency_type,
         "status": d.status,
-        "created_at": d.created_at
+        "created_at": d.created_at,
+        "details": d.source_finding.details if getattr(d, 'source_finding', None) else None
     } for d in defs]
 
 @router.get("/{application_id}/verification")
@@ -211,6 +237,29 @@ def get_verification_status(
     finding_count = db.query(VerificationFinding).filter(VerificationFinding.verification_run_id == latest_run.id).count()
     def_count = db.query(Deficiency).filter(Deficiency.verification_run_id == latest_run.id).count()
     
+    is_outdated = False
+    if latest_run and latest_run.started_at:
+        # Check if application form data was updated
+        if app.updated_at and app.updated_at > latest_run.started_at:
+            is_outdated = True
+            
+        # Check if documents were updated
+        if not is_outdated:
+            for doc in app.documents:
+                if doc.versions:
+                    latest_version_date = max((v.created_at for v in doc.versions if v.created_at), default=None)
+                    if latest_version_date and latest_version_date > latest_run.started_at:
+                        is_outdated = True
+                        break
+    findings = db.query(VerificationFinding).filter(VerificationFinding.verification_run_id == latest_run.id).all()
+    finding_list = [{
+        "finding_id": str(f.id),
+        "finding_type": f.finding_type,
+        "status": f.status,
+        "source_identifier": f.source_identifier,
+        "details": f.details
+    } for f in findings]
+
     return {
         "run_id": str(latest_run.id),
         "status": latest_run.status,
@@ -219,5 +268,8 @@ def get_verification_status(
         "overall_operational_state": app.current_status,
         "finding_count": finding_count,
         "deficiency_count": def_count,
-        "error_state": latest_run.result_summary.get("error") if latest_run.result_summary else None
+        "error_state": latest_run.result_summary.get("error") if latest_run.result_summary else None,
+        "result_summary": latest_run.result_summary,
+        "is_outdated": is_outdated,
+        "findings": finding_list
     }

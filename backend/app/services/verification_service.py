@@ -2,6 +2,7 @@ import json
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone
 import uuid
+from typing import Optional
 
 from app.models.verification import VerificationRun, VerificationFinding, EvidenceRecord, Deficiency
 from app.models.application import Application
@@ -32,12 +33,13 @@ class VerificationService:
         if not app:
             raise ValueError("APPLICATION_NOT_FOUND")
 
-        if app.current_status not in ["SUBMITTED", "REQUIRES_CORRECTION", "RESUBMISSION_RECEIVED"]:
+        if app.current_status not in ["DRAFT", "PRE_VALIDATION", "SUBMITTED", "REQUIRES_CORRECTION", "RESUBMISSION_RECEIVED"]:
             raise ValueError("INVALID_STATE_TRANSITION")
 
-        # Lock application state optimistically
-        app.current_status = "VERIFICATION"
-        app.version += 1
+        # Keep DRAFT as DRAFT, otherwise lock to VERIFICATION
+        if app.current_status != "DRAFT":
+            app.current_status = "VERIFICATION"  # type: ignore
+        app.version += 1  # type: ignore
 
         # Snapshot current active document versions
         from app.models.document import Document
@@ -73,17 +75,18 @@ class VerificationService:
         )
         self.db.add(run)
 
-        self._create_audit_event(actor_id, actor_role, "VERIFICATION_STARTED", "APPLICATION", str(application_id), "SUCCESS")
+        self._create_audit_event(str(actor_id), actor_role, "VERIFICATION_STARTED", "APPLICATION", str(application_id), "SUCCESS")
         self.db.commit()  # Commit the 'PROCESSING' state immediately
 
         # ==========================================
-        # Dispatch to Celery for async processing
+        # Run synchronously for the pre-submission workflow
+        # to guarantee the applicant gets immediate feedback.
         # ==========================================
         from app.core.celery_app import run_verification_task
-        run_verification_task.delay(str(run.id), str(actor_id), actor_role)
+        run_verification_task.apply(args=(str(run.id), str(actor_id), actor_role))
 
         return run
-    def complete_verification(self, run_id: uuid.UUID, actor_id: str, actor_role: str, success: bool, error: str = None):
+    def complete_verification(self, run_id: uuid.UUID, actor_id: str, actor_role: str, success: bool, error: Optional[str] = None):
         from app.models.application import Application
         run = self.db.query(VerificationRun).filter(VerificationRun.id == run_id).first()
         if not run:
@@ -93,17 +96,19 @@ class VerificationService:
         if not app:
             return
         
-        if success:
-            run.status = "COMPLETED"
-            run.completed_at = datetime.now(timezone.utc)
-            app.current_status = "READY_FOR_OFFICER"
-            app.version += 1
-            self._create_audit_event(actor_id, actor_role, "VERIFICATION_COMPLETED", "VERIFICATION_RUN", str(run.id), "SUCCESS")
+        if not error:
+            run.status = "COMPLETED"  # type: ignore
+            run.completed_at = datetime.now(timezone.utc)  # type: ignore
+            if app.current_status != "DRAFT":
+                app.current_status = "READY_FOR_OFFICER" if success else "REQUIRES_CORRECTION"  # type: ignore
+            app.version += 1  # type: ignore
+            self._create_audit_event(str(actor_id), actor_role, "VERIFICATION_COMPLETED", "VERIFICATION_RUN", str(run.id), "SUCCESS")
         else:
-            run.status = "FAILED"
-            run.result_summary = {"error": error}
-            app.current_status = "REQUIRES_MANUAL_REVIEW"
-            app.version += 1
-            self._create_audit_event(actor_id, actor_role, "VERIFICATION_FAILED", "VERIFICATION_RUN", str(run.id), "FAILURE")
+            run.status = "FAILED"  # type: ignore
+            run.result_summary = {"error": error}  # type: ignore
+            if app.current_status != "DRAFT":
+                app.current_status = "REQUIRES_MANUAL_REVIEW"  # type: ignore
+            app.version += 1  # type: ignore
+            self._create_audit_event(str(actor_id), actor_role, "VERIFICATION_FAILED", "VERIFICATION_RUN", str(run.id), "FAILURE")
             
         self.db.commit()

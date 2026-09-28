@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { fetchApi } from "@/lib/api";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Upload, CheckCircle } from "lucide-react";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -22,10 +22,13 @@ const CATEGORY_OPTIONS = [
 
 export default function CreateApplicationWizard() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const editId = searchParams.get("edit");
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [initialFetchDone, setInitialFetchDone] = useState(false);
   const [error, setError] = useState("");
-  const [appId, setAppId] = useState<string | null>(null);
+  const [appId, setAppId] = useState<string | null>(editId);
 
   // Step 1: Personal & Demographic
   const [schemeCode, setSchemeCode] = useState("PM-2022");
@@ -47,8 +50,49 @@ export default function CreateApplicationWizard() {
   const [annualFamilyIncome, setAnnualFamilyIncome] = useState("");
   const [incomeSource, setIncomeSource] = useState("");
 
-  // Step 4: Documents (Uploaded via API)
   const [uploadedDocs, setUploadedDocs] = useState<{type: string, name: string}[]>([]);
+
+  useEffect(() => {
+    if (editId && !initialFetchDone) {
+      setLoading(true);
+      fetchApi<any>(`/applications/${editId}`)
+        .then(data => {
+          if (data && data.status === "DRAFT") {
+            setSchemeCode(data.scheme_code || "PM-2022");
+            setAcademicYear(data.academic_year || "2024-2025");
+            const sub = data.submitted_data || {};
+            if (sub.applicant) {
+              setFullName(sub.applicant.name || "");
+              setDob(sub.applicant.dob || "");
+              if (sub.applicant.masked_aadhaar) {
+                setMaskedAadhaar(sub.applicant.masked_aadhaar.split('-').pop() || "");
+              }
+            }
+            if (sub.demographic) {
+              setCategory(sub.demographic.category || "ST");
+              setDomicileState(sub.demographic.domicile_state || "");
+              setAnnualFamilyIncome(sub.demographic.annual_family_income?.toString() || "");
+              setIncomeSource(sub.demographic.income_source || "");
+            }
+            if (sub.academic) {
+              setInstitutionName(sub.academic.institution_name || "");
+              setInstitutionId(sub.academic.institution_id || "");
+              setCourseName(sub.academic.course_name || "");
+              setCourseId(sub.academic.course_id || "");
+              setExamPercentage(sub.academic.last_exam_percentage?.toString() || "");
+            }
+          }
+        })
+        .catch(err => {
+          console.error("Failed to fetch application for editing:", err);
+          setError("Failed to load application data.");
+        })
+        .finally(() => {
+          setInitialFetchDone(true);
+          setLoading(false);
+        });
+    }
+  }, [editId, initialFetchDone]);
 
   const handleCreateApplication = async () => {
     if (!fullName.trim() || !dob || !domicileState.trim() || !institutionName.trim() || !courseName.trim() || !annualFamilyIncome) {

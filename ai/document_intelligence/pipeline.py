@@ -18,7 +18,7 @@ class DocumentPipeline:
         self.field_extractor = FieldExtractor()
         self.normalizer = Normalizer()
 
-    def process_document(self, filepath: str, doc_id: str, app_id: str = None) -> DocumentExtractionResult:
+    def process_document(self, filepath: str, doc_id: str, app_id: str = None, declared_doc_type: str = None) -> DocumentExtractionResult:
         inspection = self.inspector.inspect(filepath)
         raw_text = ""
         extraction_method = ""
@@ -39,8 +39,8 @@ class DocumentPipeline:
                 notes.append("Extracted using PaddleOCR fallback.")
 
         # If OCR_UNAVAILABLE or OCR_FAILED, we may have no text.
-        doc_type = "UNKNOWN"
-        if raw_text.strip():
+        doc_type = declared_doc_type if declared_doc_type else "UNKNOWN"
+        if doc_type == "UNKNOWN" and raw_text.strip():
             doc_type = self.classifier.classify(raw_text)
 
         fields_dict = {}

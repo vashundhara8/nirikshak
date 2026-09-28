@@ -9,9 +9,8 @@ def resolve_inputs(application_data: Dict[str, Any], validation_data: Dict[str, 
     inputs = NormalizedInputs()
     
     # 1. Resolve Document Presence
-    # (In a real system, this comes from document intelligence. Here we use expected presence from the benchmark schema)
-    # We use the list of uploaded documents to determine presence
-    inputs.documents_present = [doc['document_type'] for doc in application_data.get('documents_expected', [])]
+    # We use the list of uploaded documents to determine presence from the extracted validation_data
+    inputs.documents_present = [doc.get('document_type') for doc in validation_data.get('documents', []) if doc.get('document_type')]
     
     # 2. Resolve Validation Conflicts
     checks = validation_data.get("checks", {})

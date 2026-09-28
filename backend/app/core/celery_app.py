@@ -110,7 +110,9 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
                 tmp_path = tmp.name
 
             try:
-                result = doc_pipeline.process_document(tmp_path, doc_id_str, str(app.id))
+                doc = db.query(Document).filter(Document.id == doc_id_str).first()
+                declared_type = doc.document_type if doc else "UNKNOWN"
+                result = doc_pipeline.process_document(tmp_path, doc_id_str, str(app.id), declared_doc_type=declared_type)
                 extracted_docs.append(result.model_dump())
             finally:
                 if os.path.exists(tmp_path):
@@ -175,6 +177,16 @@ def run_verification_task(self, run_id: str, actor_id: str, actor_role: str):
             db_finding_map[p_eval.rule_id] = db_finding.id
 
         # 6c. Deficiencies
+        # First, close any existing OPEN or CORRECTION_SUBMITTED deficiencies for this application
+        # since this full verification run will recreate any that are still failing.
+        old_defs = db.query(Deficiency).filter(
+            Deficiency.application_id == app.id,
+            Deficiency.status.in_(["OPEN", "CORRECTION_SUBMITTED"])
+        ).all()
+        for old_d in old_defs:
+            old_d.status = "RESOLVED"
+            old_d.resolution_notes = f"Auto-resolved by new verification run {run.id}"
+            
         for d in operational_summary.deficiencies:
             db_def = Deficiency(
                 verification_run_id=run.id,

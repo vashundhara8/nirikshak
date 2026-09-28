@@ -45,6 +45,7 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
       ...rest,
       headers: requestHeaders,
+      cache: 'no-store'
     });
 
     if (!response.ok) {
@@ -70,6 +71,7 @@ export async function fetchApi<T>(endpoint: string, options: FetchOptions = {}):
               const retryRes = await fetch(`${API_BASE_URL}${endpoint}`, {
                 ...rest,
                 headers: requestHeaders,
+                cache: 'no-store'
               });
 
               if (!retryRes.ok) {

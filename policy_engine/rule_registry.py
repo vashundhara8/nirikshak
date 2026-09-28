@@ -5,6 +5,8 @@ from .schemas import PolicyRule, NormalizedInputs
 EvalResult = Tuple[str, str, Any, str]
 
 def eval_pm_doc_001(rule: PolicyRule, inputs: NormalizedInputs) -> EvalResult:
+    if "AADHAR" in inputs.documents_present:
+        return "PASS", "Document requirements", inputs.documents_present, "Aadhaar document uploaded."
     # Aadhar ambiguity -> The source says "Aadhar Number", not explicit upload.
     return "MANUAL_REVIEW_REQUIRED", "Document requirements", inputs.documents_present, "Aadhaar document upload interpretation requires clarification per Step 6."
 

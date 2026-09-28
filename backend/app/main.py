@@ -3,6 +3,12 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import logging
+import os
+import sys
+
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+if repo_root not in sys.path:
+    sys.path.insert(0, repo_root)
 
 from app.api import auth, applications, documents, verification, evidence, audit, officer, admin, notifications
 from app.db.session import get_db
@@ -67,9 +73,9 @@ def readiness_check(db: Session = Depends(get_db)):
              raise Exception("Redis unreachable")
              
         # Check MinIO (assume minio client available)
-        # Check MSG91 config
-        if settings.OTP_PROVIDER == "msg91" and not settings.MSG91_AUTH_KEY:
-            raise Exception("MSG91_AUTH_KEY not configured")
+        # Check SMS provider config
+        if settings.OTP_PROVIDER == "twilio" and not settings.TWILIO_ACCOUNT_SID:
+            raise Exception("TWILIO_ACCOUNT_SID not configured")
             
         return {"status": "ready"}
     except Exception as e:

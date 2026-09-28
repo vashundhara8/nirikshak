@@ -81,3 +81,4 @@ class Deficiency(Base):
     created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     
     run = relationship("VerificationRun", back_populates="deficiencies")
+    source_finding = relationship("VerificationFinding", foreign_keys=[source_finding_id])
