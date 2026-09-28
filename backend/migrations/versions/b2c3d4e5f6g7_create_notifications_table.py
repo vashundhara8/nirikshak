@@ -1,7 +1,7 @@
 """create_notifications_table
 
-Revision ID: a1b2c3d4e5f6
-Revises: 50b9949a751a
+Revision ID: b2c3d4e5f6g7
+Revises: faa52376c8da
 Create Date: 2026-09-28
 
 """
@@ -9,8 +9,8 @@ from alembic import op
 import sqlalchemy as sa
 from sqlalchemy.dialects import postgresql
 
-revision = 'a1b2c3d4e5f6'
-down_revision = '50b9949a751a'
+revision = 'b2c3d4e5f6g7'
+down_revision = 'faa52376c8da'
 branch_labels = None
 depends_on = None
 
@@ -21,7 +21,7 @@ def upgrade() -> None:
         sa.Column('id', postgresql.UUID(as_uuid=True), primary_key=True),
         sa.Column('user_id', postgresql.UUID(as_uuid=True),
                   sa.ForeignKey('users.id', ondelete='CASCADE'),
-                  nullable=False, index=True),
+                  nullable=False),
         sa.Column('title', sa.String(200), nullable=False),
         sa.Column('message', sa.Text(), nullable=False),
         sa.Column('notification_type', sa.String(80), nullable=False),

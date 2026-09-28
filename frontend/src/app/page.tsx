@@ -33,16 +33,16 @@ export default function LandingPage() {
                 {t('hero.title')}
               </h1>
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl leading-relaxed font-medium">
-                A unified, AI-assisted verification platform for seamless and transparent scholarship disbursement. Secure, verifiable, and designed to ensure eligible students receive timely support.
+                {t('hero.subtitle')}
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button size="lg" variant="secondary" href="/applicant/login" className="font-bold tracking-wide text-navy text-base h-14 px-8 shadow-xl hover:shadow-2xl transition-all">
-                  Apply for Scholarship
+                  {t('hero.apply')}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button size="lg" variant="outline" href="/applicant/login" className="font-bold text-white border-white hover:bg-white/10 hover:text-white h-14 px-8">
-                  Track Application Status
+                  {t('hero.track')}
                 </Button>
               </div>
             </div>
@@ -94,15 +94,15 @@ export default function LandingPage() {
             <div className="grid lg:grid-cols-2 gap-16">
               {/* How to Apply */}
               <div>
-                <div className="text-sm font-bold text-teal-primary uppercase tracking-widest mb-3">Service Clarity</div>
-                <h2 className="text-3xl font-bold text-navy mb-8 font-serif">How to Apply</h2>
+                <div className="text-sm font-bold text-teal-primary uppercase tracking-widest mb-3">{t('how.service_clarity')}</div>
+                <h2 className="text-3xl font-bold text-navy mb-8 font-serif">{t('how.title')}</h2>
                 
                 <div className="space-y-8">
                   {[
-                    { title: "Register & Profile Setup", desc: "Create your account using your Mobile Number or Aadhaar. Fill in your basic demographic details." },
-                    { title: "Choose Scheme & Upload", desc: "Select the appropriate scholarship scheme and upload digitally verifiable documents (PDFs)." },
-                    { title: "Automated Verification", desc: "The NIRIKSHAK engine automatically verifies your document integrity and extracts data instantly." },
-                    { title: "Officer Review & DBT", desc: "A Nodal Officer performs final scrutiny. Once approved, funds are transferred via Direct Benefit Transfer." }
+                    { title: t('how.step1.title'), desc: t('how.step1.desc') },
+                    { title: t('how.step2.title'), desc: t('how.step2.desc') },
+                    { title: t('how.step3.title'), desc: t('how.step3.desc') },
+                    { title: t('how.step4.title'), desc: t('how.step4.desc') }
                   ].map((step, idx) => (
                     <div key={idx} className="flex">
                       <div className="flex flex-col items-center mr-6">
@@ -122,17 +122,17 @@ export default function LandingPage() {
               
               {/* Mandatory Documents */}
               <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
-                <h2 className="text-2xl font-bold text-navy mb-2 font-serif flex items-center"><ShieldCheck className="mr-3 text-gold" size={28} /> Required Documents</h2>
-                <p className="text-slate-600 mb-8 font-medium">Please keep clear, legible PDF copies of the following documents ready before starting your application.</p>
+                <h2 className="text-2xl font-bold text-navy mb-2 font-serif flex items-center"><ShieldCheck className="mr-3 text-gold" size={28} /> {t('docs.title')}</h2>
+                <p className="text-slate-600 mb-8 font-medium">{t('docs.desc')}</p>
                 
                 <ul className="space-y-4">
                   {[
-                    "Caste / Tribe Certificate (Issued by competent authority)",
-                    "Valid Income Certificate (Current financial year)",
-                    "Domicile / Resident Certificate",
-                    "Aadhaar Card (For identity & DBT linkage)",
-                    "Previous Year Academic Marksheet",
-                    "Institution Admission Proof / Fee Receipt"
+                    t('docs.doc1'),
+                    t('docs.doc2'),
+                    t('docs.doc3'),
+                    t('docs.doc4'),
+                    t('docs.doc5'),
+                    t('docs.doc6')
                   ].map((doc, idx) => (
                     <li key={idx} className="flex items-start bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
                       <CheckCircle className="w-5 h-5 text-teal-600 mr-4 mt-0.5 flex-shrink-0" />
@@ -142,7 +142,7 @@ export default function LandingPage() {
                 </ul>
                 
                 <div className="mt-8 p-4 bg-teal-50 border border-teal-100 rounded text-sm text-teal-900 font-medium">
-                  <strong>Note:</strong> Uploaded documents must be authentic. Forgery will lead to immediate rejection and legal action under Government of India guidelines.
+                  <strong>{t('docs.note_label')}</strong> {t('docs.note_text')}
                 </div>
               </div>
             </div>
@@ -153,29 +153,29 @@ export default function LandingPage() {
         <section className="py-20 bg-slate-100 border-t border-slate-200" id="schemes">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-navy mb-4 font-serif">Flagship Scholarship Schemes</h2>
+              <h2 className="text-3xl font-bold text-navy mb-4 font-serif">{t('schemes.featured')}</h2>
               <p className="text-slate-600 max-w-2xl mx-auto font-medium">Central and state-level financial assistance programs administered through the NIRIKSHAK platform.</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { 
-                  title: "National Fellowship for ST", 
-                  desc: "Comprehensive financial support to pursue M.Phil & Ph.D. degrees in Sciences, Humanities, Engineering, and Technology at top Indian universities.", 
+                  title: t('scheme.nfst.title'), 
+                  desc: t('scheme.nfst.desc'), 
                   badge: "Higher Research",
                   amount: "₹31,000 - ₹35,000 / mo",
                   tenure: "Up to 5 Years"
                 },
                 { 
-                  title: "National Overseas Scholarship", 
-                  desc: "Global postgraduate and doctoral funding for ST candidates admitted into top 500 QS World Ranked international academic institutions.", 
+                  title: t('scheme.nos.title'), 
+                  desc: t('scheme.nos.desc'), 
                   badge: "Study Abroad",
                   amount: "Full Tuition + Airfare",
                   tenure: "Up to 4 Years (Ph.D)"
                 },
                 { 
-                  title: "Post-Matric Scholarship for ST", 
-                  desc: "Financial aid for meritorious tribal students pursuing recognized post-secondary courses across colleges, polytechnics, and vocational centers.", 
+                  title: t('scheme.pm.title'), 
+                  desc: t('scheme.pm.desc'), 
                   badge: "State + Central",
                   amount: "Maint. & Day Scholar Rates",
                   tenure: "Course Duration"

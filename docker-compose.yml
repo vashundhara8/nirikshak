@@ -53,7 +53,7 @@ services:
       retries: 10
 
   minio:
-    image: minio/minio:latest
+    image: elestio/minio:latest
     container_name: nirikshak_minio
     restart: unless-stopped
     environment:
@@ -72,17 +72,19 @@ services:
       retries: 5
 
   minio-setup:
-    image: minio/mc:latest
+    image: amazon/aws-cli:latest
     container_name: nirikshak_minio_setup
     depends_on:
       minio:
         condition: service_healthy
     restart: "no"
+    environment:
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER:-mota_admin}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD:-mota_secret}
     entrypoint: >
       /bin/sh -c "
-      /usr/bin/mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER:-mota_admin} ${MINIO_ROOT_PASSWORD:-mota_secret};
-      /usr/bin/mc mb myminio/${S3_BUCKET_NAME:-mota-documents} --ignore-existing;
-      /usr/bin/mc anonymous set download myminio/${S3_BUCKET_NAME:-mota-documents};
+      aws --endpoint-url http://minio:9000 s3 mb s3://${S3_BUCKET_NAME:-mota-documents} || true;
+      aws --endpoint-url http://minio:9000 s3api put-bucket-policy --bucket ${S3_BUCKET_NAME:-mota-documents} --policy '{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":[\"s3:GetObject\"],\"Resource\":[\"arn:aws:s3:::${S3_BUCKET_NAME:-mota-documents}/*\"]}]}';
       echo 'MinIO bucket ready.';
       "
 
