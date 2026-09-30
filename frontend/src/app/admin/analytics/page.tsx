@@ -4,6 +4,8 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "@/lib/auth";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import { fetchApi } from "@/lib/api";
 import {
   Users, FileText, CheckCircle, XCircle, AlertTriangle,
@@ -126,13 +128,24 @@ export default function AdminDashboard() {
       {/* Header */}
       <div className="bg-[#12263F] text-white px-8 py-6 shadow-lg">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div>
-            <div className="flex items-center space-x-2 mb-1">
-              <Shield size={18} className="text-[#4ade80]" />
-              <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-widest">Admin Control Panel</span>
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center hover:opacity-90 transition-opacity">
+              <Image
+                src="/logo.png"
+                alt="NIRIKSHAK Logo"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+            </Link>
+            <div>
+              <div className="flex items-center space-x-2 mb-1">
+                <Shield size={16} className="text-[#4ade80]" />
+                <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-widest">Admin Control Panel</span>
+              </div>
+              <h1 className="text-2xl font-black tracking-tight">Platform Analytics</h1>
+              <p className="text-slate-400 text-sm mt-0.5">NIRIKSHAK · Ministry of Tribal Affairs</p>
             </div>
-            <h1 className="text-2xl font-black tracking-tight">Platform Analytics</h1>
-            <p className="text-slate-400 text-sm mt-0.5">NIRIKSHAK · Ministry of Tribal Affairs</p>
           </div>
           <div className="flex items-center space-x-3">
             <div className="text-right text-xs text-slate-400">

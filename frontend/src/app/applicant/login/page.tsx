@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { ShieldCheck, ArrowLeft, RefreshCw } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginPage() {
   const [step, setStep] = useState<1 | 2>(1);
@@ -105,8 +106,15 @@ export default function LoginPage() {
       <main className="flex-grow flex items-center justify-center p-4">
         <Card className="w-full max-w-md shadow-lg border-t-4 border-t-teal-primary">
           <CardHeader className="text-center pb-2">
-            <div className="mx-auto w-12 h-12 bg-teal-light rounded-full flex items-center justify-center mb-4">
-               <ShieldCheck className="w-6 h-6 text-teal-primary" />
+            <div className="mx-auto w-14 h-14 flex items-center justify-center mb-3">
+              <Image
+                src="/logo.png"
+                alt="NIRIKSHAK Logo"
+                width={52}
+                height={52}
+                className="object-contain"
+                priority
+              />
             </div>
             <CardTitle className="text-2xl">Applicant Login</CardTitle>
             <p className="text-sm text-text-muted mt-2">

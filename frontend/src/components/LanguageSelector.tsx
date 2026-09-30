@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/lib/i18n";
 import React from "react";
+import { Globe } from "lucide-react";
 
 export function LanguageSelector() {
   const { locale, setLocale } = useI18n();
@@ -12,16 +13,16 @@ export function LanguageSelector() {
   };
 
   return (
-    <div className="flex items-center space-x-2">
-      <span className="text-sm text-slate-500">🌐</span>
+    <div className="flex items-center space-x-1.5">
+      <Globe className="w-3.5 h-3.5 text-slate-700" />
       <select
         value={locale}
         onChange={handleSelect}
-        className="bg-white border border-slate-300 text-slate-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+        className="bg-transparent border border-stone-300 text-stone-800 text-xs font-medium rounded px-2.5 py-1 focus:ring-1 focus:ring-stone-400 focus:outline-none cursor-pointer"
       >
         <option value="en">English</option>
         <option value="hi">हिंदी (Hindi)</option>
-        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+        <option value="or">ଓଡ଼ᱤଆ (Odia)</option>
         <option value="bn">বাংলা (Bengali)</option>
         <option value="kn">ಕನ್ನಡ (Kannada)</option>
         <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ (Santali)</option>

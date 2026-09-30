@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { ShieldCheck, User, Lock, ArrowRight, Eye, X } from "lucide-react";
 import { fetchApi } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
@@ -62,12 +63,18 @@ export default function AdminLoginPage() {
            </div>
            
            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-12 bg-gold rounded flex items-center justify-center border border-yellow-600 shadow-sm">
-                <ShieldCheck className="w-6 h-6 text-navy" />
+              <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white/10 rounded-lg p-1 border border-white/20">
+                <Image
+                  src="/logo.png"
+                  alt="NIRIKSHAK Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <div className="text-gold font-bold text-[9px] uppercase tracking-widest leading-none mb-1">Government of India</div>
-                <div className="text-white font-bold text-sm leading-none">Ministry of Tribal Affairs</div>
+                <div className="text-white font-bold text-sm leading-none">Ministry of Tribal Affairs · NIRIKSHAK</div>
               </div>
            </div>
 

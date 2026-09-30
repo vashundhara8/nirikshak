@@ -10,8 +10,12 @@ import { I18nProvider } from "@/lib/i18n";
 import { ScholarBot } from "@/components/ui/ScholarBot";
 
 export const metadata: Metadata = {
-  title: "Nirikshak Platform",
+  title: "Nirikshak Platform - Ministry of Tribal Affairs",
   description: "MoTA Scholarship Intelligence & Lifecycle Platform",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

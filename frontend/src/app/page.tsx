@@ -27,12 +27,12 @@ export default function LandingPage() {
             {/* Left Content */}
             <div className="lg:col-span-8">
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <Badge className="bg-teal-400 hover:bg-teal-500 text-navy font-bold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase border-none shadow-sm">
+                <Badge className="bg-teal-400 hover:bg-teal-500 text-slate-900 font-extrabold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase border-none shadow-sm">
                   GLOBAL MASTERS & PH.D. IN STEM, MEDICINE & HUMANITIES
                 </Badge>
-                <Badge className="bg-slate-800/80 text-gold border border-gold/30 hover:bg-slate-800 font-bold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase shadow-sm flex items-center">
-                  <Check className="w-3 h-3 mr-1" /> AI-Assisted Verification & Scoring
-                </Badge>
+                <div className="bg-[#0B2548]/90 text-amber-300 border border-amber-400/50 font-extrabold px-4 py-1.5 rounded-full text-[10px] tracking-widest uppercase shadow-sm flex items-center">
+                  <Check className="w-3.5 h-3.5 mr-1.5 text-amber-300 stroke-[3]" /> AI-Assisted Verification & Scoring
+                </div>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.15] mb-4 tracking-tight">

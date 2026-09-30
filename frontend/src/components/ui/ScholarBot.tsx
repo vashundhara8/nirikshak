@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MessageSquare, X, Bot } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export function ScholarBot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,8 +41,14 @@ export function ScholarBot() {
         {/* Header */}
         <div className="bg-navy p-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center relative">
-              <Bot className="w-5 h-5 text-gold" />
+            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center relative p-1 border border-white/20">
+              <Image
+                src="/logo.png"
+                alt="NIRIKSHAK Logo"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
               <span className="absolute bottom-0 right-0 w-2 h-2 bg-green-500 rounded-full border-2 border-navy"></span>
             </div>
             <div>

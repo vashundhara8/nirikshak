@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { NotificationBell } from "@/components/ui/NotificationBell";
+import Image from "next/image";
 
 export default function OfficerLayout({ children }: { children: React.ReactNode }) {
   const { user, loading, logout } = useAuth();
@@ -42,12 +43,19 @@ export default function OfficerLayout({ children }: { children: React.ReactNode 
     <div className="flex flex-col h-screen font-sans overflow-hidden bg-[#F4F7FA]">
       {/* TOP HEADER - Full Width */}
       <header className="h-16 bg-[#12263F] text-white flex items-center justify-between px-6 border-b border-slate-700/50 flex-shrink-0 z-30">
-        <div className="flex items-center space-x-3">
-          {/* Emblem Icon (using Shield as placeholder) */}
-          <Shield className="text-white w-7 h-7 opacity-90" />
-          <span className="font-bold text-xl tracking-tight">NIRIKSHAK</span>
+        <Link href="/officer/dashboard" className="flex items-center space-x-3 hover:opacity-95 transition-opacity">
+          <div className="relative w-8 h-8 flex-shrink-0 flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="NIRIKSHAK Logo"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+          </div>
+          <span className="font-bold text-xl tracking-tight text-white">NIRIKSHAK</span>
           <span className="text-slate-300 text-sm hidden sm:inline-block border-l border-slate-600 pl-3 ml-1 font-medium">Scholarship Verification & Lifecycle Platform</span>
-        </div>
+        </Link>
         
         <div className="flex items-center space-x-6">
           {/* Live Notification Bell */}
@@ -59,10 +67,10 @@ export default function OfficerLayout({ children }: { children: React.ReactNode 
               <UserIcon size={18} />
             </div>
             <div className="flex flex-col hidden sm:flex">
-              <span className="font-semibold text-sm leading-tight text-white">{user.full_name}</span>
+              <span className="font-semibold text-sm leading-tight text-white">{user.full_name || user.email || "Officer"}</span>
               <span className="text-[10px] text-slate-400 font-medium mt-0.5">
                 {user.roles[0]?.name.replace(/_/g, " ").replace("OFFICER", "Officer")} 
-                <span className="opacity-80"> (ID: DO-{user.id.substring(0, 4).toUpperCase()})</span>
+                <span className="opacity-80"> (ID: DO-{user.id ? user.id.substring(0, 4).toUpperCase() : "DEMO"})</span>
               </span>
             </div>
             <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>

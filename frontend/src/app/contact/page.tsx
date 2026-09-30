@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -8,8 +9,16 @@ export default function ContactPage() {
       <header className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-7 h-7 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-sm">N</div>
+            <Link href="/" className="flex items-center space-x-2.5 hover:opacity-90 transition-opacity">
+              <div className="relative w-8 h-8 flex-shrink-0 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="NIRIKSHAK Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
               <span className="text-lg font-bold text-[#0B4F4C]">Nirikshak</span>
             </Link>
             <nav className="hidden md:flex space-x-6 text-sm">

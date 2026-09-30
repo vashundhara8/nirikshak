@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function RegisterPage() {
   const [mobileNumber, setMobileNumber] = useState("");
@@ -52,6 +53,16 @@ export default function RegisterPage() {
     <div className="min-h-screen flex items-center justify-center bg-base-bg font-sans p-4">
       <Card className="max-w-md w-full shadow-lg border-t-4 border-t-gold">
         <CardHeader className="text-center pb-2">
+          <div className="mx-auto w-14 h-14 flex items-center justify-center mb-3">
+            <Image
+              src="/logo.png"
+              alt="NIRIKSHAK Logo"
+              width={52}
+              height={52}
+              className="object-contain"
+              priority
+            />
+          </div>
           <CardTitle className="text-2xl font-bold text-navy tracking-tight">Create an Account</CardTitle>
           <p className="text-sm text-text-muted mt-2 font-medium">
             Register as an applicant to apply for scholarships.
